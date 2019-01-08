@@ -22,7 +22,7 @@ public class Inicio extends javax.swing.JFrame {
         this.setTitle("Inicio");
         this.setLocalitationRelativeTo(Inicio.this);
        // this.setResizable(false);
-       this.setExtendedState(Inicio.CENTER_ALIGNMENT);
+       this.setExtendedState((int) Inicio.CENTER_ALIGNMENT);
        Image ico = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Imagenes/Amip.png"));
     }
 
