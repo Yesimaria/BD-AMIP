@@ -54,38 +54,38 @@ public class InfPersonal extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
-        jTextField17 = new javax.swing.JTextField();
-        jTextField18 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jTextField19 = new javax.swing.JTextField();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jTextField20 = new javax.swing.JTextField();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jTextField21 = new javax.swing.JTextField();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        txtTelefIgle = new javax.swing.JTextField();
+        txtApellidos = new javax.swing.JTextField();
+        txtLugarNac = new javax.swing.JTextField();
+        txtxCedula = new javax.swing.JTextField();
+        txtCorreo = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        txtCelular = new javax.swing.JTextField();
+        txtNivelEduc = new javax.swing.JTextField();
+        txtDirecResidencia = new javax.swing.JTextField();
+        txtEstrato = new javax.swing.JTextField();
+        txtNombres = new javax.swing.JTextField();
+        txtSeguro = new javax.swing.JTextField();
+        txtAntOrganiz = new javax.swing.JTextField();
+        txtNomEmprPensi = new javax.swing.JTextField();
+        txtRecomendacionP = new javax.swing.JTextField();
+        txtTelefRecom = new javax.swing.JTextField();
+        txtDirecIglesia = new javax.swing.JTextField();
+        txtNomResponIgle = new javax.swing.JTextField();
+        rdMasculino = new javax.swing.JRadioButton();
+        rdCasaNo = new javax.swing.JRadioButton();
+        txtTelefOrganiz = new javax.swing.JTextField();
+        rdFemenino = new javax.swing.JRadioButton();
+        rdCasaSi = new javax.swing.JRadioButton();
+        txtCantHijos = new javax.swing.JTextField();
+        rdDepenSi = new javax.swing.JRadioButton();
+        rdDepenNo = new javax.swing.JRadioButton();
+        txtNomHijos = new javax.swing.JTextField();
+        rsPensionadoSi = new javax.swing.JRadioButton();
+        rdPensionadoNo = new javax.swing.JRadioButton();
+        btnGuardar = new javax.swing.JButton();
+        BtnCancelar = new javax.swing.JButton();
+        jlbFondoInfP = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -226,244 +226,244 @@ public class InfPersonal extends javax.swing.JFrame {
         getContentPane().add(jLabel28);
         jLabel28.setBounds(330, 480, 170, 17);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtTelefIgle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtTelefIgleActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(330, 500, 280, 20);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(30, 200, 230, 20);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(30, 250, 230, 20);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(30, 300, 230, 20);
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(30, 350, 230, 20);
-        getContentPane().add(jTextField6);
-        jTextField6.setBounds(30, 400, 230, 20);
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(30, 450, 230, 20);
-        getContentPane().add(jTextField8);
-        jTextField8.setBounds(30, 500, 230, 20);
-        getContentPane().add(jTextField9);
-        jTextField9.setBounds(30, 600, 230, 20);
-        getContentPane().add(jTextField10);
-        jTextField10.setBounds(30, 550, 230, 20);
+        getContentPane().add(txtTelefIgle);
+        txtTelefIgle.setBounds(330, 500, 280, 20);
+        getContentPane().add(txtApellidos);
+        txtApellidos.setBounds(30, 200, 230, 20);
+        getContentPane().add(txtLugarNac);
+        txtLugarNac.setBounds(30, 250, 230, 20);
+        getContentPane().add(txtxCedula);
+        txtxCedula.setBounds(30, 300, 230, 20);
+        getContentPane().add(txtCorreo);
+        txtCorreo.setBounds(30, 350, 230, 20);
+        getContentPane().add(txtTelefono);
+        txtTelefono.setBounds(30, 400, 230, 20);
+        getContentPane().add(txtCelular);
+        txtCelular.setBounds(30, 450, 230, 20);
+        getContentPane().add(txtNivelEduc);
+        txtNivelEduc.setBounds(30, 500, 230, 20);
+        getContentPane().add(txtDirecResidencia);
+        txtDirecResidencia.setBounds(30, 600, 230, 20);
+        getContentPane().add(txtEstrato);
+        txtEstrato.setBounds(30, 550, 230, 20);
 
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        txtNombres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                txtNombresActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField11);
-        jTextField11.setBounds(30, 150, 230, 20);
+        getContentPane().add(txtNombres);
+        txtNombres.setBounds(30, 150, 230, 20);
 
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+        txtSeguro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
+                txtSeguroActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField12);
-        jTextField12.setBounds(330, 150, 280, 20);
+        getContentPane().add(txtSeguro);
+        txtSeguro.setBounds(330, 150, 280, 20);
 
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+        txtAntOrganiz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
+                txtAntOrganizActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField13);
-        jTextField13.setBounds(330, 200, 280, 20);
+        getContentPane().add(txtAntOrganiz);
+        txtAntOrganiz.setBounds(330, 200, 280, 20);
 
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+        txtNomEmprPensi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
+                txtNomEmprPensiActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField14);
-        jTextField14.setBounds(710, 450, 270, 20);
+        getContentPane().add(txtNomEmprPensi);
+        txtNomEmprPensi.setBounds(710, 450, 270, 20);
 
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+        txtRecomendacionP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
+                txtRecomendacionPActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField15);
-        jTextField15.setBounds(330, 300, 280, 20);
+        getContentPane().add(txtRecomendacionP);
+        txtRecomendacionP.setBounds(330, 300, 280, 20);
 
-        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+        txtTelefRecom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField16ActionPerformed(evt);
+                txtTelefRecomActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField16);
-        jTextField16.setBounds(330, 350, 280, 20);
+        getContentPane().add(txtTelefRecom);
+        txtTelefRecom.setBounds(330, 350, 280, 20);
 
-        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+        txtDirecIglesia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField17ActionPerformed(evt);
+                txtDirecIglesiaActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField17);
-        jTextField17.setBounds(330, 400, 280, 20);
+        getContentPane().add(txtDirecIglesia);
+        txtDirecIglesia.setBounds(330, 400, 280, 20);
 
-        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+        txtNomResponIgle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField18ActionPerformed(evt);
+                txtNomResponIgleActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField18);
-        jTextField18.setBounds(330, 450, 280, 20);
+        getContentPane().add(txtNomResponIgle);
+        txtNomResponIgle.setBounds(330, 450, 280, 20);
 
-        jRadioButton1.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton1.setText("Masculino");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        rdMasculino.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdMasculino.setText("Masculino");
+        rdMasculino.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rdMasculinoActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(830, 150, 100, 25);
+        getContentPane().add(rdMasculino);
+        rdMasculino.setBounds(830, 150, 100, 25);
 
-        jRadioButton2.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton2.setText("No");
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(760, 500, 50, 25);
+        rdCasaNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdCasaNo.setText("No");
+        getContentPane().add(rdCasaNo);
+        rdCasaNo.setBounds(760, 500, 50, 25);
 
-        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+        txtTelefOrganiz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField19ActionPerformed(evt);
+                txtTelefOrganizActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField19);
-        jTextField19.setBounds(330, 250, 280, 20);
+        getContentPane().add(txtTelefOrganiz);
+        txtTelefOrganiz.setBounds(330, 250, 280, 20);
 
-        jRadioButton3.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton3.setText("Fememino");
-        getContentPane().add(jRadioButton3);
-        jRadioButton3.setBounds(710, 150, 100, 25);
+        rdFemenino.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdFemenino.setText("Fememino");
+        getContentPane().add(rdFemenino);
+        rdFemenino.setBounds(710, 150, 100, 25);
 
-        jRadioButton4.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton4.setText("Sí");
-        getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(710, 500, 40, 25);
+        rdCasaSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdCasaSi.setText("Sí");
+        getContentPane().add(rdCasaSi);
+        rdCasaSi.setBounds(710, 500, 40, 25);
 
-        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+        txtCantHijos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField20ActionPerformed(evt);
+                txtCantHijosActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField20);
-        jTextField20.setBounds(710, 250, 270, 20);
+        getContentPane().add(txtCantHijos);
+        txtCantHijos.setBounds(710, 250, 100, 20);
 
-        jRadioButton5.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton5.setText("Sí");
-        getContentPane().add(jRadioButton5);
-        jRadioButton5.setBounds(710, 300, 40, 25);
+        rdDepenSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdDepenSi.setText("Sí");
+        getContentPane().add(rdDepenSi);
+        rdDepenSi.setBounds(710, 300, 40, 25);
 
-        jRadioButton6.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton6.setText("No");
-        getContentPane().add(jRadioButton6);
-        jRadioButton6.setBounds(760, 300, 50, 25);
+        rdDepenNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdDepenNo.setText("No");
+        getContentPane().add(rdDepenNo);
+        rdDepenNo.setBounds(760, 300, 50, 25);
 
-        jTextField21.addActionListener(new java.awt.event.ActionListener() {
+        txtNomHijos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField21ActionPerformed(evt);
+                txtNomHijosActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField21);
-        jTextField21.setBounds(710, 350, 270, 20);
+        getContentPane().add(txtNomHijos);
+        txtNomHijos.setBounds(710, 350, 270, 20);
 
-        jRadioButton7.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton7.setText("Sí");
-        getContentPane().add(jRadioButton7);
-        jRadioButton7.setBounds(710, 400, 40, 25);
+        rsPensionadoSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rsPensionadoSi.setText("Sí");
+        getContentPane().add(rsPensionadoSi);
+        rsPensionadoSi.setBounds(710, 400, 40, 25);
 
-        jRadioButton8.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton8.setText("No");
-        getContentPane().add(jRadioButton8);
-        jRadioButton8.setBounds(760, 400, 50, 25);
+        rdPensionadoNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdPensionadoNo.setText("No");
+        getContentPane().add(rdPensionadoNo);
+        rdPensionadoNo.setBounds(760, 400, 50, 25);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setIconTextGap(-3);
-        jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton1);
-        jButton1.setBounds(420, 640, 150, 70);
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
+        btnGuardar.setBorder(null);
+        btnGuardar.setBorderPainted(false);
+        btnGuardar.setContentAreaFilled(false);
+        btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGuardar.setIconTextGap(-3);
+        btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnGuardar);
+        btnGuardar.setBounds(420, 640, 150, 70);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(580, 640, 150, 70);
+        BtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
+        BtnCancelar.setBorder(null);
+        BtnCancelar.setBorderPainted(false);
+        BtnCancelar.setContentAreaFilled(false);
+        BtnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BtnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        BtnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(BtnCancelar);
+        BtnCancelar.setBounds(580, 640, 150, 70);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo12.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 1030, 710);
+        jlbFondoInfP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo12.png"))); // NOI18N
+        getContentPane().add(jlbFondoInfP);
+        jlbFondoInfP.setBounds(0, 0, 1030, 710);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtTelefIgleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefIgleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtTelefIgleActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void txtNombresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_txtNombresActionPerformed
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void txtSeguroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSeguroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_txtSeguroActionPerformed
 
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    private void txtAntOrganizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAntOrganizActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
+    }//GEN-LAST:event_txtAntOrganizActionPerformed
 
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    private void txtNomEmprPensiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomEmprPensiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
+    }//GEN-LAST:event_txtNomEmprPensiActionPerformed
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void txtRecomendacionPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRecomendacionPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }//GEN-LAST:event_txtRecomendacionPActionPerformed
 
-    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    private void txtTelefRecomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefRecomActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField16ActionPerformed
+    }//GEN-LAST:event_txtTelefRecomActionPerformed
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    private void txtDirecIglesiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDirecIglesiaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
+    }//GEN-LAST:event_txtDirecIglesiaActionPerformed
 
-    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+    private void txtNomResponIgleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomResponIgleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField18ActionPerformed
+    }//GEN-LAST:event_txtNomResponIgleActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void rdMasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdMasculinoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_rdMasculinoActionPerformed
 
-    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+    private void txtTelefOrganizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefOrganizActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField19ActionPerformed
+    }//GEN-LAST:event_txtTelefOrganizActionPerformed
 
-    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+    private void txtCantHijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantHijosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField20ActionPerformed
+    }//GEN-LAST:event_txtCantHijosActionPerformed
 
-    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
+    private void txtNomHijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomHijosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField21ActionPerformed
+    }//GEN-LAST:event_txtNomHijosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -501,8 +501,8 @@ public class InfPersonal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton BtnCancelar;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -514,7 +514,6 @@ public class InfPersonal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -531,34 +530,35 @@ public class InfPersonal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel jlbFondoInfP;
+    private javax.swing.JRadioButton rdCasaNo;
+    private javax.swing.JRadioButton rdCasaSi;
+    private javax.swing.JRadioButton rdDepenNo;
+    private javax.swing.JRadioButton rdDepenSi;
+    private javax.swing.JRadioButton rdFemenino;
+    private javax.swing.JRadioButton rdMasculino;
+    private javax.swing.JRadioButton rdPensionadoNo;
+    private javax.swing.JRadioButton rsPensionadoSi;
+    private javax.swing.JTextField txtAntOrganiz;
+    private javax.swing.JTextField txtApellidos;
+    private javax.swing.JTextField txtCantHijos;
+    private javax.swing.JTextField txtCelular;
+    private javax.swing.JTextField txtCorreo;
+    private javax.swing.JTextField txtDirecIglesia;
+    private javax.swing.JTextField txtDirecResidencia;
+    private javax.swing.JTextField txtEstrato;
+    private javax.swing.JTextField txtLugarNac;
+    private javax.swing.JTextField txtNivelEduc;
+    private javax.swing.JTextField txtNomEmprPensi;
+    private javax.swing.JTextField txtNomHijos;
+    private javax.swing.JTextField txtNomResponIgle;
+    private javax.swing.JTextField txtNombres;
+    private javax.swing.JTextField txtRecomendacionP;
+    private javax.swing.JTextField txtSeguro;
+    private javax.swing.JTextField txtTelefIgle;
+    private javax.swing.JTextField txtTelefOrganiz;
+    private javax.swing.JTextField txtTelefRecom;
+    private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField txtxCedula;
     // End of variables declaration//GEN-END:variables
 }

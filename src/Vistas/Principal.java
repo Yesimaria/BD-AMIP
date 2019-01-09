@@ -31,13 +31,13 @@ public class Principal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        txtPastor = new javax.swing.JTextField();
+        txtNroPas = new javax.swing.JTextField();
+        txtFechaIng = new javax.swing.JTextField();
+        btnCancelar = new javax.swing.JButton();
+        btnAceptar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jlbFondoIngreso = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,55 +68,55 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(90, 160, 120, 17);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtPastor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtPastorActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(220, 100, 140, 20);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(220, 130, 140, 20);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(220, 160, 140, 20);
+        getContentPane().add(txtPastor);
+        txtPastor.setBounds(220, 100, 140, 20);
+        getContentPane().add(txtNroPas);
+        txtNroPas.setBounds(220, 130, 140, 20);
+        getContentPane().add(txtFechaIng);
+        txtFechaIng.setBounds(220, 160, 140, 20);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Btcanc.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setIconTextGap(-3);
-        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(240, 240, 120, 53);
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Btcanc.png"))); // NOI18N
+        btnCancelar.setBorder(null);
+        btnCancelar.setBorderPainted(false);
+        btnCancelar.setContentAreaFilled(false);
+        btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCancelar.setIconTextGap(-3);
+        btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnCancelar);
+        btnCancelar.setBounds(240, 240, 120, 53);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtAcep.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton3.setIconTextGap(-3);
-        jButton3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton3);
-        jButton3.setBounds(90, 240, 130, 53);
+        btnAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtAcep.png"))); // NOI18N
+        btnAceptar.setBorder(null);
+        btnAceptar.setBorderPainted(false);
+        btnAceptar.setContentAreaFilled(false);
+        btnAceptar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAceptar.setIconTextGap(-3);
+        btnAceptar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnAceptar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnAceptar);
+        btnAceptar.setBounds(90, 240, 130, 53);
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel5.setText("Ingreso");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(150, 10, 170, 52);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 450, 310);
+        jlbFondoIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.jpg"))); // NOI18N
+        getContentPane().add(jlbFondoIngreso);
+        jlbFondoIngreso.setBounds(0, 0, 450, 310);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtPastorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPastorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtPastorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,16 +154,16 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnAceptar;
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel jlbFondoIngreso;
+    private javax.swing.JTextField txtFechaIng;
+    private javax.swing.JTextField txtNroPas;
+    private javax.swing.JTextField txtPastor;
     // End of variables declaration//GEN-END:variables
 }
