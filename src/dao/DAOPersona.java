@@ -4,11 +4,55 @@
  * and open the template in the editor.
  */
 package dao;
-
+import modelo.MPersona;
+import hibernate.SesionFactory;
+import java.util.List;
+import org.hibernate.Query;
 /**
  *
  * @author maike
  */
 public class DAOPersona {
+
+    public DAOPersona() {
+    }
     
+    
+    public boolean savePersona(MPersona persona){
+      SesionFactory sesionFactory = new SesionFactory();
+        try {
+           sesionFactory.openTransaction();
+           sesionFactory.save(persona);
+           sesionFactory.closeTransaction();
+           sesionFactory.closeSession();
+           return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+      public boolean updatePersona(MPersona persona){
+          SesionFactory sesionFactory = new SesionFactory();
+        try {
+           sesionFactory.openTransaction();
+           sesionFactory.save(persona);
+           sesionFactory.closeTransaction();
+           sesionFactory.closeSession();
+           return true;
+        } catch (Exception e) {
+            return false;
+        }
+     }
+      
+    public MPersona getPersonaCodigo(String codigo){
+     SesionFactory sesionFactory = new SesionFactory();
+     return (MPersona) sesionFactory.queryUniq("select p from MPersona p where p.codigo="+codigo);
+    }
+    
+    public List<Object[]> listPersonasAtributo(String atributo, String valor){
+       SesionFactory sesionFactory = new SesionFactory();
+       Query query;
+       query = sesionFactory.query("select p from MPersona p where p."+ atributo +"="+valor);
+       return query.list();
+   }
 }

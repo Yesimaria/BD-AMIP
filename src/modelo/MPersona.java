@@ -26,6 +26,8 @@ public class MPersona implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int id;
+  private String codigo;
+  private String fecha_ingreso;
   private String nombre;
   private String apellido;
   private String cedula;
@@ -33,7 +35,7 @@ public class MPersona implements Serializable {
   private String correo;
   private String fecha_nacimiento;
   private String lugar_nacimiento;
-   private int edo_civil;
+  private int edo_civil;
   private int cant_hijos;
   private int sexo; 
   @OneToOne(cascade = CascadeType.ALL)
@@ -48,14 +50,24 @@ public class MPersona implements Serializable {
   @OneToOne(cascade = CascadeType.ALL)
   @PrimaryKeyJoinColumn
   private MIglesia iglesia;
- 
-
+  @OneToOne(cascade = CascadeType.ALL)
+  @PrimaryKeyJoinColumn
+  private MInfoLaboral infoLaboral;
+  @OneToOne(cascade = CascadeType.ALL)
+  @PrimaryKeyJoinColumn
+  private MInfoMinisterio infoMinisterio;
+  @OneToOne(cascade = CascadeType.ALL)
+  @PrimaryKeyJoinColumn
+  private MInfoEstudios infoEstudios;
+  
     public MPersona() {
         
     }
 
-    public MPersona(String nombre, String apellido, String cedula, String telefono, String correo, String fecha_nacimiento, String lugar_nacimiento, int edo_civil, int cant_hijos, int sexo, MMatrimonio matrimonio, MInfoEconomica infoEconomica, MOrganizacionPrev organizacionPrev, MIglesia iglesia) {
-        
+    public MPersona(int id, String codigo, String fecha_ingreso, String nombre, String apellido, String cedula, String telefono, String correo, String fecha_nacimiento, String lugar_nacimiento, int edo_civil, int cant_hijos, int sexo, MMatrimonio matrimonio, MInfoEconomica infoEconomica, MOrganizacionPrev organizacionPrev, MIglesia iglesia, MInfoLaboral infoLaboral, MInfoMinisterio infoMinisterio, MInfoEstudios infoEstudios) {
+        this.id = id;
+        this.codigo = codigo;
+        this.fecha_ingreso = fecha_ingreso;
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
@@ -70,7 +82,11 @@ public class MPersona implements Serializable {
         this.infoEconomica = infoEconomica;
         this.organizacionPrev = organizacionPrev;
         this.iglesia = iglesia;
+        this.infoLaboral = infoLaboral;
+        this.infoMinisterio = infoMinisterio;
+        this.infoEstudios = infoEstudios;
     }
+
 
     public int getId() {
         return id;
@@ -78,6 +94,46 @@ public class MPersona implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getFecha_ingreso() {
+        return fecha_ingreso;
+    }
+
+    public void setFecha_ingreso(String fecha_ingreso) {
+        this.fecha_ingreso = fecha_ingreso;
+    }
+
+    public MInfoLaboral getInfoLaboral() {
+        return infoLaboral;
+    }
+
+    public void setInfoLaboral(MInfoLaboral infoLaboral) {
+        this.infoLaboral = infoLaboral;
+    }
+
+    public MInfoMinisterio getInfoMinisterio() {
+        return infoMinisterio;
+    }
+
+    public void setInfoMinisterio(MInfoMinisterio infoMinisterio) {
+        this.infoMinisterio = infoMinisterio;
+    }
+
+    public MInfoEstudios getInfoEstudios() {
+        return infoEstudios;
+    }
+
+    public void setInfoEstudios(MInfoEstudios infoEstudios) {
+        this.infoEstudios = infoEstudios;
     }
 
     public String getNombre() {
