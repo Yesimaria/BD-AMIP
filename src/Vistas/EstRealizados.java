@@ -40,21 +40,22 @@ public class EstRealizados extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jTextField1 = new javax.swing.JTextField();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        rdPrimariaSi = new javax.swing.JRadioButton();
+        rdPrimariaNo = new javax.swing.JRadioButton();
+        rdSecundariaSi = new javax.swing.JRadioButton();
+        rdSecundariaNo = new javax.swing.JRadioButton();
+        rdUniversidadSi = new javax.swing.JRadioButton();
+        rdUniversidadNo = new javax.swing.JRadioButton();
+        rdTeologicoSi = new javax.swing.JRadioButton();
+        rdTeologicoNo = new javax.swing.JRadioButton();
+        txtUltimoEstud = new javax.swing.JTextField();
+        rdSeminarioSi = new javax.swing.JRadioButton();
+        rdSeminarioNo = new javax.swing.JRadioButton();
+        txtDirecSeminario = new javax.swing.JTextField();
+        txtxIdiomas = new javax.swing.JTextField();
+        txtInstSemimario = new javax.swing.JTextField();
+        FechaEstu = new com.toedter.calendar.JDateChooser();
+        jlbFondoEstRea = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -136,139 +137,144 @@ public class EstRealizados extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(430, 560, 160, 70);
 
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton1.setText("Sí");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        rdPrimariaSi.setBackground(new java.awt.Color(255, 255, 255));
+        rdPrimariaSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdPrimariaSi.setText("Sí");
+        rdPrimariaSi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                rdPrimariaSiActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(70, 180, 40, 25);
+        getContentPane().add(rdPrimariaSi);
+        rdPrimariaSi.setBounds(70, 180, 40, 25);
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton2.setText("No");
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(120, 180, 50, 25);
+        rdPrimariaNo.setBackground(new java.awt.Color(255, 255, 255));
+        rdPrimariaNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdPrimariaNo.setText("No");
+        getContentPane().add(rdPrimariaNo);
+        rdPrimariaNo.setBounds(120, 180, 50, 25);
 
-        jRadioButton3.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton3.setText("Sí");
-        getContentPane().add(jRadioButton3);
-        jRadioButton3.setBounds(70, 250, 40, 25);
+        rdSecundariaSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdSecundariaSi.setText("Sí");
+        getContentPane().add(rdSecundariaSi);
+        rdSecundariaSi.setBounds(70, 250, 40, 25);
 
-        jRadioButton4.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton4.setText("No");
-        getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(120, 250, 50, 25);
+        rdSecundariaNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdSecundariaNo.setText("No");
+        getContentPane().add(rdSecundariaNo);
+        rdSecundariaNo.setBounds(120, 250, 50, 25);
 
-        jRadioButton5.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton5.setText("Sí");
-        getContentPane().add(jRadioButton5);
-        jRadioButton5.setBounds(70, 320, 40, 25);
+        rdUniversidadSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdUniversidadSi.setText("Sí");
+        getContentPane().add(rdUniversidadSi);
+        rdUniversidadSi.setBounds(70, 320, 40, 25);
 
-        jRadioButton6.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton6.setText("No");
-        getContentPane().add(jRadioButton6);
-        jRadioButton6.setBounds(120, 320, 50, 25);
+        rdUniversidadNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdUniversidadNo.setText("No");
+        getContentPane().add(rdUniversidadNo);
+        rdUniversidadNo.setBounds(120, 320, 50, 25);
 
-        jRadioButton7.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton7.setText("Sí");
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+        rdTeologicoSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdTeologicoSi.setText("Sí");
+        rdTeologicoSi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
+                rdTeologicoSiActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton7);
-        jRadioButton7.setBounds(70, 470, 40, 25);
+        getContentPane().add(rdTeologicoSi);
+        rdTeologicoSi.setBounds(70, 470, 40, 25);
 
-        jRadioButton8.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton8.setText("No");
-        getContentPane().add(jRadioButton8);
-        jRadioButton8.setBounds(120, 470, 50, 25);
+        rdTeologicoNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdTeologicoNo.setText("No");
+        getContentPane().add(rdTeologicoNo);
+        rdTeologicoNo.setBounds(120, 470, 50, 25);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtUltimoEstud.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtUltimoEstudActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(40, 390, 300, 30);
+        getContentPane().add(txtUltimoEstud);
+        txtUltimoEstud.setBounds(40, 390, 300, 30);
 
-        jRadioButton9.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton9.setText("Sí");
-        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+        rdSeminarioSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdSeminarioSi.setText("Sí");
+        rdSeminarioSi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton9ActionPerformed(evt);
+                rdSeminarioSiActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton9);
-        jRadioButton9.setBounds(470, 250, 40, 25);
+        getContentPane().add(rdSeminarioSi);
+        rdSeminarioSi.setBounds(470, 250, 40, 25);
 
-        jRadioButton10.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jRadioButton10.setText("No");
-        getContentPane().add(jRadioButton10);
-        jRadioButton10.setBounds(520, 250, 50, 25);
+        rdSeminarioNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdSeminarioNo.setText("No");
+        getContentPane().add(rdSeminarioNo);
+        rdSeminarioNo.setBounds(520, 250, 50, 25);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtDirecSeminario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtDirecSeminarioActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(440, 390, 350, 30);
+        getContentPane().add(txtDirecSeminario);
+        txtDirecSeminario.setBounds(440, 390, 350, 30);
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        txtxIdiomas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                txtxIdiomasActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(440, 470, 350, 30);
+        getContentPane().add(txtxIdiomas);
+        txtxIdiomas.setBounds(440, 470, 350, 30);
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        txtInstSemimario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                txtInstSemimarioActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(440, 320, 350, 30);
+        getContentPane().add(txtInstSemimario);
+        txtInstSemimario.setBounds(440, 320, 350, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo14.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 880, 640);
+        FechaEstu.setDateFormatString("yyyy/MM/dd");
+        FechaEstu.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        getContentPane().add(FechaEstu);
+        FechaEstu.setBounds(440, 180, 240, 30);
+
+        jlbFondoEstRea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo14.png"))); // NOI18N
+        getContentPane().add(jlbFondoEstRea);
+        jlbFondoEstRea.setBounds(0, 0, 880, 640);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void rdPrimariaSiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdPrimariaSiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_rdPrimariaSiActionPerformed
 
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+    private void rdTeologicoSiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdTeologicoSiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
+    }//GEN-LAST:event_rdTeologicoSiActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtUltimoEstudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUltimoEstudActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtUltimoEstudActionPerformed
 
-    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+    private void rdSeminarioSiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdSeminarioSiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton9ActionPerformed
+    }//GEN-LAST:event_rdSeminarioSiActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtDirecSeminarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDirecSeminarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtDirecSeminarioActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void txtxIdiomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtxIdiomasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_txtxIdiomasActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void txtInstSemimarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInstSemimarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_txtInstSemimarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -306,9 +312,9 @@ public class EstRealizados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser FechaEstu;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -320,19 +326,20 @@ public class EstRealizados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JLabel jlbFondoEstRea;
+    private javax.swing.JRadioButton rdPrimariaNo;
+    private javax.swing.JRadioButton rdPrimariaSi;
+    private javax.swing.JRadioButton rdSecundariaNo;
+    private javax.swing.JRadioButton rdSecundariaSi;
+    private javax.swing.JRadioButton rdSeminarioNo;
+    private javax.swing.JRadioButton rdSeminarioSi;
+    private javax.swing.JRadioButton rdTeologicoNo;
+    private javax.swing.JRadioButton rdTeologicoSi;
+    private javax.swing.JRadioButton rdUniversidadNo;
+    private javax.swing.JRadioButton rdUniversidadSi;
+    private javax.swing.JTextField txtDirecSeminario;
+    private javax.swing.JTextField txtInstSemimario;
+    private javax.swing.JTextField txtUltimoEstud;
+    private javax.swing.JTextField txtxIdiomas;
     // End of variables declaration//GEN-END:variables
 }
