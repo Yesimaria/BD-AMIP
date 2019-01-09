@@ -68,7 +68,7 @@ public class DocAnexos extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel6.setText("Referencias personales:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 350, 190, 18);
+        jLabel6.setBounds(260, 70, 190, 18);
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel7.setText("Referencias familiares:");
