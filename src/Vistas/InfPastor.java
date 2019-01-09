@@ -42,7 +42,6 @@ public class InfPastor extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
@@ -55,6 +54,7 @@ public class InfPastor extends javax.swing.JFrame {
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
+        datenaci = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -136,8 +136,6 @@ public class InfPastor extends javax.swing.JFrame {
         jButton2.setBounds(180, 400, 150, 60);
         getContentPane().add(jTextField1);
         jTextField1.setBounds(360, 280, 200, 20);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(100, 220, 200, 20);
         getContentPane().add(jTextField3);
         jTextField3.setBounds(100, 280, 200, 20);
         getContentPane().add(jTextField4);
@@ -180,6 +178,11 @@ public class InfPastor extends javax.swing.JFrame {
         jRadioButton6.setText("Masculino");
         getContentPane().add(jRadioButton6);
         jRadioButton6.setBounds(470, 220, 90, 20);
+
+        datenaci.setDateFormatString("yyyy/MM/dd");
+        datenaci.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        getContentPane().add(datenaci);
+        datenaci.setBounds(100, 220, 200, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo13.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -225,6 +228,7 @@ public class InfPastor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private com.toedter.calendar.JDateChooser datenaci;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -246,7 +250,6 @@ public class InfPastor extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;

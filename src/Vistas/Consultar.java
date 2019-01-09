@@ -16,10 +16,6 @@ public class Consultar extends javax.swing.JFrame {
      */
     public Consultar() {
         initComponents();
-        
-        this.setLocationRelativeTo(null);
-        
-        rsscalelabel.RSScaleLabel.setScaleLabel(jlbFondoCons, "src/Imagenes/fondo13.png");
     }
 
     /**

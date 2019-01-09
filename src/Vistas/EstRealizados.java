@@ -54,6 +54,7 @@ public class EstRealizados extends javax.swing.JFrame {
         txtDirecSeminario = new javax.swing.JTextField();
         txtxIdiomas = new javax.swing.JTextField();
         txtInstSemimario = new javax.swing.JTextField();
+        FechaEstu = new com.toedter.calendar.JDateChooser();
         jlbFondoEstRea = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -235,6 +236,11 @@ public class EstRealizados extends javax.swing.JFrame {
         getContentPane().add(txtInstSemimario);
         txtInstSemimario.setBounds(440, 320, 350, 30);
 
+        FechaEstu.setDateFormatString("yyyy/MM/dd");
+        FechaEstu.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        getContentPane().add(FechaEstu);
+        FechaEstu.setBounds(440, 180, 240, 30);
+
         jlbFondoEstRea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo14.png"))); // NOI18N
         getContentPane().add(jlbFondoEstRea);
         jlbFondoEstRea.setBounds(0, 0, 880, 640);
@@ -306,6 +312,7 @@ public class EstRealizados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser FechaEstu;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel10;

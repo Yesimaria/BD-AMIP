@@ -61,7 +61,7 @@ public class InfOrganizacionPrev extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel5.setText("Teléfono de la persona que lo recomienda:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(110, 310, 330, 21);
+        jLabel5.setBounds(110, 300, 330, 21);
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel6.setText("Nombre de la organización anterior perteneciente:");
@@ -92,7 +92,7 @@ public class InfOrganizacionPrev extends javax.swing.JFrame {
         getContentPane().add(jTextField2);
         jTextField2.setBounds(110, 260, 400, 30);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(110, 340, 400, 30);
+        jTextField3.setBounds(110, 330, 400, 30);
         getContentPane().add(jTextField4);
         jTextField4.setBounds(110, 120, 400, 30);
 

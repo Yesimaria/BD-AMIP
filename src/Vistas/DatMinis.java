@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Vistas;
-
 /**
  *
  * @author Usuario
@@ -49,6 +48,9 @@ public class DatMinis extends javax.swing.JFrame {
         txtEdadMinis = new javax.swing.JTextField();
         rdBautizoSi = new javax.swing.JRadioButton();
         rdBautizoNo = new javax.swing.JRadioButton();
+        FechaBaut = new com.toedter.calendar.JDateChooser();
+        FechaCon = new com.toedter.calendar.JDateChooser();
+        jPanel1 = new javax.swing.JPanel();
         jlbFondoDatMin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -153,9 +155,23 @@ public class DatMinis extends javax.swing.JFrame {
         getContentPane().add(rdBautizoNo);
         rdBautizoNo.setBounds(130, 300, 50, 27);
 
+        FechaBaut.setDateFormatString("yyyy/MM/dd");
+        FechaBaut.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        getContentPane().add(FechaBaut);
+        FechaBaut.setBounds(20, 210, 240, 30);
+
+        FechaCon.setDateFormatString("yyyy/MM/dd");
+        FechaCon.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        getContentPane().add(FechaCon);
+        FechaCon.setBounds(20, 140, 240, 30);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jlbFondoDatMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo14.png"))); // NOI18N
-        getContentPane().add(jlbFondoDatMin);
-        jlbFondoDatMin.setBounds(1, -5, 880, 640);
+        jPanel1.add(jlbFondoDatMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, -10, 100, 100);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -196,6 +212,8 @@ public class DatMinis extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.toedter.calendar.JDateChooser FechaBaut;
+    private com.toedter.calendar.JDateChooser FechaCon;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel10;
@@ -209,6 +227,7 @@ public class DatMinis extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jlbFondoDatMin;
     private javax.swing.JRadioButton rdBautizoNo;
     private javax.swing.JRadioButton rdBautizoSi;
