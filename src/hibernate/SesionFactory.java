@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package hibernate;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -42,9 +43,32 @@ public class SesionFactory {
         this.session.save(object);
         this.session.getTransaction().commit();
     }
+      public void saveOrUpdate(Object object){
+        this.session.saveOrUpdate(object);
+        this.session.getTransaction().commit();
+    }
+      
+     public void delete(Object object){
+        this.session.delete(object);
+        this.session.getTransaction().commit();
+    }
     
+    public Query query (String sql){
+        Query query;
+        query = this.session.createSQLQuery(sql);
+        return query;
+        
+    }
+    
+    public Object queryUniq(String sql){
+        Object query;
+        query = this.session.createSQLQuery(sql).uniqueResult();
+        return query;
+    }
+   
      public void closeSession(){
         this.sessionFactory.close();
          
      }
+     
 }
