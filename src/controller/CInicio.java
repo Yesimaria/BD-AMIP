@@ -41,6 +41,7 @@ public class CInicio implements ActionListener {
             
         }
         if(e.getActionCommand().equalsIgnoreCase("consulta")){
+              System.out.println("click");
             this.vprincipal = new Principal();
             
         }
