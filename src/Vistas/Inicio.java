@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Vistas;
 
 import java.awt.Image;
@@ -39,67 +34,65 @@ public class Inicio extends javax.swing.JFrame implements IVista {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnIncluir = new javax.swing.JButton();
+        btnConsultar = new javax.swing.JButton();
+        jlbFondoInicio = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtInluir.png"))); // NOI18N
-        jButton1.setActionCommand("incluir");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setIconTextGap(-3);
-        jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnIncluir.setBackground(new java.awt.Color(255, 255, 255));
+        btnIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtInluir.png"))); // NOI18N
+        btnIncluir.setActionCommand("incluir");
+        btnIncluir.setBorder(null);
+        btnIncluir.setBorderPainted(false);
+        btnIncluir.setContentAreaFilled(false);
+        btnIncluir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnIncluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnIncluir.setIconTextGap(-3);
+        btnIncluir.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnIncluir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnIncluirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(50, 130, 180, 80);
+        getContentPane().add(btnIncluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 180, 80));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtConsultar.png"))); // NOI18N
-        jButton2.setActionCommand("consultar");
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setIconTextGap(-3);
-        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtConsultar.png"))); // NOI18N
+        btnConsultar.setActionCommand("consultar");
+        btnConsultar.setBorder(null);
+        btnConsultar.setBorderPainted(false);
+        btnConsultar.setContentAreaFilled(false);
+        btnConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnConsultar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnConsultar.setIconTextGap(-3);
+        btnConsultar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnConsultar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnConsultarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(50, 220, 180, 80);
+        getContentPane().add(btnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 180, 80));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo11.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 660, 420);
+        jlbFondoInicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlbFondoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo11.png"))); // NOI18N
+        jlbFondoInicio.setAutoscrolls(true);
+        jlbFondoInicio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jlbFondoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 657, 479));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    }                                            
+    private void  btnIncluirActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    }    
     /**
      * @param args the command line arguments
      */
@@ -136,39 +129,41 @@ public class Inicio extends javax.swing.JFrame implements IVista {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnConsultar;
+    private javax.swing.JButton btnIncluir;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jlbFondoInicio;
     // End of variables declaration//GEN-END:variables
 
     private void setLocalitationRelativeTo(Inicio aThis) {
+    
+    }
+
+    public JButton getBtnConsultar() {
+        return btnConsultar;
+    }
+
+    public void setBtnConsultar(JButton btnConsultar) {
+        this.btnConsultar = btnConsultar;
+    }
+
+    public JButton getBtnIncluir() {
+        return btnIncluir;
+    }
+
+    public void setBtnIncluir(JButton btnIncluir) {
+        this.btnIncluir = btnIncluir;
+    }
+
+    public JLabel getJlbFondoInicio() {
+        return jlbFondoInicio;
+    }
+
+    public void setJlbFondoInicio(JLabel jlbFondoInicio) {
+        this.jlbFondoInicio = jlbFondoInicio;
+    }
       
-    }
-
-    public JButton getjButton1() {
-        return jButton1;
-    }
-
-    public void setjButton1(JButton jButton1) {
-        this.jButton1 = jButton1;
-    }
-
-    public JButton getjButton2() {
-        return jButton2;
-    }
-
-    public void setjButton2(JButton jButton2) {
-        this.jButton2 = jButton2;
-    }
-
-    public JLabel getjLabel1() {
-        return jLabel1;
-    }
-
-    public void setjLabel1(JLabel jLabel1) {
-        this.jLabel1 = jLabel1;
-    }
+ 
 
     public JLabel getjLabel2() {
         return jLabel2;
@@ -180,8 +175,8 @@ public class Inicio extends javax.swing.JFrame implements IVista {
 
     @Override
     public void aggActionListener(ActionListener acL) {
-    jButton1.addActionListener(acL);
-    jButton2.addActionListener(acL);
+    btnConsultar.addActionListener(acL);
+    btnIncluir.addActionListener(acL);
     }
 
     @Override

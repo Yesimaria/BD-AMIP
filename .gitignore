@@ -1,3 +1,5 @@
 /dist/
 /build/
 /nbproject/
+/nbproject/*.properties
+*.properties
