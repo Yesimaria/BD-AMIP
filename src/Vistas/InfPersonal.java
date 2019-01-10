@@ -51,7 +51,6 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         jLabel2 = new javax.swing.JLabel();
         txtcodigo = new javax.swing.JTextField();
         txtApellidos = new javax.swing.JTextField();
-        txtLugarNac = new javax.swing.JTextField();
         txtxCedula = new javax.swing.JTextField();
         txtCorreo = new javax.swing.JTextField();
         txtTelefono = new javax.swing.JTextField();
@@ -63,8 +62,7 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         btnGuardar = new javax.swing.JButton();
         BtnCancelar = new javax.swing.JButton();
         txtFechaNac = new javax.swing.JTextField();
-        txtLugarNac1 = new javax.swing.JTextField();
-        txtLugarNac2 = new javax.swing.JTextField();
+        txtLugarNac = new javax.swing.JTextField();
         rdFemenino = new javax.swing.JRadioButton();
         rdMasculino = new javax.swing.JRadioButton();
         jLabel12 = new javax.swing.JLabel();
@@ -73,69 +71,70 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         jScrollPane2 = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Información personal");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel1.setText("Información personal");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 550, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 550, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel3.setText("Nombres:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel4.setText("Apellidos:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, 20));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, 20));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel5.setText("Fecha de nacimiento:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 150, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 150, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel6.setText("Lugar de nacimiento:");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 150, 20));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 150, 20));
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel7.setText("Cédula o pasaporte:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 150, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 150, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel8.setText("Estado Civil:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 120, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, 120, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel9.setText("Correo electrónico:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel10.setText("Fecha de ingreso:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 170, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 170, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel11.setText("Cantidad de hijos:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 140, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 140, -1));
 
         jLabel21.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel21.setText("Teléfono fijo:");
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 100, 14));
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 100, 14));
 
-        jLabel2.setText("Código");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 60, 20));
-        getContentPane().add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 230, 20));
-        getContentPane().add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 230, -1));
-        getContentPane().add(txtLugarNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, -1));
-        getContentPane().add(txtxCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 230, -1));
-        getContentPane().add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 230, -1));
-        getContentPane().add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 230, -1));
-        getContentPane().add(txtFechaIngre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 230, -1));
+        jLabel2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel2.setText("Código:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 60, 20));
+        getContentPane().add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 230, 20));
+        getContentPane().add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 230, -1));
+        getContentPane().add(txtxCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 230, -1));
+        getContentPane().add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 230, -1));
+        getContentPane().add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 230, -1));
+        getContentPane().add(txtFechaIngre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 230, -1));
 
         txtNombres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombresActionPerformed(evt);
             }
         });
-        getContentPane().add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 230, -1));
+        getContentPane().add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 230, -1));
 
         rdSoltero.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdSoltero.setText("Soltero");
@@ -144,18 +143,18 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
                 rdSolteroActionPerformed(evt);
             }
         });
-        getContentPane().add(rdSoltero, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 100, -1));
+        getContentPane().add(rdSoltero, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 80, 20));
 
         rdCasado.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdCasado.setText("Casado");
-        getContentPane().add(rdCasado, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 100, -1));
+        getContentPane().add(rdCasado, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 80, 20));
 
         txtCantHijos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCantHijosActionPerformed(evt);
             }
         });
-        getContentPane().add(txtCantHijos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 100, -1));
+        getContentPane().add(txtCantHijos, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, 100, -1));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
         btnGuardar.setActionCommand("guardar");
@@ -166,7 +165,7 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         btnGuardar.setIconTextGap(-3);
         btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 530, 150, 70));
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 150, 70));
 
         BtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
         BtnCancelar.setActionCommand("cancelar");
@@ -176,19 +175,18 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         BtnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         BtnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         BtnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(BtnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 530, 150, 70));
+        getContentPane().add(BtnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, 150, 70));
 
         txtFechaNac.setEditable(false);
         txtFechaNac.setBackground(new java.awt.Color(255, 255, 255));
         txtFechaNac.setToolTipText("");
         txtFechaNac.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(txtFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 220, -1));
-        getContentPane().add(txtLugarNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, -1));
-        getContentPane().add(txtLugarNac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, -1));
+        getContentPane().add(txtFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 220, -1));
+        getContentPane().add(txtLugarNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 230, -1));
 
         rdFemenino.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdFemenino.setText("Fememino");
-        getContentPane().add(rdFemenino, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 100, -1));
+        getContentPane().add(rdFemenino, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 100, 20));
 
         rdMasculino.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdMasculino.setText("Masculino");
@@ -197,14 +195,14 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
                 rdMasculinoActionPerformed(evt);
             }
         });
-        getContentPane().add(rdMasculino, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 100, -1));
+        getContentPane().add(rdMasculino, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 100, 20));
 
         jLabel12.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel12.setText("Sexo:");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 50, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 50, -1));
 
-        jlbFondoInfP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo12.png"))); // NOI18N
-        getContentPane().add(jlbFondoInfP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1030, -1));
+        jlbFondoInfP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo13.png"))); // NOI18N
+        getContentPane().add(jlbFondoInfP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 460));
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, -1, -1));
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 220, -1));
 
@@ -291,8 +289,6 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
     private javax.swing.JTextField txtFechaIngre;
     private javax.swing.JTextField txtFechaNac;
     private javax.swing.JTextField txtLugarNac;
-    private javax.swing.JTextField txtLugarNac1;
-    private javax.swing.JTextField txtLugarNac2;
     private javax.swing.JTextField txtNombres;
     private javax.swing.JTextField txtTelefono;
     private javax.swing.JTextField txtcodigo;
@@ -513,20 +509,12 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         this.txtLugarNac = txtLugarNac;
     }
 
-    public JTextField getTxtLugarNac1() {
-        return txtLugarNac1;
-    }
-
-    public void setTxtLugarNac1(JTextField txtLugarNac1) {
-        this.txtLugarNac1 = txtLugarNac1;
-    }
-
     public JTextField getTxtLugarNac2() {
-        return txtLugarNac2;
+        return txtLugarNac;
     }
 
     public void setTxtLugarNac2(JTextField txtLugarNac2) {
-        this.txtLugarNac2 = txtLugarNac2;
+        this.txtLugarNac = txtLugarNac2;
     }
 
     public JTextField getTxtNombres() {

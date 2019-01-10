@@ -2,6 +2,7 @@ package Vistas;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseListener;
@@ -41,6 +42,7 @@ public class Inicio extends javax.swing.JFrame implements IVista {
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inicio");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnIncluir.setBackground(new java.awt.Color(255, 255, 255));
@@ -82,7 +84,7 @@ public class Inicio extends javax.swing.JFrame implements IVista {
         jlbFondoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo11.png"))); // NOI18N
         jlbFondoInicio.setAutoscrolls(true);
         jlbFondoInicio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jlbFondoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 657, 479));
+        getContentPane().add(jlbFondoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -10, 660, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

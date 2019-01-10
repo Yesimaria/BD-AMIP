@@ -58,62 +58,52 @@ public class EstRealizados extends javax.swing.JFrame {
         jlbFondoEstRea = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setTitle("Estudios realizados");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel2.setText("Estudios realizados");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(200, 20, 460, 40);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 460, 40));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel3.setText("¿Aprobó toda la primaria?");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 150, 210, 18);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 210, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel4.setText("¿Aprobó toda la secundaria?");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(40, 220, 230, 18);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 230, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel5.setText("¿Aprobó estudios técnicos o universitarios?");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 290, 330, 18);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 330, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel6.setText("Institución donde aprobó su último estudio:");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(40, 360, 340, 18);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 340, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel7.setText("¿Ha realizado estudios teológicos?");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(40, 440, 270, 18);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 270, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel8.setText("Fecha en que realizó sus estudios teológicos:");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(440, 140, 350, 30);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 350, 30));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel9.setText("¿Ha realizado seminarios bíblicos?");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(440, 220, 260, 18);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel10.setText("Institución donde ha realizado seminarios bíblicos:");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(440, 290, 400, 18);
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 400, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel11.setText("Dirección de la institución:");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(440, 360, 203, 10);
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, 10));
 
         jLabel12.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel12.setText("¿Qué idiomas conoce?");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(440, 440, 190, 18);
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 440, 190, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -123,8 +113,7 @@ public class EstRealizados extends javax.swing.JFrame {
         jButton1.setIconTextGap(-3);
         jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton1);
-        jButton1.setBounds(210, 560, 170, 70);
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 560, 170, 70));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -134,8 +123,7 @@ public class EstRealizados extends javax.swing.JFrame {
         jButton2.setIconTextGap(-3);
         jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(430, 560, 160, 70);
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 560, 160, 70));
 
         rdPrimariaSi.setBackground(new java.awt.Color(255, 255, 255));
         rdPrimariaSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
@@ -145,34 +133,28 @@ public class EstRealizados extends javax.swing.JFrame {
                 rdPrimariaSiActionPerformed(evt);
             }
         });
-        getContentPane().add(rdPrimariaSi);
-        rdPrimariaSi.setBounds(70, 180, 40, 25);
+        getContentPane().add(rdPrimariaSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 40, -1));
 
         rdPrimariaNo.setBackground(new java.awt.Color(255, 255, 255));
         rdPrimariaNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdPrimariaNo.setText("No");
-        getContentPane().add(rdPrimariaNo);
-        rdPrimariaNo.setBounds(120, 180, 50, 25);
+        getContentPane().add(rdPrimariaNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 50, -1));
 
         rdSecundariaSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdSecundariaSi.setText("Sí");
-        getContentPane().add(rdSecundariaSi);
-        rdSecundariaSi.setBounds(70, 250, 40, 25);
+        getContentPane().add(rdSecundariaSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 40, -1));
 
         rdSecundariaNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdSecundariaNo.setText("No");
-        getContentPane().add(rdSecundariaNo);
-        rdSecundariaNo.setBounds(120, 250, 50, 25);
+        getContentPane().add(rdSecundariaNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 50, -1));
 
         rdUniversidadSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdUniversidadSi.setText("Sí");
-        getContentPane().add(rdUniversidadSi);
-        rdUniversidadSi.setBounds(70, 320, 40, 25);
+        getContentPane().add(rdUniversidadSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 40, -1));
 
         rdUniversidadNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdUniversidadNo.setText("No");
-        getContentPane().add(rdUniversidadNo);
-        rdUniversidadNo.setBounds(120, 320, 50, 25);
+        getContentPane().add(rdUniversidadNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 50, -1));
 
         rdTeologicoSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdTeologicoSi.setText("Sí");
@@ -181,21 +163,18 @@ public class EstRealizados extends javax.swing.JFrame {
                 rdTeologicoSiActionPerformed(evt);
             }
         });
-        getContentPane().add(rdTeologicoSi);
-        rdTeologicoSi.setBounds(70, 470, 40, 25);
+        getContentPane().add(rdTeologicoSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 470, 40, -1));
 
         rdTeologicoNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdTeologicoNo.setText("No");
-        getContentPane().add(rdTeologicoNo);
-        rdTeologicoNo.setBounds(120, 470, 50, 25);
+        getContentPane().add(rdTeologicoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 470, 50, -1));
 
         txtUltimoEstud.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUltimoEstudActionPerformed(evt);
             }
         });
-        getContentPane().add(txtUltimoEstud);
-        txtUltimoEstud.setBounds(40, 390, 300, 30);
+        getContentPane().add(txtUltimoEstud, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 300, 30));
 
         rdSeminarioSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdSeminarioSi.setText("Sí");
@@ -204,46 +183,39 @@ public class EstRealizados extends javax.swing.JFrame {
                 rdSeminarioSiActionPerformed(evt);
             }
         });
-        getContentPane().add(rdSeminarioSi);
-        rdSeminarioSi.setBounds(470, 250, 40, 25);
+        getContentPane().add(rdSeminarioSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 250, 40, -1));
 
         rdSeminarioNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdSeminarioNo.setText("No");
-        getContentPane().add(rdSeminarioNo);
-        rdSeminarioNo.setBounds(520, 250, 50, 25);
+        getContentPane().add(rdSeminarioNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, 50, -1));
 
         txtDirecSeminario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDirecSeminarioActionPerformed(evt);
             }
         });
-        getContentPane().add(txtDirecSeminario);
-        txtDirecSeminario.setBounds(440, 390, 350, 30);
+        getContentPane().add(txtDirecSeminario, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 350, 30));
 
         txtxIdiomas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtxIdiomasActionPerformed(evt);
             }
         });
-        getContentPane().add(txtxIdiomas);
-        txtxIdiomas.setBounds(440, 470, 350, 30);
+        getContentPane().add(txtxIdiomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 350, 30));
 
         txtInstSemimario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtInstSemimarioActionPerformed(evt);
             }
         });
-        getContentPane().add(txtInstSemimario);
-        txtInstSemimario.setBounds(440, 320, 350, 30);
+        getContentPane().add(txtInstSemimario, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 350, 30));
 
         FechaEstu.setDateFormatString("yyyy/MM/dd");
         FechaEstu.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        getContentPane().add(FechaEstu);
-        FechaEstu.setBounds(440, 180, 240, 30);
+        getContentPane().add(FechaEstu, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 170, 30));
 
         jlbFondoEstRea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo14.png"))); // NOI18N
-        getContentPane().add(jlbFondoEstRea);
-        jlbFondoEstRea.setBounds(0, 0, 880, 640);
+        getContentPane().add(jlbFondoEstRea, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

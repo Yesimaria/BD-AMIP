@@ -56,6 +56,7 @@ public class DatLab extends javax.swing.JFrame implements IVista {
         JFondoDatLab = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Datos laborales");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N

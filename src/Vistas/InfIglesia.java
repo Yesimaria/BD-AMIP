@@ -39,27 +39,24 @@ public class InfIglesia extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setTitle("Información de la iglesia");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel2.setText("Información de la Iglesia");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(30, 0, 550, 50);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 550, 50));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel3.setText("Nombre de la persona responsable de la Iglesia:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(150, 250, 370, 20);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 370, 20));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel4.setText("Teléfono o celular:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(150, 170, 170, 20);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 170, 20));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel5.setText("Dirección:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(150, 90, 80, 20);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 80, 20));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -68,8 +65,7 @@ public class InfIglesia extends javax.swing.JFrame {
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton1);
-        jButton1.setBounds(340, 370, 160, 70);
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 370, 160, 70));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -78,18 +74,13 @@ public class InfIglesia extends javax.swing.JFrame {
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(140, 370, 160, 70);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(150, 200, 350, 30);
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(150, 280, 350, 30);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(150, 120, 350, 30);
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 160, 70));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 350, 30));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 350, 30));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 350, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo15.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 650, 450);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

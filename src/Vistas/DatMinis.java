@@ -50,66 +50,55 @@ public class DatMinis extends javax.swing.JFrame {
         rdBautizoNo = new javax.swing.JRadioButton();
         FechaBaut = new com.toedter.calendar.JDateChooser();
         FechaCon = new com.toedter.calendar.JDateChooser();
-        jPanel1 = new javax.swing.JPanel();
-        jlbFondoDatMin = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setTitle("Datos ministeriales");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel2.setText("Datos ministeriales");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(180, 10, 440, 60);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 440, 60));
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel3.setText("Fecha de conversión:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(20, 110, 160, 18);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 160, -1));
 
-        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel4.setText("Fecha de bautismo en agua:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(20, 180, 220, 18);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 220, -1));
 
-        jLabel5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel5.setText("¿Es bautizado en el Espíritu Santo?");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(20, 260, 280, 18);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 280, -1));
 
-        jLabel6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel6.setText("¿Qué edad tenía al inicio de su Ministerio?");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(20, 340, 330, 18);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 330, -1));
 
-        jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel7.setText("¿En que Iglesia u organización inició su Ministerio?");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(20, 420, 390, 18);
+        jLabel7.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel7.setText("¿En qué Iglesia u organización inició su Ministerio?");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 390, -1));
 
-        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel8.setText("Ciudad y Departamento:");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(460, 110, 190, 18);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 190, -1));
 
-        jLabel9.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel9.setText("Mencione los lugares donde ha ejercido su Ministerio:");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(460, 180, 420, 18);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 420, -1));
 
-        jLabel10.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel10.setText("Cargos desempeñados:");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(460, 260, 180, 18);
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 180, -1));
 
-        jLabel11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel11.setText("Grado ministerial:");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(460, 340, 140, 18);
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 140, -1));
 
-        jLabel12.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel12.setText("Área de mayor experiencia ministerial:");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(460, 420, 300, 18);
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, 300, -1));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
         btnGuardar.setBorder(null);
@@ -118,8 +107,7 @@ public class DatMinis extends javax.swing.JFrame {
         btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnGuardar);
-        btnGuardar.setBounds(230, 550, 140, 70);
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 140, 70));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
         btnCancelar.setBorder(null);
@@ -128,50 +116,33 @@ public class DatMinis extends javax.swing.JFrame {
         btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar);
-        btnCancelar.setBounds(450, 550, 140, 70);
-        getContentPane().add(txtIgleMinis);
-        txtIgleMinis.setBounds(20, 450, 370, 30);
-        getContentPane().add(txtCiudad);
-        txtCiudad.setBounds(460, 140, 370, 30);
-        getContentPane().add(txtEjerMinis);
-        txtEjerMinis.setBounds(460, 210, 370, 30);
-        getContentPane().add(txtCargos);
-        txtCargos.setBounds(460, 290, 370, 30);
-        getContentPane().add(txtGradoMinis);
-        txtGradoMinis.setBounds(460, 370, 370, 30);
-        getContentPane().add(txtExpeMinis);
-        txtExpeMinis.setBounds(460, 450, 370, 30);
-        getContentPane().add(txtEdadMinis);
-        txtEdadMinis.setBounds(20, 370, 80, 30);
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 470, 140, 70));
+        getContentPane().add(txtIgleMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 350, 30));
+        getContentPane().add(txtCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 370, 30));
+        getContentPane().add(txtEjerMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 370, 30));
+        getContentPane().add(txtCargos, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 370, 30));
+        getContentPane().add(txtGradoMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 370, 30));
+        getContentPane().add(txtExpeMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 370, 30));
+        getContentPane().add(txtEdadMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 80, 30));
 
-        rdBautizoSi.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        rdBautizoSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdBautizoSi.setText("Sí");
-        getContentPane().add(rdBautizoSi);
-        rdBautizoSi.setBounds(70, 300, 50, 27);
+        getContentPane().add(rdBautizoSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 50, -1));
 
-        rdBautizoNo.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        rdBautizoNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdBautizoNo.setText("No");
-        getContentPane().add(rdBautizoNo);
-        rdBautizoNo.setBounds(130, 300, 50, 27);
+        getContentPane().add(rdBautizoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 50, -1));
 
         FechaBaut.setDateFormatString("yyyy/MM/dd");
         FechaBaut.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        getContentPane().add(FechaBaut);
-        FechaBaut.setBounds(20, 210, 240, 30);
+        getContentPane().add(FechaBaut, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 170, 30));
 
         FechaCon.setDateFormatString("yyyy/MM/dd");
         FechaCon.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        getContentPane().add(FechaCon);
-        FechaCon.setBounds(20, 140, 240, 30);
+        getContentPane().add(FechaCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 170, 30));
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jlbFondoDatMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo14.png"))); // NOI18N
-        jPanel1.add(jlbFondoDatMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, -1, -1));
-
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, -10, 100, 100);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo 17.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -216,6 +187,7 @@ public class DatMinis extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser FechaCon;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -227,8 +199,6 @@ public class DatMinis extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel jlbFondoDatMin;
     private javax.swing.JRadioButton rdBautizoNo;
     private javax.swing.JRadioButton rdBautizoSi;
     private javax.swing.JTextField txtCargos;
