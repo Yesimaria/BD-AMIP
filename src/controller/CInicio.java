@@ -5,14 +5,15 @@
  */
 package controller;
 
-import Vistas.Inicio;
-import Vistas.Menus;
-import Vistas.Principal;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
-import javax.swing.JOptionPane;
 import lib.OpJCalendar;
+import Vistas.Inicio;
+import Vistas.Menus;
+import Vistas.Principal;
+import controller.CMenus;
 
 /**
  *
@@ -22,8 +23,10 @@ public class CInicio implements ActionListener {
     
     Inicio vinicio;
     Menus vmenus;
+    CMenus cmenus;
     Principal vprincipal;
     OpJCalendar c;
+    
     
     public CInicio(Inicio vinicio){
         Date fechaac = new Date();
@@ -36,13 +39,13 @@ public class CInicio implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equalsIgnoreCase("incluir")){
-            System.out.println("click");
-            this.vmenus = new Menus();
-            
+            vmenus = new Menus();
+            cmenus = new CMenus(this.vmenus);
+            vinicio.setVisible(false);
         }
         if(e.getActionCommand().equalsIgnoreCase("consulta")){
               System.out.println("click");
-            this.vprincipal = new Principal();
+            vprincipal = new Principal();
             
         }
     }
