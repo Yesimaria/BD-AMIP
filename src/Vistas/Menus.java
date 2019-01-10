@@ -5,11 +5,15 @@
  */
 package Vistas;
 
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
+
 /**
  *
  * @author Usuario
  */
-public class Menus extends javax.swing.JPanel {
+public class Menus extends javax.swing.JPanel implements IVista {
 
     /**
      * Creates new form Menus
@@ -27,116 +31,131 @@ public class Menus extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnInfPersonal = new javax.swing.JButton();
-        btnDatLab = new javax.swing.JButton();
-        btnDatMinis = new javax.swing.JButton();
-        btnEstudRea = new javax.swing.JButton();
-        btnDocAnex = new javax.swing.JButton();
-        btnGuardar = new javax.swing.JButton();
-        btnSalir = new javax.swing.JButton();
-        jlbFondoMenu = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(null);
 
-        btnInfPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IBtInfPer.png"))); // NOI18N
-        btnInfPersonal.setToolTipText("");
-        btnInfPersonal.setBorder(null);
-        btnInfPersonal.setBorderPainted(false);
-        btnInfPersonal.setContentAreaFilled(false);
-        btnInfPersonal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnInfPersonal.setIconTextGap(-3);
-        btnInfPersonal.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnInfPersonal.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(btnInfPersonal);
-        btnInfPersonal.setBounds(60, 30, 190, 80);
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IBtInfPer.png"))); // NOI18N
+        jButton1.setToolTipText("");
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton1.setIconTextGap(-3);
+        jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(jButton1);
+        jButton1.setBounds(60, 30, 190, 80);
 
-        btnDatLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtDatLab.png"))); // NOI18N
-        btnDatLab.setBorder(null);
-        btnDatLab.setBorderPainted(false);
-        btnDatLab.setContentAreaFilled(false);
-        btnDatLab.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnDatLab.setIconTextGap(-3);
-        btnDatLab.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnDatLab.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(btnDatLab);
-        btnDatLab.setBounds(60, 120, 190, 80);
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtDatLab.png"))); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton2.setIconTextGap(-3);
+        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(jButton2);
+        jButton2.setBounds(60, 120, 190, 80);
 
-        btnDatMinis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtDatMin.png"))); // NOI18N
-        btnDatMinis.setBorder(null);
-        btnDatMinis.setBorderPainted(false);
-        btnDatMinis.setContentAreaFilled(false);
-        btnDatMinis.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnDatMinis.setIconTextGap(-3);
-        btnDatMinis.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnDatMinis.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(btnDatMinis);
-        btnDatMinis.setBounds(60, 210, 190, 80);
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtDatMin.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setIconTextGap(-3);
+        jButton3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(jButton3);
+        jButton3.setBounds(60, 210, 190, 80);
 
-        btnEstudRea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtEstdReal.png"))); // NOI18N
-        btnEstudRea.setBorder(null);
-        btnEstudRea.setBorderPainted(false);
-        btnEstudRea.setContentAreaFilled(false);
-        btnEstudRea.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnEstudRea.setIconTextGap(-3);
-        btnEstudRea.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnEstudRea.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnEstudRea.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtEstdReal.png"))); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton4.setIconTextGap(-3);
+        jButton4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstudReaActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        add(btnEstudRea);
-        btnEstudRea.setBounds(60, 290, 190, 90);
+        add(jButton4);
+        jButton4.setBounds(60, 290, 190, 90);
 
-        btnDocAnex.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtDocmAne.png"))); // NOI18N
-        btnDocAnex.setBorder(null);
-        btnDocAnex.setBorderPainted(false);
-        btnDocAnex.setContentAreaFilled(false);
-        btnDocAnex.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnDocAnex.setIconTextGap(-3);
-        btnDocAnex.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnDocAnex.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(btnDocAnex);
-        btnDocAnex.setBounds(60, 390, 190, 80);
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtDocmAne.png"))); // NOI18N
+        jButton5.setBorder(null);
+        jButton5.setBorderPainted(false);
+        jButton5.setContentAreaFilled(false);
+        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton5.setIconTextGap(-3);
+        jButton5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(jButton5);
+        jButton5.setBounds(60, 390, 190, 80);
 
-        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
-        btnGuardar.setBorder(null);
-        btnGuardar.setBorderPainted(false);
-        btnGuardar.setContentAreaFilled(false);
-        btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(btnGuardar);
-        btnGuardar.setBounds(330, 430, 130, 50);
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        jButton6.setBorder(null);
+        jButton6.setBorderPainted(false);
+        jButton6.setContentAreaFilled(false);
+        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton6.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(jButton6);
+        jButton6.setBounds(330, 430, 130, 50);
 
-        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtSalir.png"))); // NOI18N
-        btnSalir.setBorder(null);
-        btnSalir.setBorderPainted(false);
-        btnSalir.setContentAreaFilled(false);
-        btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnSalir.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnSalir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        add(btnSalir);
-        btnSalir.setBounds(460, 430, 120, 50);
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtSalir.png"))); // NOI18N
+        jButton7.setBorder(null);
+        jButton7.setBorderPainted(false);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton7.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        add(jButton7);
+        jButton7.setBounds(460, 430, 120, 50);
 
-        jlbFondoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo11.png"))); // NOI18N
-        add(jlbFondoMenu);
-        jlbFondoMenu.setBounds(0, -10, 660, 500);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo11.png"))); // NOI18N
+        add(jLabel1);
+        jLabel1.setBounds(0, -10, 660, 500);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEstudReaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudReaActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnEstudReaActionPerformed
+    }//GEN-LAST:event_jButton4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDatLab;
-    private javax.swing.JButton btnDatMinis;
-    private javax.swing.JButton btnDocAnex;
-    private javax.swing.JButton btnEstudRea;
-    private javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnInfPersonal;
-    private javax.swing.JButton btnSalir;
-    private javax.swing.JLabel jlbFondoMenu;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void aggActionListener(ActionListener acL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void aggKeyListener(KeyListener keyL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void aggMouseListener(MouseListener mouseL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

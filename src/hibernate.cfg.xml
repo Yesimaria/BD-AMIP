@@ -53,5 +53,8 @@ Contributor(s):
     <mapping class="modelo.MMatrimonio"/>
     <mapping class="modelo.MInfoEconomica"/>
     <mapping class="modelo.MIglesia"/>
+    <mapping class="modelo.MInfoMinisterio"/>
+    <mapping class="modelo.MInfoLaboral"/>
+    <mapping class="modelo.MInfoEstudios"/>
   </session-factory>
 </hibernate-configuration>

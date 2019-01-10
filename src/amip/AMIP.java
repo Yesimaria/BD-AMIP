@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package amip;
-import modelo.MPersona;
-import hibernate.SesionFactory;
+import Vistas.Inicio;
+import controller.CInicio;
 /**
  *
  * @author Usuario
@@ -17,16 +17,7 @@ public class AMIP {
      */
     public static void main(String[] args) {
        
-        SesionFactory sesionFactory = new SesionFactory();
-        
-        MPersona persona = new MPersona();
-        sesionFactory.openTransaction();
-           persona.setNombre("maiker");
-           persona.setApellido("Gutierrez");
-           persona.setCedula("21503775");
-           sesionFactory.save(persona);
-           sesionFactory.closeTransaction();
-           sesionFactory.closeSession();
-    
+        Inicio vinicio = new Inicio();
+        CInicio cinicio = new CInicio(vinicio);
     }
 }
