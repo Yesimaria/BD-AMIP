@@ -46,7 +46,10 @@ public class DAOPersona {
       
     public MPersona getPersonaCodigo(String codigo){
      SesionFactory sesionFactory = new SesionFactory();
-     return (MPersona) sesionFactory.queryUniq("select p from MPersona p where p.codigo="+codigo);
+     MPersona persona;
+     persona = (MPersona) sesionFactory.queryUniq("select p from MPersona p where codigo='"+codigo+"'");
+     System.out.print(persona);
+     return persona;
     }
     
     public List<Object[]> listPersonasAtributo(String atributo, String valor){

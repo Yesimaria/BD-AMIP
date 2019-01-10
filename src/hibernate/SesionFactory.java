@@ -63,6 +63,7 @@ public class SesionFactory {
     public Object queryUniq(String sql){
         Object query;
         query = this.session.createSQLQuery(sql).uniqueResult();
+        System.out.print(query);
         return query;
     }
    

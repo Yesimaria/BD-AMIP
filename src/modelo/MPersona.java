@@ -64,8 +64,7 @@ public class MPersona implements Serializable {
         
     }
 
-    public MPersona(int id, String codigo, String fecha_ingreso, String nombre, String apellido, String cedula, String telefono, String correo, String fecha_nacimiento, String lugar_nacimiento, int edo_civil, int cant_hijos, int sexo, MMatrimonio matrimonio, MInfoEconomica infoEconomica, MOrganizacionPrev organizacionPrev, MIglesia iglesia, MInfoLaboral infoLaboral, MInfoMinisterio infoMinisterio, MInfoEstudios infoEstudios) {
-        this.id = id;
+    public MPersona(String codigo, String fecha_ingreso, String nombre, String apellido, String cedula, String telefono, String correo, String fecha_nacimiento, String lugar_nacimiento, int edo_civil, int cant_hijos, int sexo, MMatrimonio matrimonio, MInfoEconomica infoEconomica, MOrganizacionPrev organizacionPrev, MIglesia iglesia, MInfoLaboral infoLaboral, MInfoMinisterio infoMinisterio, MInfoEstudios infoEstudios) {
         this.codigo = codigo;
         this.fecha_ingreso = fecha_ingreso;
         this.nombre = nombre;

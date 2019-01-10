@@ -5,11 +5,22 @@
  */
 package Vistas;
 
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Usuario
  */
-public class DatLab extends javax.swing.JFrame {
+public class DatLab extends javax.swing.JFrame implements IVista {
 
     /**
      * Creates new form DatLab
@@ -77,6 +88,7 @@ public class DatLab extends javax.swing.JFrame {
         getContentPane().add(txtNomJefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 310, 30));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
+        btnGuardar.setActionCommand("guardar");
         btnGuardar.setBorder(null);
         btnGuardar.setBorderPainted(false);
         btnGuardar.setContentAreaFilled(false);
@@ -87,6 +99,7 @@ public class DatLab extends javax.swing.JFrame {
         getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, -1, 70));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
+        btnCancelar.setActionCommand("cancelar");
         btnCancelar.setBorderPainted(false);
         btnCancelar.setContentAreaFilled(false);
         btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -183,4 +196,149 @@ public class DatLab extends javax.swing.JFrame {
     private javax.swing.JTextField txtNomJefe;
     private javax.swing.JTextField txtNombEmpresa;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void aggActionListener(ActionListener acL) {
+        btnGuardar.addActionListener(acL);
+        btnCancelar.addActionListener(acL);
+    }
+
+    @Override
+    public void aggKeyListener(KeyListener keyL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void aggMouseListener(MouseListener mouseL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public JLabel getJFondoDatLab() {
+        return JFondoDatLab;
+    }
+
+    public void setJFondoDatLab(JLabel JFondoDatLab) {
+        this.JFondoDatLab = JFondoDatLab;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public void setBtnGuardar(JButton btnGuardar) {
+        this.btnGuardar = btnGuardar;
+    }
+
+    public ButtonGroup getButtonGroup1() {
+        return buttonGroup1;
+    }
+
+    public void setButtonGroup1(ButtonGroup buttonGroup1) {
+        this.buttonGroup1 = buttonGroup1;
+    }
+
+    public ButtonGroup getButtonGroup2() {
+        return buttonGroup2;
+    }
+
+    public void setButtonGroup2(ButtonGroup buttonGroup2) {
+        this.buttonGroup2 = buttonGroup2;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JRadioButton getRdNo() {
+        return rdNo;
+    }
+
+    public void setRdNo(JRadioButton rdNo) {
+        this.rdNo = rdNo;
+    }
+
+    public JRadioButton getRdSi() {
+        return rdSi;
+    }
+
+    public void setRdSi(JRadioButton rdSi) {
+        this.rdSi = rdSi;
+    }
+
+    public JTextArea getTxtAOficios() {
+        return txtAOficios;
+    }
+
+    public void setTxtAOficios(JTextArea txtAOficios) {
+        this.txtAOficios = txtAOficios;
+    }
+
+    public JTextField getTxtNomJefe() {
+        return txtNomJefe;
+    }
+
+    public void setTxtNomJefe(JTextField txtNomJefe) {
+        this.txtNomJefe = txtNomJefe;
+    }
+
+    public JTextField getTxtNombEmpresa() {
+        return txtNombEmpresa;
+    }
+
+    public void setTxtNombEmpresa(JTextField txtNombEmpresa) {
+        this.txtNombEmpresa = txtNombEmpresa;
+    }
+    
 }
