@@ -125,7 +125,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 120, 50));
 
         jlbFondoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo11.png"))); // NOI18N
-        getContentPane().add(jlbFondoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 660, 500));
+        getContentPane().add(jlbFondoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 480));
 
         getAccessibleContext().setAccessibleDescription("");
     }// </editor-fold>//GEN-END:initComponents
