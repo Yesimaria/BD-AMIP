@@ -58,62 +58,52 @@ public class InfPastor extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setTitle("Información del Pastor");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel2.setText("Información del Pastor");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 0, 510, 60);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 510, 60));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel3.setText("Correo electrónico:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(360, 320, 140, 18);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 140, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel4.setText("Nombres:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(100, 90, 70, 18);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 70, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel5.setText("Apellidos:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(100, 140, 70, 18);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 70, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel6.setText("Fecha de nacimiento:");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(100, 200, 150, 18);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 150, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel7.setText("Lugar de nacimiento:");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(100, 260, 150, 18);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 150, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel8.setText("Cédula o pasaporte:");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(100, 320, 150, 18);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 150, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel9.setText("Estado civil:");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(360, 90, 90, 18);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 90, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel10.setText("Cantidad de hijos:");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(360, 140, 150, 18);
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 150, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel11.setText("Sexo:");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(360, 200, 50, 18);
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 50, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jLabel12.setText("Número de teléfono:");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(360, 260, 150, 18);
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 150, -1));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Btcanc.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -122,8 +112,7 @@ public class InfPastor extends javax.swing.JFrame {
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton1);
-        jButton1.setBounds(340, 410, 130, 50);
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 130, 50));
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
         jButton2.setBorder(null);
@@ -132,61 +121,45 @@ public class InfPastor extends javax.swing.JFrame {
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton2);
-        jButton2.setBounds(180, 400, 150, 60);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(360, 280, 200, 20);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(100, 280, 200, 20);
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(100, 340, 200, 20);
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(360, 340, 200, 20);
-        getContentPane().add(jTextField6);
-        jTextField6.setBounds(100, 110, 200, 20);
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(100, 160, 200, 20);
-        getContentPane().add(jTextField8);
-        jTextField8.setBounds(360, 160, 60, 20);
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 150, 60));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 200, -1));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 200, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 200, -1));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 200, -1));
+        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 200, -1));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 200, -1));
+        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 60, -1));
 
         jRadioButton1.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         jRadioButton1.setText("Ninguno");
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(440, 160, 80, 20);
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 160, 80, 20));
 
         jRadioButton2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         jRadioButton2.setText("Soltero");
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(360, 110, 70, 20);
+        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 70, 20));
 
         jRadioButton3.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         jRadioButton3.setText("Casado");
-        getContentPane().add(jRadioButton3);
-        jRadioButton3.setBounds(440, 110, 70, 20);
+        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 70, 20));
 
         jRadioButton4.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         jRadioButton4.setText("Divorciado");
-        getContentPane().add(jRadioButton4);
-        jRadioButton4.setBounds(520, 110, 90, 20);
+        getContentPane().add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 90, 20));
 
         jRadioButton5.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         jRadioButton5.setText("Femenino");
-        getContentPane().add(jRadioButton5);
-        jRadioButton5.setBounds(360, 220, 90, 20);
+        getContentPane().add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 90, 20));
 
         jRadioButton6.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         jRadioButton6.setText("Masculino");
-        getContentPane().add(jRadioButton6);
-        jRadioButton6.setBounds(470, 220, 90, 20);
+        getContentPane().add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 90, 20));
 
         datenaci.setDateFormatString("yyyy/MM/dd");
         datenaci.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        getContentPane().add(datenaci);
-        datenaci.setBounds(100, 220, 200, 20);
+        getContentPane().add(datenaci, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 200, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo13.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 690, 460);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -45,42 +45,36 @@ public class DatLab extends javax.swing.JFrame {
         JFondoDatLab = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setTitle("Datos laborales");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel2.setText("Datos laborales");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 0, 350, 52);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 350, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel3.setText("Nombre de la empresa:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(107, 110, 200, 30);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 110, 200, 30));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel4.setText("Nombre de su jefe inmediato:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 150, 260, 30);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 260, 30));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel5.setText("¿Ha sido trabajador independiente?");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(30, 200, 330, 21);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 330, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel6.setText("Oficios que ha desempeñado:");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 240, 260, 21);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 260, -1));
 
         txtNombEmpresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombEmpresaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtNombEmpresa);
-        txtNombEmpresa.setBounds(320, 110, 310, 30);
-        getContentPane().add(txtNomJefe);
-        txtNomJefe.setBounds(320, 150, 310, 30);
+        getContentPane().add(txtNombEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 310, 30));
+        getContentPane().add(txtNomJefe, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 310, 30));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
         btnGuardar.setBorder(null);
@@ -90,8 +84,7 @@ public class DatLab extends javax.swing.JFrame {
         btnGuardar.setIconTextGap(-3);
         btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnGuardar);
-        btnGuardar.setBounds(170, 390, 161, 70);
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, -1, 70));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
         btnCancelar.setBorderPainted(false);
@@ -100,14 +93,12 @@ public class DatLab extends javax.swing.JFrame {
         btnCancelar.setIconTextGap(-3);
         btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar);
-        btnCancelar.setBounds(350, 390, 150, 75);
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 150, -1));
 
         rdSi.setBackground(new java.awt.Color(255, 255, 255));
         rdSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdSi.setText("Sí");
-        getContentPane().add(rdSi);
-        rdSi.setBounds(370, 200, 40, 25);
+        getContentPane().add(rdSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 40, -1));
 
         rdNo.setBackground(new java.awt.Color(255, 255, 255));
         rdNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
@@ -117,19 +108,16 @@ public class DatLab extends javax.swing.JFrame {
                 rdNoActionPerformed(evt);
             }
         });
-        getContentPane().add(rdNo);
-        rdNo.setBounds(440, 200, 50, 25);
+        getContentPane().add(rdNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 50, -1));
 
         txtAOficios.setColumns(20);
         txtAOficios.setRows(5);
         jScrollPane1.setViewportView(txtAOficios);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(320, 240, 310, 130);
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 310, 130));
 
         JFondoDatLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo13.png"))); // NOI18N
-        getContentPane().add(JFondoDatLab);
-        JFondoDatLab.setBounds(0, 0, 694, 467);
+        getContentPane().add(JFondoDatLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

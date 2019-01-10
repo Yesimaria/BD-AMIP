@@ -109,7 +109,7 @@ public class Principal extends javax.swing.JFrame {
 
         jlbFondoIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.jpg"))); // NOI18N
         getContentPane().add(jlbFondoIngreso);
-        jlbFondoIngreso.setBounds(0, 0, 450, 310);
+        jlbFondoIngreso.setBounds(0, 0, 460, 310);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
