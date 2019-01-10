@@ -5,11 +5,21 @@
  */
 package Vistas;
 
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Usuario
  */
-public class InfPersonal extends javax.swing.JFrame {
+public class InfPersonal extends javax.swing.JFrame implements IVista {
 
     /**
      * Creates new form InfPersonal
@@ -37,284 +47,148 @@ public class InfPersonal extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        txtTelefIgle = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtcodigo = new javax.swing.JTextField();
         txtApellidos = new javax.swing.JTextField();
         txtLugarNac = new javax.swing.JTextField();
         txtxCedula = new javax.swing.JTextField();
         txtCorreo = new javax.swing.JTextField();
         txtTelefono = new javax.swing.JTextField();
-        txtCelular = new javax.swing.JTextField();
-        txtNivelEduc = new javax.swing.JTextField();
-        txtDirecResidencia = new javax.swing.JTextField();
-        txtEstrato = new javax.swing.JTextField();
+        txtFechaIngre = new javax.swing.JTextField();
         txtNombres = new javax.swing.JTextField();
-        txtSeguro = new javax.swing.JTextField();
-        txtAntOrganiz = new javax.swing.JTextField();
-        txtNomEmprPensi = new javax.swing.JTextField();
-        txtRecomendacionP = new javax.swing.JTextField();
-        txtTelefRecom = new javax.swing.JTextField();
-        txtDirecIglesia = new javax.swing.JTextField();
-        txtNomResponIgle = new javax.swing.JTextField();
-        rdMasculino = new javax.swing.JRadioButton();
-        rdCasaNo = new javax.swing.JRadioButton();
-        txtTelefOrganiz = new javax.swing.JTextField();
-        rdFemenino = new javax.swing.JRadioButton();
-        rdCasaSi = new javax.swing.JRadioButton();
+        rdSoltero = new javax.swing.JRadioButton();
+        rdCasado = new javax.swing.JRadioButton();
         txtCantHijos = new javax.swing.JTextField();
-        rdDepenSi = new javax.swing.JRadioButton();
-        rdDepenNo = new javax.swing.JRadioButton();
-        txtNomHijos = new javax.swing.JTextField();
-        rsPensionadoSi = new javax.swing.JRadioButton();
-        rdPensionadoNo = new javax.swing.JRadioButton();
         btnGuardar = new javax.swing.JButton();
         BtnCancelar = new javax.swing.JButton();
+        txtFechaNac = new javax.swing.JTextField();
+        txtLugarNac1 = new javax.swing.JTextField();
+        txtLugarNac2 = new javax.swing.JTextField();
+        rdFemenino = new javax.swing.JRadioButton();
+        rdMasculino = new javax.swing.JRadioButton();
+        jLabel12 = new javax.swing.JLabel();
         jlbFondoInfP = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel1.setText("Información personal");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(190, 10, 700, 68);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 550, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel3.setText("Nombres:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(30, 130, 65, 17);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel4.setText("Apellidos:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(30, 180, 70, 17);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, 20));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel5.setText("Fecha de nacimiento:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(710, 180, 150, 17);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 150, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel6.setText("Lugar de nacimiento:");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 230, 150, 17);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 150, 20));
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel7.setText("Cédula o pasaporte:");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(30, 280, 150, 17);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 150, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel8.setText("Sexo:");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(710, 130, 50, 17);
+        jLabel8.setText("Estado Civil:");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 120, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel9.setText("Correo electrónico:");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(30, 330, 134, 17);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel10.setText("Nro. de celular:");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(30, 430, 110, 17);
+        jLabel10.setText("Fecha de ingreso:");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 170, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel11.setText("Cantidad de hijos:");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(710, 230, 140, 17);
-
-        jLabel12.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel12.setText("Dependen económicamente de usted:");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(710, 280, 260, 17);
-
-        jLabel13.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel13.setText("Nombres de los hijos de mayor a menor:");
-        getContentPane().add(jLabel13);
-        jLabel13.setBounds(710, 330, 290, 17);
-
-        jLabel14.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel14.setText("Seguro de salud al que pertenece:");
-        getContentPane().add(jLabel14);
-        jLabel14.setBounds(330, 130, 240, 17);
-
-        jLabel15.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel15.setText("Nivel de educación:");
-        getContentPane().add(jLabel15);
-        jLabel15.setBounds(30, 480, 150, 17);
-
-        jLabel16.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel16.setText("¿Es pensionado?");
-        getContentPane().add(jLabel16);
-        jLabel16.setBounds(710, 380, 130, 17);
-
-        jLabel17.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel17.setText("Nombre de la empresa donde se pensionó:");
-        getContentPane().add(jLabel17);
-        jLabel17.setBounds(710, 430, 310, 17);
-
-        jLabel18.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel18.setText("¿Tiene casa propia?");
-        getContentPane().add(jLabel18);
-        jLabel18.setBounds(710, 480, 150, 17);
-
-        jLabel19.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel19.setText("Estrato donde vive:");
-        getContentPane().add(jLabel19);
-        jLabel19.setBounds(30, 530, 140, 17);
-
-        jLabel20.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel20.setText("Dirección de residencia:");
-        getContentPane().add(jLabel20);
-        jLabel20.setBounds(30, 580, 180, 17);
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 140, -1));
 
         jLabel21.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel21.setText("Teléfono fijo:");
-        getContentPane().add(jLabel21);
-        jLabel21.setBounds(30, 380, 100, 14);
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 100, 14));
 
-        jLabel22.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel22.setText("Nombre de la anterior organización perteneciente:");
-        getContentPane().add(jLabel22);
-        jLabel22.setBounds(330, 180, 360, 20);
-
-        jLabel23.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel23.setText("Teléfono fijo de la organización:");
-        getContentPane().add(jLabel23);
-        jLabel23.setBounds(330, 230, 230, 17);
-
-        jLabel24.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel24.setText("Recomendación personal:");
-        getContentPane().add(jLabel24);
-        jLabel24.setBounds(330, 280, 190, 17);
-
-        jLabel25.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel25.setText("Teléfono de la persona que lo recomienda:");
-        getContentPane().add(jLabel25);
-        jLabel25.setBounds(330, 330, 310, 17);
-
-        jLabel26.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel26.setText("Dirección de la Iglesia que pastorea:");
-        getContentPane().add(jLabel26);
-        jLabel26.setBounds(330, 380, 260, 17);
-
-        jLabel27.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel27.setText("Nombre de la persona responsable de la Iglesia:");
-        getContentPane().add(jLabel27);
-        jLabel27.setBounds(330, 430, 340, 17);
-
-        jLabel28.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        jLabel28.setText("Teléfono de la Iglesia:");
-        getContentPane().add(jLabel28);
-        jLabel28.setBounds(330, 480, 170, 17);
-
-        txtTelefIgle.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTelefIgleActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtTelefIgle);
-        txtTelefIgle.setBounds(330, 500, 280, 20);
-        getContentPane().add(txtApellidos);
-        txtApellidos.setBounds(30, 200, 230, 20);
-        getContentPane().add(txtLugarNac);
-        txtLugarNac.setBounds(30, 250, 230, 20);
-        getContentPane().add(txtxCedula);
-        txtxCedula.setBounds(30, 300, 230, 20);
-        getContentPane().add(txtCorreo);
-        txtCorreo.setBounds(30, 350, 230, 20);
-        getContentPane().add(txtTelefono);
-        txtTelefono.setBounds(30, 400, 230, 20);
-        getContentPane().add(txtCelular);
-        txtCelular.setBounds(30, 450, 230, 20);
-        getContentPane().add(txtNivelEduc);
-        txtNivelEduc.setBounds(30, 500, 230, 20);
-        getContentPane().add(txtDirecResidencia);
-        txtDirecResidencia.setBounds(30, 600, 230, 20);
-        getContentPane().add(txtEstrato);
-        txtEstrato.setBounds(30, 550, 230, 20);
+        jLabel2.setText("Código");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 60, 20));
+        getContentPane().add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 230, 20));
+        getContentPane().add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 230, -1));
+        getContentPane().add(txtLugarNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, -1));
+        getContentPane().add(txtxCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 230, -1));
+        getContentPane().add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 230, -1));
+        getContentPane().add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 230, -1));
+        getContentPane().add(txtFechaIngre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 230, -1));
 
         txtNombres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombresActionPerformed(evt);
             }
         });
-        getContentPane().add(txtNombres);
-        txtNombres.setBounds(30, 150, 230, 20);
+        getContentPane().add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 230, -1));
 
-        txtSeguro.addActionListener(new java.awt.event.ActionListener() {
+        rdSoltero.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdSoltero.setText("Soltero");
+        rdSoltero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSeguroActionPerformed(evt);
+                rdSolteroActionPerformed(evt);
             }
         });
-        getContentPane().add(txtSeguro);
-        txtSeguro.setBounds(330, 150, 280, 20);
+        getContentPane().add(rdSoltero, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 350, 100, -1));
 
-        txtAntOrganiz.addActionListener(new java.awt.event.ActionListener() {
+        rdCasado.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdCasado.setText("Casado");
+        getContentPane().add(rdCasado, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, 100, -1));
+
+        txtCantHijos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAntOrganizActionPerformed(evt);
+                txtCantHijosActionPerformed(evt);
             }
         });
-        getContentPane().add(txtAntOrganiz);
-        txtAntOrganiz.setBounds(330, 200, 280, 20);
+        getContentPane().add(txtCantHijos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 100, -1));
 
-        txtNomEmprPensi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomEmprPensiActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtNomEmprPensi);
-        txtNomEmprPensi.setBounds(710, 450, 270, 20);
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
+        btnGuardar.setActionCommand("guardar");
+        btnGuardar.setBorder(null);
+        btnGuardar.setBorderPainted(false);
+        btnGuardar.setContentAreaFilled(false);
+        btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGuardar.setIconTextGap(-3);
+        btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 530, 150, 70));
 
-        txtRecomendacionP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRecomendacionPActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtRecomendacionP);
-        txtRecomendacionP.setBounds(330, 300, 280, 20);
+        BtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
+        BtnCancelar.setActionCommand("cancelar");
+        BtnCancelar.setBorder(null);
+        BtnCancelar.setBorderPainted(false);
+        BtnCancelar.setContentAreaFilled(false);
+        BtnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BtnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        BtnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(BtnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 530, 150, 70));
 
-        txtTelefRecom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTelefRecomActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtTelefRecom);
-        txtTelefRecom.setBounds(330, 350, 280, 20);
+        txtFechaNac.setEditable(false);
+        txtFechaNac.setBackground(new java.awt.Color(255, 255, 255));
+        txtFechaNac.setToolTipText("");
+        txtFechaNac.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(txtFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 220, -1));
+        getContentPane().add(txtLugarNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, -1));
+        getContentPane().add(txtLugarNac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 230, -1));
 
-        txtDirecIglesia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDirecIglesiaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtDirecIglesia);
-        txtDirecIglesia.setBounds(330, 400, 280, 20);
-
-        txtNomResponIgle.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomResponIgleActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtNomResponIgle);
-        txtNomResponIgle.setBounds(330, 450, 280, 20);
+        rdFemenino.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        rdFemenino.setText("Fememino");
+        getContentPane().add(rdFemenino, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 100, -1));
 
         rdMasculino.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdMasculino.setText("Masculino");
@@ -323,147 +197,35 @@ public class InfPersonal extends javax.swing.JFrame {
                 rdMasculinoActionPerformed(evt);
             }
         });
-        getContentPane().add(rdMasculino);
-        rdMasculino.setBounds(830, 150, 100, 25);
+        getContentPane().add(rdMasculino, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 100, -1));
 
-        rdCasaNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        rdCasaNo.setText("No");
-        getContentPane().add(rdCasaNo);
-        rdCasaNo.setBounds(760, 500, 50, 25);
-
-        txtTelefOrganiz.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTelefOrganizActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtTelefOrganiz);
-        txtTelefOrganiz.setBounds(330, 250, 280, 20);
-
-        rdFemenino.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        rdFemenino.setText("Fememino");
-        getContentPane().add(rdFemenino);
-        rdFemenino.setBounds(710, 150, 100, 25);
-
-        rdCasaSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        rdCasaSi.setText("Sí");
-        getContentPane().add(rdCasaSi);
-        rdCasaSi.setBounds(710, 500, 40, 25);
-
-        txtCantHijos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCantHijosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtCantHijos);
-        txtCantHijos.setBounds(710, 250, 100, 20);
-
-        rdDepenSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        rdDepenSi.setText("Sí");
-        getContentPane().add(rdDepenSi);
-        rdDepenSi.setBounds(710, 300, 40, 25);
-
-        rdDepenNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        rdDepenNo.setText("No");
-        getContentPane().add(rdDepenNo);
-        rdDepenNo.setBounds(760, 300, 50, 25);
-
-        txtNomHijos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomHijosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtNomHijos);
-        txtNomHijos.setBounds(710, 350, 270, 20);
-
-        rsPensionadoSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        rsPensionadoSi.setText("Sí");
-        getContentPane().add(rsPensionadoSi);
-        rsPensionadoSi.setBounds(710, 400, 40, 25);
-
-        rdPensionadoNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        rdPensionadoNo.setText("No");
-        getContentPane().add(rdPensionadoNo);
-        rdPensionadoNo.setBounds(760, 400, 50, 25);
-
-        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
-        btnGuardar.setBorder(null);
-        btnGuardar.setBorderPainted(false);
-        btnGuardar.setContentAreaFilled(false);
-        btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGuardar.setIconTextGap(-3);
-        btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnGuardar);
-        btnGuardar.setBounds(420, 640, 150, 70);
-
-        BtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
-        BtnCancelar.setBorder(null);
-        BtnCancelar.setBorderPainted(false);
-        BtnCancelar.setContentAreaFilled(false);
-        BtnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        BtnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        BtnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(BtnCancelar);
-        BtnCancelar.setBounds(580, 640, 150, 70);
+        jLabel12.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel12.setText("Sexo:");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 50, -1));
 
         jlbFondoInfP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo12.png"))); // NOI18N
-        getContentPane().add(jlbFondoInfP);
-        jlbFondoInfP.setBounds(0, 0, 1030, 710);
+        getContentPane().add(jlbFondoInfP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1030, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, -1, -1));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 220, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtTelefIgleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefIgleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTelefIgleActionPerformed
 
     private void txtNombresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombresActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombresActionPerformed
 
-    private void txtSeguroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSeguroActionPerformed
+    private void rdSolteroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdSolteroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtSeguroActionPerformed
-
-    private void txtAntOrganizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAntOrganizActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAntOrganizActionPerformed
-
-    private void txtNomEmprPensiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomEmprPensiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomEmprPensiActionPerformed
-
-    private void txtRecomendacionPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRecomendacionPActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtRecomendacionPActionPerformed
-
-    private void txtTelefRecomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefRecomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTelefRecomActionPerformed
-
-    private void txtDirecIglesiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDirecIglesiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDirecIglesiaActionPerformed
-
-    private void txtNomResponIgleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomResponIgleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomResponIgleActionPerformed
-
-    private void rdMasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdMasculinoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rdMasculinoActionPerformed
-
-    private void txtTelefOrganizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefOrganizActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTelefOrganizActionPerformed
+    }//GEN-LAST:event_rdSolteroActionPerformed
 
     private void txtCantHijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantHijosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCantHijosActionPerformed
 
-    private void txtNomHijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomHijosActionPerformed
+    private void rdMasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdMasculinoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomHijosActionPerformed
+    }//GEN-LAST:event_rdMasculinoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -507,22 +269,8 @@ public class InfPersonal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -530,35 +278,330 @@ public class InfPersonal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel jlbFondoInfP;
-    private javax.swing.JRadioButton rdCasaNo;
-    private javax.swing.JRadioButton rdCasaSi;
-    private javax.swing.JRadioButton rdDepenNo;
-    private javax.swing.JRadioButton rdDepenSi;
+    private javax.swing.JRadioButton rdCasado;
     private javax.swing.JRadioButton rdFemenino;
     private javax.swing.JRadioButton rdMasculino;
-    private javax.swing.JRadioButton rdPensionadoNo;
-    private javax.swing.JRadioButton rsPensionadoSi;
-    private javax.swing.JTextField txtAntOrganiz;
+    private javax.swing.JRadioButton rdSoltero;
     private javax.swing.JTextField txtApellidos;
     private javax.swing.JTextField txtCantHijos;
-    private javax.swing.JTextField txtCelular;
     private javax.swing.JTextField txtCorreo;
-    private javax.swing.JTextField txtDirecIglesia;
-    private javax.swing.JTextField txtDirecResidencia;
-    private javax.swing.JTextField txtEstrato;
+    private javax.swing.JTextField txtFechaIngre;
+    private javax.swing.JTextField txtFechaNac;
     private javax.swing.JTextField txtLugarNac;
-    private javax.swing.JTextField txtNivelEduc;
-    private javax.swing.JTextField txtNomEmprPensi;
-    private javax.swing.JTextField txtNomHijos;
-    private javax.swing.JTextField txtNomResponIgle;
+    private javax.swing.JTextField txtLugarNac1;
+    private javax.swing.JTextField txtLugarNac2;
     private javax.swing.JTextField txtNombres;
-    private javax.swing.JTextField txtRecomendacionP;
-    private javax.swing.JTextField txtSeguro;
-    private javax.swing.JTextField txtTelefIgle;
-    private javax.swing.JTextField txtTelefOrganiz;
-    private javax.swing.JTextField txtTelefRecom;
     private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField txtcodigo;
     private javax.swing.JTextField txtxCedula;
     // End of variables declaration//GEN-END:variables
+
+    
+   
+    
+    @Override
+    public void aggActionListener(ActionListener acL) {
+      btnGuardar.addActionListener(acL);
+      BtnCancelar.addActionListener(acL);
+      rdCasado.addActionListener(acL);
+      rdSoltero.addActionListener(acL);
+    
+    }
+
+    @Override
+    public void aggKeyListener(KeyListener keyL) {
+       txtApellidos.addKeyListener(keyL);
+       txtFechaIngre.addKeyListener(keyL);
+       txtCorreo.addKeyListener(keyL);
+       txtLugarNac.addKeyListener(keyL);
+       txtFechaNac.addKeyListener(keyL);
+       
+      
+    }
+
+    @Override
+    public void aggMouseListener(MouseListener mouseL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public JButton getBtnCancelar() {
+        return BtnCancelar;
+    }
+
+    public void setBtnCancelar(JButton BtnCancelar) {
+        this.BtnCancelar = BtnCancelar;
+    }
+
+    public JButton getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public void setBtnGuardar(JButton btnGuardar) {
+        this.btnGuardar = btnGuardar;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public void setjLabel11(JLabel jLabel11) {
+        this.jLabel11 = jLabel11;
+    }
+
+    public JLabel getjLabel21() {
+        return jLabel21;
+    }
+
+    public void setjLabel21(JLabel jLabel21) {
+        this.jLabel21 = jLabel21;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JLabel getJlbFondoInfP() {
+        return jlbFondoInfP;
+    }
+
+    public void setJlbFondoInfP(JLabel jlbFondoInfP) {
+        this.jlbFondoInfP = jlbFondoInfP;
+    }
+
+    public JRadioButton getRdFemenino() {
+        return rdCasado;
+    }
+
+    public void setRdFemenino(JRadioButton rdFemenino) {
+        this.rdCasado = rdFemenino;
+    }
+
+    public JRadioButton getRdMasculino() {
+        return rdSoltero;
+    }
+
+    public void setRdMasculino(JRadioButton rdMasculino) {
+        this.rdSoltero = rdMasculino;
+    }
+
+    public JTextField getTxtApellidos() {
+        return txtApellidos;
+    }
+
+    public void setTxtApellidos(JTextField txtApellidos) {
+        this.txtApellidos = txtApellidos;
+    }
+
+   
+
+    public JTextField getFechaIngre() {
+        return txtFechaIngre;
+    }
+
+    public void setFechaIngre(JTextField fechaIngre) {
+        this.txtFechaIngre = fechaIngre;
+    }
+
+    public JTextField getTxtCorreo() {
+        return txtCorreo;
+    }
+
+    public void setTxtCorreo(JTextField txtCorreo) {
+        this.txtCorreo = txtCorreo;
+    }
+
+    public JTextField getTxtFechaNac() {
+        return txtFechaNac;
+    }
+
+    public void setTxtFechaNac(JTextField txtFechaNac) {
+        this.txtFechaNac = txtFechaNac;
+    }
+
+    public JTextField getTxtLugarNac() {
+        return txtLugarNac;
+    }
+
+    public void setTxtLugarNac(JTextField txtLugarNac) {
+        this.txtLugarNac = txtLugarNac;
+    }
+
+    public JTextField getTxtLugarNac1() {
+        return txtLugarNac1;
+    }
+
+    public void setTxtLugarNac1(JTextField txtLugarNac1) {
+        this.txtLugarNac1 = txtLugarNac1;
+    }
+
+    public JTextField getTxtLugarNac2() {
+        return txtLugarNac2;
+    }
+
+    public void setTxtLugarNac2(JTextField txtLugarNac2) {
+        this.txtLugarNac2 = txtLugarNac2;
+    }
+
+    public JTextField getTxtNombres() {
+        return txtNombres;
+    }
+
+    public void setTxtNombres(JTextField txtNombres) {
+        this.txtNombres = txtNombres;
+    }
+
+    public JTextField getTxtTelefono() {
+        return txtTelefono;
+    }
+
+    public void setTxtTelefono(JTextField txtTelefono) {
+        this.txtTelefono = txtTelefono;
+    }
+
+    public JTextField getTxtxCedula() {
+        return txtxCedula;
+    }
+
+    public void setTxtxCedula(JTextField txtxCedula) {
+        this.txtxCedula = txtxCedula;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JTextField getTxtcodigo() {
+        return txtcodigo;
+    }
+
+    public void setTxtcodigo(JTextField txtcodigo) {
+        this.txtcodigo = txtcodigo;
+    }
+
+    public JTextField getTxtCantHijos() {
+        return txtCantHijos;
+    }
+
+    public void setTxtCantHijos(JTextField txtCantHijos) {
+        this.txtCantHijos = txtCantHijos;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JRadioButton getRdCasado() {
+        return rdCasado;
+    }
+
+    public void setRdCasado(JRadioButton rdCasado) {
+        this.rdCasado = rdCasado;
+    }
+
+    public JRadioButton getRdSoltero() {
+        return rdSoltero;
+    }
+
+    public void setRdSoltero(JRadioButton rdSoltero) {
+        this.rdSoltero = rdSoltero;
+    }
+
+  
+    
+    
 }
