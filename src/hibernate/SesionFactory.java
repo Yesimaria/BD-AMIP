@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package hibernate;
+import java.util.ArrayList;
+import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -53,16 +55,16 @@ public class SesionFactory {
         this.session.getTransaction().commit();
     }
     
-    public Query query (String sql){
-        Query query;
-        query = this.session.createSQLQuery(sql);
-        return query;
+    public List query (Class clase){
+        List objs = new ArrayList();
+        objs = this.session.createQuery("FROM" + clase.getName()).list();
+        return objs;
         
     }
     
     public Object queryUniq(String sql){
         Object query;
-        query = this.session.createSQLQuery(sql).uniqueResult();
+        query = this.session.createQuery(sql).uniqueResult();
         System.out.print(query);
         return query;
     }

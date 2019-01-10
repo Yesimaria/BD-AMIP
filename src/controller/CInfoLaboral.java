@@ -39,16 +39,32 @@ public class CInfoLaboral implements ActionListener, KeyListener {
     
     public boolean incluirDatosLaboral(String codigo){
          daopersona = new DAOPersona();
+         boolean save;
+         System.out.print("test"+ " " + daopersona.getPersonaCodigo(codigo).getInfoLaboral().getNombre_empresa());
+         try {
          persona = daopersona.getPersonaCodigo(codigo);
-         infolaboral = new MInfoLaboral();
+         infolaboral = daopersona.getPersonaCodigo(codigo).getInfoLaboral();
          infolaboral.setNombre_empresa(vlaboral.getTxtNombEmpresa().getText());
          infolaboral.setNombre_jefe(vlaboral.getTxtNomJefe().getText());
          infolaboral.setIndependiente(vlaboral.getRdSi().isSelected() ? vlaboral.getRdSi().isSelected() : false );
          infolaboral.setOficion(vlaboral.getTxtAOficios().getText());
-         infolaboral.setPersona(persona);
          persona.setInfoLaboral(infolaboral);
+         infolaboral.setPersona(persona);
          daolaboral = new DAOInfoLaboral();
-         boolean save = this.daolaboral.updatePersona(infolaboral, persona);
+         save = this.daolaboral.updatePersona(infolaboral, persona);
+        } catch (Exception e) {
+         infolaboral = new MInfoLaboral();
+         persona = new MPersona();
+         infolaboral.setNombre_empresa(vlaboral.getTxtNombEmpresa().getText());
+         infolaboral.setNombre_jefe(vlaboral.getTxtNomJefe().getText());
+         infolaboral.setIndependiente(vlaboral.getRdSi().isSelected() ? vlaboral.getRdSi().isSelected() : false );
+         infolaboral.setOficion(vlaboral.getTxtAOficios().getText());
+         persona.setInfoLaboral(infolaboral);
+          infolaboral.setPersona(persona);
+         daolaboral = new DAOInfoLaboral();
+         save = this.daolaboral.updatePersona(infolaboral, persona);
+        }
+        
         return save;
     }
 

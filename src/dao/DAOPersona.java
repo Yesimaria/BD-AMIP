@@ -6,6 +6,7 @@
 package dao;
 import modelo.MPersona;
 import hibernate.SesionFactory;
+import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Query;
 /**
@@ -14,6 +15,7 @@ import org.hibernate.Query;
  */
 public class DAOPersona {
 
+    MPersona persona;
     public DAOPersona() {
     }
     
@@ -46,16 +48,15 @@ public class DAOPersona {
       
     public MPersona getPersonaCodigo(String codigo){
      SesionFactory sesionFactory = new SesionFactory();
-     MPersona persona;
-     persona = (MPersona) sesionFactory.queryUniq("select p from MPersona p where codigo='"+codigo+"'");
+     persona = (MPersona)sesionFactory.queryUniq("SELECT p FROM MPersona p WHERE p.codigo='"+codigo+"'" );
      System.out.print(persona);
      return persona;
     }
     
-    public List<Object[]> listPersonasAtributo(String atributo, String valor){
+    public List<Object[]> listPersonas(){
        SesionFactory sesionFactory = new SesionFactory();
-       Query query;
-       query = sesionFactory.query("select p from MPersona p where p."+ atributo +"="+valor);
-       return query.list();
+       List objs = new ArrayList();
+       objs = sesionFactory.query(MPersona.class);
+       return objs;
    }
 }
