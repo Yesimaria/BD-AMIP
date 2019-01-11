@@ -5,6 +5,16 @@
  */
 package Vistas;
 
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 /**
  *
  * @author Usuario
@@ -38,8 +48,8 @@ public class EstRealizados extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
         rdPrimariaSi = new javax.swing.JRadioButton();
         rdPrimariaNo = new javax.swing.JRadioButton();
         rdSecundariaSi = new javax.swing.JRadioButton();
@@ -99,31 +109,31 @@ public class EstRealizados extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel11.setText("Dirección de la institución:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, 10));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, 20));
 
         jLabel12.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel12.setText("¿Qué idiomas conoce?");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 440, 190, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setIconTextGap(-3);
-        jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 560, 170, 70));
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
+        btnGuardar.setBorder(null);
+        btnGuardar.setBorderPainted(false);
+        btnGuardar.setContentAreaFilled(false);
+        btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGuardar.setIconTextGap(-3);
+        btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 560, 170, 70));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setIconTextGap(-3);
-        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 560, 160, 70));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
+        btnCancelar.setBorder(null);
+        btnCancelar.setBorderPainted(false);
+        btnCancelar.setContentAreaFilled(false);
+        btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCancelar.setIconTextGap(-3);
+        btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 560, 160, 70));
 
         rdPrimariaSi.setBackground(new java.awt.Color(255, 255, 255));
         rdPrimariaSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
@@ -285,8 +295,8 @@ public class EstRealizados extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.toedter.calendar.JDateChooser FechaEstu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -314,4 +324,236 @@ public class EstRealizados extends javax.swing.JFrame {
     private javax.swing.JTextField txtUltimoEstud;
     private javax.swing.JTextField txtxIdiomas;
     // End of variables declaration//GEN-END:variables
+
+    public void aggActionListener(ActionListener acL) {
+        btnGuardar.addActionListener(acL);
+        btnCancelar.addActionListener(acL);
+    }
+
+    public void aggKeyListener(KeyListener keyL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+  
+    public void aggMouseListener(MouseListener mouseL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public JTextField getTxtxIdiomas() {
+        return txtxIdiomas;
+    }
+
+    public void setTxtxIdiomas(JTextField txtxIdiomas) {
+        this.txtxIdiomas = txtxIdiomas;
+    }
+    
+    public JTextField getTxtUltimoEstud() {
+        return txtUltimoEstud;
+    }
+
+    public void setTxtUltimoEstud(JTextField txtUltimoEstud) {
+        this.txtUltimoEstud = txtUltimoEstud;
+    }
+    
+    public JTextField getTxtDirecSeminario() {
+        return txtDirecSeminario;
+    }
+
+    public void setTxtDirecSeminario(JTextField txtDirecSeminario) {
+        this.txtDirecSeminario = txtDirecSeminario;
+    }
+    public JTextField getTxtInstSemimario() {
+        return txtInstSemimario;
+    }
+
+    public void setTxtInstSemimario(JTextField txtInstSemimario) {
+        this.txtInstSemimario = txtInstSemimario;
+    }
+
+    public JLabel getJlbFondoEstRea() {
+        return jlbFondoEstRea;
+    }
+
+    public void setJlbFondoEstRea(JLabel jlbFondoEstRea) {
+        this.jlbFondoEstRea = jlbFondoEstRea;
+    }
+     public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public void setBtnGuardar(JButton btnGuardar) {
+        this.btnGuardar = btnGuardar;
+    }
+    
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+    
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+    
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public void setjLabel11(JLabel jLabel11) {
+        this.jLabel11 = jLabel11;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel4;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+    public JRadioButton getRdPrimariaNo() {
+        return rdPrimariaNo;
+    }
+
+    public void setRdPrimariaNo(JRadioButton rdPrimariaNo) {
+        this.rdPrimariaNo = rdPrimariaNo;
+    }
+    
+    public JRadioButton getRdPrimariaSi() {
+        return rdPrimariaSi;
+    }
+
+    public void setRdPrimariaSi(JRadioButton rdPrimariaSi) {
+        this.rdPrimariaSi = rdPrimariaSi;
+    }
+    
+    public JRadioButton getRdSecundariaNo() {
+        return rdSecundariaNo;
+    }
+
+    public void setRdSecundariaNo(JRadioButton rdSecundariaNo) {
+        this.rdSecundariaNo = rdSecundariaNo;
+    }
+    
+    public JRadioButton getRdSecundariaSi() {
+        return rdSecundariaSi;
+    }
+
+    public void setRdSecundariaSi(JRadioButton rdSecundariaSi) {
+        this.rdSecundariaSi = rdSecundariaSi;
+    }
+    
+    public JRadioButton getRdTeologicoNo() {
+        return rdTeologicoNo;
+    }
+
+    public void setRdTeologicoNo(JRadioButton rdTeologicoNo) {
+        this.rdTeologicoNo = rdTeologicoNo;
+    }
+    
+    public JRadioButton getRdTeologicoSi() {
+        return rdTeologicoSi;
+    }
+
+    public void setRdTeologicoSi(JRadioButton rdTeologicoSi) {
+        this.rdTeologicoSi = rdTeologicoSi;
+    }
+    
+    public JRadioButton getRdSeminarioNo() {
+        return rdSeminarioNo;
+    }
+
+    public void setRdSeminarioNo(JRadioButton rdSeminarioNo) {
+        this.rdSeminarioNo = rdSeminarioNo;
+    }
+    
+    public JRadioButton getRdSeminarioSi() {
+        return rdSeminarioSi;
+    }
+
+    public void setRdSeminarioSi(JRadioButton rdSeminarioSi) {
+        this.rdSeminarioSi = rdSeminarioSi;
+    }
+    
+    public JRadioButton getRdUniversidadNo() {
+        return rdUniversidadNo;
+    }
+
+    public void setRdUniversidadNo(JRadioButton rdUniversidadNo) {
+        this.rdUniversidadNo = rdUniversidadNo;
+    }
+    
+    public JRadioButton getRdUniversidadSi() {
+        return rdUniversidadSi;
+    }
+
+    public void setRdUniversidadSi(JRadioButton rdUniversidadSi) {
+        this.rdUniversidadSi = rdUniversidadSi;
+    }
 }

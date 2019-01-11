@@ -58,47 +58,47 @@ public class DatMinis extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel2.setText("Datos ministeriales");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 440, 60));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 440, 60));
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel3.setText("Fecha de conversión:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 160, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 160, -1));
 
-        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel4.setText("Fecha de bautismo en agua:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 220, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 220, -1));
 
-        jLabel5.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel5.setText("¿Es bautizado en el Espíritu Santo?");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 280, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 280, -1));
 
-        jLabel6.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel6.setText("¿Qué edad tenía al inicio de su Ministerio?");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 330, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 330, -1));
 
-        jLabel7.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel7.setText("¿En qué Iglesia u organización inició su Ministerio?");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 390, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 390, -1));
 
-        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel8.setText("Ciudad y Departamento:");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 190, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 190, -1));
 
-        jLabel9.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel9.setText("Mencione los lugares donde ha ejercido su Ministerio:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 420, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 420, -1));
 
-        jLabel10.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel10.setText("Cargos desempeñados:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 180, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 180, -1));
 
-        jLabel11.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel11.setText("Grado ministerial:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 140, -1));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, 140, -1));
 
-        jLabel12.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel12.setText("Área de mayor experiencia ministerial:");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, 300, -1));
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, 300, -1));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
         btnGuardar.setBorder(null);
@@ -107,7 +107,7 @@ public class DatMinis extends javax.swing.JFrame {
         btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, 140, 70));
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 540, 140, 70));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
         btnCancelar.setBorder(null);
@@ -116,33 +116,33 @@ public class DatMinis extends javax.swing.JFrame {
         btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 470, 140, 70));
-        getContentPane().add(txtIgleMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 350, 30));
-        getContentPane().add(txtCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 370, 30));
-        getContentPane().add(txtEjerMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 180, 370, 30));
-        getContentPane().add(txtCargos, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 370, 30));
-        getContentPane().add(txtGradoMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 370, 30));
-        getContentPane().add(txtExpeMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 370, 30));
-        getContentPane().add(txtEdadMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 80, 30));
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 540, 140, 70));
+        getContentPane().add(txtIgleMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 350, 30));
+        getContentPane().add(txtCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 370, 30));
+        getContentPane().add(txtEjerMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, 370, 30));
+        getContentPane().add(txtCargos, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 370, 30));
+        getContentPane().add(txtGradoMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, 370, 30));
+        getContentPane().add(txtExpeMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 370, 30));
+        getContentPane().add(txtEdadMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 80, 30));
 
         rdBautizoSi.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdBautizoSi.setText("Sí");
-        getContentPane().add(rdBautizoSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 50, -1));
+        getContentPane().add(rdBautizoSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 50, -1));
 
         rdBautizoNo.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         rdBautizoNo.setText("No");
-        getContentPane().add(rdBautizoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 50, -1));
+        getContentPane().add(rdBautizoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 50, -1));
 
         FechaBaut.setDateFormatString("yyyy/MM/dd");
         FechaBaut.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        getContentPane().add(FechaBaut, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 170, 30));
+        getContentPane().add(FechaBaut, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 170, 30));
 
         FechaCon.setDateFormatString("yyyy/MM/dd");
         FechaCon.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        getContentPane().add(FechaCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 170, 30));
+        getContentPane().add(FechaCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 170, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo 17.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo 16.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 0, 1010, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
