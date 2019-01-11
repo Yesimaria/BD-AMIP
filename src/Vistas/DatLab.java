@@ -45,6 +45,7 @@ public class DatLab extends javax.swing.JFrame implements IVista {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        lbnombre = new javax.swing.JLabel();
         txtNombEmpresa = new javax.swing.JTextField();
         txtNomJefe = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
@@ -78,6 +79,9 @@ public class DatLab extends javax.swing.JFrame implements IVista {
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel6.setText("Oficios que ha desempeñado:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 260, -1));
+
+        lbnombre.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        getContentPane().add(lbnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 140, 40));
 
         txtNombEmpresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,6 +194,7 @@ public class DatLab extends javax.swing.JFrame implements IVista {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbnombre;
     private javax.swing.JRadioButton rdNo;
     private javax.swing.JRadioButton rdSi;
     private javax.swing.JTextArea txtAOficios;
@@ -339,6 +344,14 @@ public class DatLab extends javax.swing.JFrame implements IVista {
 
     public void setTxtNombEmpresa(JTextField txtNombEmpresa) {
         this.txtNombEmpresa = txtNombEmpresa;
+    }
+
+    public JLabel getLbnombre() {
+        return lbnombre;
+    }
+
+    public void setLbnombre(JLabel lbnombre) {
+        this.lbnombre = lbnombre;
     }
     
 }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package controller;
+import Vistas.DatLab;
 import Vistas.InfPersonal;
 import Vistas.Menus;
 import dao.DAOPersona;
@@ -18,30 +19,33 @@ import modelo.MPersona;
  *
  * @author maike
  */
-public class CInfoPersonal implements ActionListener, KeyListener {
+public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyListener {
 
     Menus vmenus;
     CMenus cmenus;
+    DatLab vlaboral;
+    CInfoLaboral claboral;
     InfPersonal vpersonal;
-     MPersona persona;
+    MPersona persona;
     DAOPersona daopersona;
-    public CInfoPersonal(InfPersonal vpersonal) {
+    
+    public CInfoPersonal(InfPersonal vpersonal , String codigo) {
     this.vpersonal = vpersonal;
     vpersonal.aggActionListener(this);
     vpersonal.setVisible(true);
     }
     
- public boolean incluirPersona(){
+ public String incluirPersona(){
        
         String nombre = vpersonal.getTxtNombres().getText();
         String apellido = vpersonal.getTxtApellidos().getText();
         String codigo = vpersonal.getTxtcodigo().getText();
         String lnacimiento = vpersonal.getTxtLugarNac().getText();
-        String fnac = vpersonal.getTxtFechaNac().getText();
+        String fnac = ObtFecha(vpersonal.getTxtFechaNac(), "dd-mm-yyyy");
         String cedula = vpersonal.getTxtxCedula().getText();
         String correo = vpersonal.getTxtCorreo().getText();
         String telefono = vpersonal.getTxtTelefono().getText();
-        String fechaIngre = vpersonal.getFechaIngre().getText();
+        String fechaIngre = ObtFecha(vpersonal.getFechaIngre(), "dd-mm-yyyy");
         int cantHijos = Integer.parseInt(vpersonal.getTxtCantHijos().getText().trim());
         boolean sexoM = vpersonal.getRdMasculino().isSelected();
         boolean sexoF = vpersonal.getRdFemenino().isSelected();
@@ -62,23 +66,25 @@ public class CInfoPersonal implements ActionListener, KeyListener {
          persona = new MPersona(codigo, fechaIngre, nombre, apellido, cedula, telefono, correo, fnac, lnacimiento, edoCivil, cantHijos, sexo, null, null, null, null, null, null, null);
          this.daopersona = new DAOPersona();
          boolean save = this.daopersona.savePersona(persona);
-        return save;
+        return codigo;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
       if(e.getActionCommand().equalsIgnoreCase("guardar")){
-          boolean save = this.incluirPersona();
-          if(save){
+     
+          try {
+          String codigo = this.incluirPersona();
           vpersonal.setVisible(false);
-          vmenus= new Menus();
-          cmenus = new CMenus(vmenus);
+          vlaboral= new DatLab();
+          persona = daopersona.getPersonaCodigo(codigo);
+          vlaboral.getLbnombre().setText(persona.getNombre());
+          claboral = new CInfoLaboral(vlaboral, persona.getCodigo());
           System.out.print("incluido exitosamente");
-          }else{
-              System.out.print("Error al intentar incluir");
+          } catch (Exception ex) {
+              System.out.print("Error al intentar incluir: " + ex);
           }
-          
-        }
+      }
       if(e.getActionCommand().equalsIgnoreCase("cancelar")){
           vpersonal.setVisible(false);
           vmenus= new Menus();

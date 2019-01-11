@@ -30,20 +30,22 @@ public class CInfoLaboral implements ActionListener, KeyListener {
     DAOPersona daopersona;
     DAOInfoLaboral daolaboral;
     String codigo;
-    public CInfoLaboral(DatLab vlaboral) {
+    
+    public CInfoLaboral(DatLab vlaboral, String codigo) {
     this.vlaboral = vlaboral;
+    this.codigo = codigo;
     vlaboral.aggActionListener(this);
     vlaboral.setVisible(true);
-    this.codigo = "yeret2";
+    
+    
     }
     
-    public boolean incluirDatosLaboral(String codigo){
+    public void incluirDatosLaboral(String codigo){
          daopersona = new DAOPersona();
-         boolean save;
-         System.out.print("test"+ " " + daopersona.getPersonaCodigo(codigo).getInfoLaboral().getNombre_empresa());
-         try {
+         boolean save = false;
+          try {
          persona = daopersona.getPersonaCodigo(codigo);
-         infolaboral = daopersona.getPersonaCodigo(codigo).getInfoLaboral();
+         infolaboral = daopersona.getPerksonaCodigo(codigo).getInfoLaboral();
          infolaboral.setNombre_empresa(vlaboral.getTxtNombEmpresa().getText());
          infolaboral.setNombre_jefe(vlaboral.getTxtNomJefe().getText());
          infolaboral.setIndependiente(vlaboral.getRdSi().isSelected() ? vlaboral.getRdSi().isSelected() : false );
@@ -53,19 +55,9 @@ public class CInfoLaboral implements ActionListener, KeyListener {
          daolaboral = new DAOInfoLaboral();
          save = this.daolaboral.updatePersona(infolaboral, persona);
         } catch (Exception e) {
-         infolaboral = new MInfoLaboral();
-         persona = new MPersona();
-         infolaboral.setNombre_empresa(vlaboral.getTxtNombEmpresa().getText());
-         infolaboral.setNombre_jefe(vlaboral.getTxtNomJefe().getText());
-         infolaboral.setIndependiente(vlaboral.getRdSi().isSelected() ? vlaboral.getRdSi().isSelected() : false );
-         infolaboral.setOficion(vlaboral.getTxtAOficios().getText());
-         persona.setInfoLaboral(infolaboral);
-          infolaboral.setPersona(persona);
-         daolaboral = new DAOInfoLaboral();
-         save = this.daolaboral.updatePersona(infolaboral, persona);
+         System.out.println(e);
         }
-        
-        return save;
+       
     }
 
     @Override
@@ -77,16 +69,18 @@ public class CInfoLaboral implements ActionListener, KeyListener {
           
         }
          if(e.getActionCommand().equalsIgnoreCase("guardar")){
-          boolean save = this.incluirDatosLaboral(codigo);
-          if(save){
-          vlaboral.setVisible(false);
+             try {
+                 System.out.println("el codigo: "+ codigo);
+           this.incluirDatosLaboral(codigo);
+           vlaboral.setVisible(false);
           vmenus= new Menus();
           cmenus = new CMenus(vmenus);
           System.out.print("incluido exitosamente");
-          }else{
-              System.out.print("Error al intentar incluir");
-          }
-          
+             } catch (Exception ex) {
+                   System.out.print("Error al intentar incluir: "+ ex);
+             }
+         
+         
         }
     }
 

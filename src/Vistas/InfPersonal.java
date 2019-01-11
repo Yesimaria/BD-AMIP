@@ -14,6 +14,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
+import com.toedter.calendar.*;
 
 /**
  *
@@ -54,14 +55,14 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         txtxCedula = new javax.swing.JTextField();
         txtCorreo = new javax.swing.JTextField();
         txtTelefono = new javax.swing.JTextField();
-        txtFechaIngre = new javax.swing.JTextField();
         txtNombres = new javax.swing.JTextField();
         rdSoltero = new javax.swing.JRadioButton();
         rdCasado = new javax.swing.JRadioButton();
         txtCantHijos = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
         BtnCancelar = new javax.swing.JButton();
-        txtFechaNac = new javax.swing.JTextField();
+        txtFechaNac = new com.toedter.calendar.JDateChooser();
+        txtFechaIngre = new com.toedter.calendar.JDateChooser();
         txtLugarNac = new javax.swing.JTextField();
         rdFemenino = new javax.swing.JRadioButton();
         rdMasculino = new javax.swing.JRadioButton();
@@ -127,7 +128,6 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         getContentPane().add(txtxCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 230, -1));
         getContentPane().add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 230, -1));
         getContentPane().add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 230, -1));
-        getContentPane().add(txtFechaIngre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 230, -1));
 
         txtNombres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,12 +176,8 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         BtnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         BtnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(BtnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, 150, 70));
-
-        txtFechaNac.setEditable(false);
-        txtFechaNac.setBackground(new java.awt.Color(255, 255, 255));
-        txtFechaNac.setToolTipText("");
-        txtFechaNac.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(txtFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 220, -1));
+        getContentPane().add(txtFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 230, -1));
+        getContentPane().add(txtFechaIngre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 230, -1));
         getContentPane().add(txtLugarNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 230, -1));
 
         rdFemenino.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
@@ -286,8 +282,8 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
     private javax.swing.JTextField txtApellidos;
     private javax.swing.JTextField txtCantHijos;
     private javax.swing.JTextField txtCorreo;
-    private javax.swing.JTextField txtFechaIngre;
-    private javax.swing.JTextField txtFechaNac;
+    private com.toedter.calendar.JDateChooser txtFechaIngre;
+    private com.toedter.calendar.JDateChooser txtFechaNac;
     private javax.swing.JTextField txtLugarNac;
     private javax.swing.JTextField txtNombres;
     private javax.swing.JTextField txtTelefono;
@@ -313,9 +309,6 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
        txtFechaIngre.addKeyListener(keyL);
        txtCorreo.addKeyListener(keyL);
        txtLugarNac.addKeyListener(keyL);
-       txtFechaNac.addKeyListener(keyL);
-       
-      
     }
 
     @Override
@@ -477,11 +470,11 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
 
    
 
-    public JTextField getFechaIngre() {
+    public JDateChooser getFechaIngre() {
         return txtFechaIngre;
     }
 
-    public void setFechaIngre(JTextField fechaIngre) {
+    public void setFechaIngre(JDateChooser fechaIngre) {
         this.txtFechaIngre = fechaIngre;
     }
 
@@ -493,11 +486,11 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         this.txtCorreo = txtCorreo;
     }
 
-    public JTextField getTxtFechaNac() {
+    public JDateChooser getTxtFechaNac() {
         return txtFechaNac;
     }
 
-    public void setTxtFechaNac(JTextField txtFechaNac) {
+    public void setTxtFechaNac(JDateChooser txtFechaNac) {
         this.txtFechaNac = txtFechaNac;
     }
 

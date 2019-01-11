@@ -50,12 +50,12 @@ public class CMenus implements ActionListener {
       if(e.getActionCommand().equalsIgnoreCase("infopersonal")){
           vmenus.setVisible(false);
           vpersonal = new InfPersonal();
-          cpersonal = new CInfoPersonal(vpersonal);
+          cpersonal = new CInfoPersonal(vpersonal, null);
         }
       if(e.getActionCommand().equalsIgnoreCase("infolaboral")){
           vmenus.setVisible(false);
           vlaboral = new DatLab ();
-          claboral = new CInfoLaboral(vlaboral);
+          claboral = new CInfoLaboral(vlaboral, null);
         }
     }
     
