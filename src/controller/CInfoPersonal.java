@@ -79,6 +79,7 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
           vlaboral= new DatLab();
           persona = daopersona.getPersonaCodigo(codigo);
           vlaboral.getLbnombre().setText(persona.getNombre());
+          System.out.println("el codigo 1 es :" + codigo+"  el codigo 2 es :" + persona.getNombre());
           claboral = new CInfoLaboral(vlaboral, persona.getCodigo());
           System.out.print("incluido exitosamente");
           } catch (Exception ex) {

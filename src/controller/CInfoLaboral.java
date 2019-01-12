@@ -34,6 +34,7 @@ public class CInfoLaboral implements ActionListener, KeyListener {
     public CInfoLaboral(DatLab vlaboral, String codigo) {
     this.vlaboral = vlaboral;
     this.codigo = codigo;
+    System.out.println("el codigo en v es: "+ codigo);
     vlaboral.aggActionListener(this);
     vlaboral.setVisible(true);
     
@@ -45,7 +46,8 @@ public class CInfoLaboral implements ActionListener, KeyListener {
          boolean save = false;
           try {
          persona = daopersona.getPersonaCodigo(codigo);
-         infolaboral = daopersona.getPerksonaCodigo(codigo).getInfoLaboral();
+         System.out.println("la persona en v es: "+ persona.getNombre()+" y el codigo es: "  + persona.getCodigo());
+         infolaboral = daopersona.getPersonaCodigo(codigo).getInfoLaboral();
          infolaboral.setNombre_empresa(vlaboral.getTxtNombEmpresa().getText());
          infolaboral.setNombre_jefe(vlaboral.getTxtNomJefe().getText());
          infolaboral.setIndependiente(vlaboral.getRdSi().isSelected() ? vlaboral.getRdSi().isSelected() : false );
