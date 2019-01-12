@@ -34,8 +34,8 @@ public class Consultar extends javax.swing.JFrame {
     public JButton getBtnModificar (){
         return btnModificar;
     }
-    public JTable getTBusqueda() {
-        return TBusqueda;
+    public JTable getConsulta() {
+        return TConsulta;
     }
     
     public void agregarActionListener(ActionListener accion){
@@ -66,7 +66,7 @@ public class Consultar extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         txtNroPastor = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TBusqueda = new javax.swing.JTable();
+        TConsulta = new javax.swing.JTable();
         btnModificar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         txtBuscar1 = new javax.swing.JTextField();
@@ -95,8 +95,8 @@ public class Consultar extends javax.swing.JFrame {
         getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 120, 50));
         getContentPane().add(txtNroPastor, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, 90, 20));
 
-        TBusqueda.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        TBusqueda.setModel(new javax.swing.table.DefaultTableModel(
+        TConsulta.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        TConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -115,7 +115,7 @@ public class Consultar extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(TBusqueda);
+        jScrollPane1.setViewportView(TConsulta);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 520, 260));
 
@@ -184,7 +184,7 @@ public class Consultar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable TBusqueda;
+    private javax.swing.JTable TConsulta;
     private javax.swing.JButton btnBuscar2;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnModificar;

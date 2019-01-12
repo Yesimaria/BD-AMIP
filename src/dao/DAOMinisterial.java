@@ -30,6 +30,7 @@ public class DAOMinisterial {
             return false;
         }
     }
+     
     
       public boolean updatePersona(MInfoMinisterio infoMinisterio, MPersona persona){
           SesionFactory sesionFactory = new SesionFactory();

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JSpinner;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 /**
  *
@@ -39,7 +40,14 @@ public class CConsulta  {
         
      }
     
-
+    public void llenarTConsulta (JTable tabla, ArrayList<MPersona> Persona){
+        String[] titulos = {"Nro. de Pastor", "Nombre", "Fecha de ingreso"};
+        String[] datos = new String[3];
+        DefaultTableModel modelo = new DefaultTableModel (null, titulos);
+        tabla.setModel(modelo);
+        MPersona Pers;
+    }
+            
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     

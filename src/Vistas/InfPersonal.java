@@ -121,8 +121,8 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 100, 14));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jLabel2.setText("Código:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 60, 20));
+        jLabel2.setText("Nro. del Pastor:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 110, 20));
         getContentPane().add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 230, 20));
         getContentPane().add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 230, -1));
         getContentPane().add(txtxCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 230, -1));
