@@ -8,15 +8,13 @@ package dao;
 import modelo.MPersona;
 import modelo.MInfoDocumentos;
 import hibernate.SesionFactory;
-import java.util.List;
-import org.hibernate.Query;
 /**
  *
  * @author Usuario
  */
 public class DAODocumentos {
     
-    public boolean savePersona(MInfoDocumentos infoDocumentos, MPersona persona){
+    public boolean saveInfoDocumentos(MInfoDocumentos infoDocumentos, MPersona persona){
       SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();
@@ -30,7 +28,7 @@ public class DAODocumentos {
         }
     }
     
-      public boolean updatePersona(MInfoDocumentos infoDocumentos, MPersona persona){
+      public boolean updateInfoDocumentos(MInfoDocumentos infoDocumentos, MPersona persona){
           SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();

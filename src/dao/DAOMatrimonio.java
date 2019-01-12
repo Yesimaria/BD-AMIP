@@ -16,7 +16,7 @@ import org.hibernate.Query;
  */
 public class DAOMatrimonio {
    
-    public boolean savePersona(MMatrimonio matrimonio, MPersona persona){
+    public boolean savePMatrimonio(MMatrimonio matrimonio, MPersona persona){
       SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();
@@ -30,7 +30,7 @@ public class DAOMatrimonio {
         }
     }
     
-      public boolean updatePersona(MMatrimonio matrimonio, MPersona persona){
+      public boolean updateMatrimonio(MMatrimonio matrimonio, MPersona persona){
           SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();
