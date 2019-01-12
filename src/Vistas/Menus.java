@@ -5,9 +5,12 @@
  */
 package Vistas;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -38,6 +41,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         btnDocAnex = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
+        lbpastorname = new javax.swing.JLabel();
         jlbFondoMenu = new javax.swing.JLabel();
 
         setLocation(new java.awt.Point(0, 0));
@@ -123,8 +127,11 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         btnSalir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 120, 50));
 
+        lbpastorname.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        getContentPane().add(lbpastorname, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 260, 40));
+
         jlbFondoMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo11.png"))); // NOI18N
-        getContentPane().add(jlbFondoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 660, 500));
+        getContentPane().add(jlbFondoMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 480));
 
         getAccessibleContext().setAccessibleDescription("");
     }// </editor-fold>//GEN-END:initComponents
@@ -146,6 +153,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
     private javax.swing.JButton btnInfPersonal;
     private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jlbFondoMenu;
+    private javax.swing.JLabel lbpastorname;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -158,6 +166,78 @@ public class Menus extends  javax.swing.JFrame implements IVista {
       btnInfPersonal.addActionListener(acL);
       btnSalir.addActionListener(acL);
       
+    }
+
+    public JButton getBtnDatLab() {
+        return btnDatLab;
+    }
+
+    public void setBtnDatLab(JButton btnDatLab) {
+        this.btnDatLab = btnDatLab;
+    }
+
+    public JButton getBtnDatMinis() {
+        return btnDatMinis;
+    }
+
+    public void setBtnDatMinis(JButton btnDatMinis) {
+        this.btnDatMinis = btnDatMinis;
+    }
+
+    public JButton getBtnDocAnex() {
+        return btnDocAnex;
+    }
+
+    public void setBtnDocAnex(JButton btnDocAnex) {
+        this.btnDocAnex = btnDocAnex;
+    }
+
+    public JButton getBtnEstudRea() {
+        return btnEstudRea;
+    }
+
+    public void setBtnEstudRea(JButton btnEstudRea) {
+        this.btnEstudRea = btnEstudRea;
+    }
+
+    public JButton getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public void setBtnGuardar(JButton btnGuardar) {
+        this.btnGuardar = btnGuardar;
+    }
+
+    public JButton getBtnInfPersonal() {
+        return btnInfPersonal;
+    }
+
+    public void setBtnInfPersonal(JButton btnInfPersonal) {
+        this.btnInfPersonal = btnInfPersonal;
+    }
+
+    public JButton getBtnSalir() {
+        return btnSalir;
+    }
+
+    public void setBtnSalir(JButton btnSalir) {
+        this.btnSalir = btnSalir;
+    }
+
+    public JLabel getJlbFondoMenu() {
+        return jlbFondoMenu;
+    }
+
+    public void setJlbFondoMenu(JLabel jlbFondoMenu) {
+        this.jlbFondoMenu = jlbFondoMenu;
+    }
+
+    public JLabel getLbpastorname() {
+        return lbpastorname;
+    }
+
+    public void setLbpastorname(JLabel lbpastorname) {
+        this.lbpastorname = lbpastorname;
     }
 
     @Override

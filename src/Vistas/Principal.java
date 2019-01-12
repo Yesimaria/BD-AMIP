@@ -51,34 +51,28 @@ public class Principal extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel2.setText("Pastor");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 100, 60, 18);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 60, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel3.setText("Nro. Pastor");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(130, 130, 90, 17);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 90, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel4.setText("Fecha de ingreso");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(90, 160, 120, 17);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 120, -1));
 
         txtPastor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPastorActionPerformed(evt);
             }
         });
-        getContentPane().add(txtPastor);
-        txtPastor.setBounds(220, 100, 140, 20);
-        getContentPane().add(txtNroPas);
-        txtNroPas.setBounds(220, 130, 140, 20);
-        getContentPane().add(txtFechaIng);
-        txtFechaIng.setBounds(220, 160, 140, 20);
+        getContentPane().add(txtPastor, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 140, -1));
+        getContentPane().add(txtNroPas, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 140, -1));
+        getContentPane().add(txtFechaIng, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 140, -1));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Btcanc.png"))); // NOI18N
         btnCancelar.setBorder(null);
@@ -88,8 +82,7 @@ public class Principal extends javax.swing.JFrame {
         btnCancelar.setIconTextGap(-3);
         btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar);
-        btnCancelar.setBounds(240, 240, 120, 53);
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 120, -1));
 
         btnAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtAcep.png"))); // NOI18N
         btnAceptar.setBorder(null);
@@ -99,17 +92,14 @@ public class Principal extends javax.swing.JFrame {
         btnAceptar.setIconTextGap(-3);
         btnAceptar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnAceptar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnAceptar);
-        btnAceptar.setBounds(90, 240, 130, 53);
+        getContentPane().add(btnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 130, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel5.setText("Ingreso");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(150, 10, 170, 52);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 170, -1));
 
         jlbFondoIngreso.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo2.jpg"))); // NOI18N
-        getContentPane().add(jlbFondoIngreso);
-        jlbFondoIngreso.setBounds(0, 0, 450, 310);
+        getContentPane().add(jlbFondoIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 310));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

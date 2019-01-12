@@ -43,62 +43,52 @@ public class DocAnexos extends javax.swing.JFrame {
         jlbFondoDocAne = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setTitle("Documentos Anexos");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel2.setText("Documentos anexos");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(210, 10, 470, 50);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 470, 50));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel3.setText("Fotocopia de cédula del Pastor:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(50, 110, 250, 18);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 250, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel4.setText("Diplomas de estudios realizados:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 190, 250, 18);
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 250, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel5.setText("Constancia de referencias laborales:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 270, 290, 18);
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 290, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel6.setText("Referencias personales:");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(260, 70, 190, 18);
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 190, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel7.setText("Referencias familiares:");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(50, 430, 180, 18);
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 180, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel8.setText("Fotocopia de la última credencial ministerial:");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(460, 110, 350, 18);
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 350, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel9.setText("Fotocopia del acta de matrimonio:");
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(460, 190, 270, 18);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 270, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel10.setText("Fotocopia de cédula del conyuge:");
-        getContentPane().add(jLabel10);
-        jLabel10.setBounds(460, 270, 260, 18);
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 260, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel11.setText("Fotocopia de seguro médico:");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(460, 350, 230, 18);
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 230, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel12.setText("Fotocopia del Sisben:");
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(460, 430, 170, 18);
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 170, -1));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
         btnGuardar.setBorder(null);
@@ -108,8 +98,7 @@ public class DocAnexos extends javax.swing.JFrame {
         btnGuardar.setIconTextGap(-3);
         btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnGuardar);
-        btnGuardar.setBounds(220, 550, 160, 70);
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 550, 160, 70));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
         btnCancelar.setBorder(null);
@@ -119,12 +108,10 @@ public class DocAnexos extends javax.swing.JFrame {
         btnCancelar.setIconTextGap(-3);
         btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar);
-        btnCancelar.setBounds(420, 550, 150, 70);
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 550, 150, 70));
 
         jlbFondoDocAne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo14.png"))); // NOI18N
-        getContentPane().add(jlbFondoDocAne);
-        jlbFondoDocAne.setBounds(-6, 0, 880, 630);
+        getContentPane().add(jlbFondoDocAne, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, -1, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
