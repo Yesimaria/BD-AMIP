@@ -8,18 +8,15 @@ package Vistas;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseListener;
-import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 /**
  *
  * @author Usuario
  */
-public class EstRealizados extends javax.swing.JFrame {
+public class EstRealizados extends javax.swing.JFrame implements IVista{
 
     /**
      * Creates new form EstRealizados
@@ -116,6 +113,7 @@ public class EstRealizados extends javax.swing.JFrame {
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 440, 190, -1));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
+        btnGuardar.setActionCommand("guardar");
         btnGuardar.setBorder(null);
         btnGuardar.setBorderPainted(false);
         btnGuardar.setContentAreaFilled(false);
@@ -126,6 +124,7 @@ public class EstRealizados extends javax.swing.JFrame {
         getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 560, 170, 70));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
+        btnCancelar.setActionCommand("cancelar");
         btnCancelar.setBorder(null);
         btnCancelar.setBorderPainted(false);
         btnCancelar.setContentAreaFilled(false);
@@ -325,16 +324,19 @@ public class EstRealizados extends javax.swing.JFrame {
     private javax.swing.JTextField txtxIdiomas;
     // End of variables declaration//GEN-END:variables
 
+    @Override
     public void aggActionListener(ActionListener acL) {
         btnGuardar.addActionListener(acL);
         btnCancelar.addActionListener(acL);
     }
 
+    @Override
     public void aggKeyListener(KeyListener keyL) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
   
+    @Override
     public void aggMouseListener(MouseListener mouseL) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

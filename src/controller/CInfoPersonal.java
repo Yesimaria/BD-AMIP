@@ -33,6 +33,7 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
     this.vpersonal = vpersonal;
     vpersonal.aggActionListener(this);
     vpersonal.setVisible(true);
+    daopersona = new DAOPersona();
     }
     
  public String incluirPersona(){
