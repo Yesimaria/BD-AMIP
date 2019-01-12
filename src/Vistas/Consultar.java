@@ -5,12 +5,46 @@
  */
 package Vistas;
 
+import java.awt.event.ActionListener;
+import javax.swing.JTable;
+import javax.swing.JButton;
 /**
  *
  * @author Usuario
  */
 public class Consultar extends javax.swing.JFrame {
 
+    private static Consultar instancia;
+    
+    public static Consultar instancia(){
+        
+        instancia=new Consultar();
+        return instancia;
+        
+    }
+
+    public JButton getBtnbuscar() {
+        return btnCancelar;
+    }
+
+    public JButton getBtncancelar() {
+        return btnCancelar;
+    }
+
+    public JButton getBtnModificar (){
+        return btnModificar;
+    }
+    public JTable getTBusqueda() {
+        return TBusqueda;
+    }
+    
+    public void agregarActionListener(ActionListener accion){
+        //metodo para que las acciones sean escuchadas
+        
+        this.btnCancelar.addActionListener(accion);
+        this.btnCancelar.addActionListener(accion);
+
+    }
     /**
      * Creates new form Consultar
      */
@@ -29,38 +63,87 @@ public class Consultar extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        btnBuscar = new javax.swing.JButton();
-        txtBuscar = new javax.swing.JTextField();
+        btnCancelar = new javax.swing.JButton();
+        txtNroPastor = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TBusqueda = new javax.swing.JTable();
+        btnModificar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtBuscar1 = new javax.swing.JTextField();
+        btnBuscar2 = new javax.swing.JButton();
         jlbFondoCons = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setTitle("Consultar");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel2.setText("Consultar");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(220, 0, 220, 50);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 220, 50));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
-        jLabel3.setText("Buscar:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(310, 70, 60, 18);
+        jLabel3.setText("Nro. del Pastor:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 120, -1));
 
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtBuscar.png"))); // NOI18N
-        btnBuscar.setBorder(null);
-        btnBuscar.setBorderPainted(false);
-        btnBuscar.setContentAreaFilled(false);
-        btnBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnBuscar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnBuscar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnBuscar);
-        btnBuscar.setBounds(580, 70, 70, 40);
-        getContentPane().add(txtBuscar);
-        txtBuscar.setBounds(380, 70, 190, 30);
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Btcanc.png"))); // NOI18N
+        btnCancelar.setBorder(null);
+        btnCancelar.setBorderPainted(false);
+        btnCancelar.setContentAreaFilled(false);
+        btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 120, 50));
+        getContentPane().add(txtNroPastor, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, 90, 20));
+
+        TBusqueda.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        TBusqueda.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Nro. de Pastor", "Nombre", "Fecha de Ingreso"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(TBusqueda);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 520, 260));
+
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnModificar.png"))); // NOI18N
+        btnModificar.setBorder(null);
+        btnModificar.setBorderPainted(false);
+        btnModificar.setContentAreaFilled(false);
+        btnModificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnModificar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnModificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, 90, 40));
+
+        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        jLabel4.setText("Buscar:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 60, -1));
+        getContentPane().add(txtBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 190, 30));
+
+        btnBuscar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtBuscar.png"))); // NOI18N
+        btnBuscar2.setBorder(null);
+        btnBuscar2.setBorderPainted(false);
+        btnBuscar2.setContentAreaFilled(false);
+        btnBuscar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnBuscar2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnBuscar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 70, 40));
 
         jlbFondoCons.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo13.png"))); // NOI18N
-        getContentPane().add(jlbFondoCons);
-        jlbFondoCons.setBounds(0, 0, 690, 460);
+        getContentPane().add(jlbFondoCons, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -101,10 +184,16 @@ public class Consultar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscar;
+    private javax.swing.JTable TBusqueda;
+    private javax.swing.JButton btnBuscar2;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnModificar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlbFondoCons;
-    private javax.swing.JTextField txtBuscar;
+    private javax.swing.JTextField txtBuscar1;
+    private javax.swing.JTextField txtNroPastor;
     // End of variables declaration//GEN-END:variables
 }
