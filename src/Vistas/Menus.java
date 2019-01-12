@@ -74,6 +74,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         getContentPane().add(btnDatLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 190, 80));
 
         btnDatMinis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtDatMin.png"))); // NOI18N
+        btnDatMinis.setActionCommand("infoministerial");
         btnDatMinis.setBorder(null);
         btnDatMinis.setBorderPainted(false);
         btnDatMinis.setContentAreaFilled(false);
@@ -84,6 +85,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         getContentPane().add(btnDatMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 190, 80));
 
         btnEstudRea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtEstdReal.png"))); // NOI18N
+        btnEstudRea.setActionCommand("infoestudios");
         btnEstudRea.setBorder(null);
         btnEstudRea.setBorderPainted(false);
         btnEstudRea.setContentAreaFilled(false);

@@ -4,11 +4,21 @@
  * and open the template in the editor.
  */
 package Vistas;
+
+import com.toedter.calendar.JDateChooser;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Usuario
  */
-public class DatMinis extends javax.swing.JFrame {
+public class DatMinis extends javax.swing.JFrame implements IVista{
 
     /**
      * Creates new form DatMinis
@@ -101,22 +111,24 @@ public class DatMinis extends javax.swing.JFrame {
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, 300, -1));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
+        btnGuardar.setActionCommand("guardar");
         btnGuardar.setBorder(null);
         btnGuardar.setBorderPainted(false);
         btnGuardar.setContentAreaFilled(false);
         btnGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 540, 140, 70));
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 490, 140, 70));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
+        btnCancelar.setActionCommand("cancelar");
         btnCancelar.setBorder(null);
         btnCancelar.setBorderPainted(false);
         btnCancelar.setContentAreaFilled(false);
         btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 540, 140, 70));
+        getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 490, 140, 70));
         getContentPane().add(txtIgleMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 350, 30));
         getContentPane().add(txtCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 370, 30));
         getContentPane().add(txtEjerMinis, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 230, 370, 30));
@@ -209,4 +221,222 @@ public class DatMinis extends javax.swing.JFrame {
     private javax.swing.JTextField txtGradoMinis;
     private javax.swing.JTextField txtIgleMinis;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void aggActionListener(ActionListener acL) {
+       btnCancelar.addActionListener(acL);
+       btnGuardar.addActionListener(acL);
+    }
+
+    @Override
+    public void aggKeyListener(KeyListener keyL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void aggMouseListener(MouseListener mouseL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public JDateChooser getFechaBaut() {
+        return FechaBaut;
+    }
+
+    public void setFechaBaut(JDateChooser FechaBaut) {
+        this.FechaBaut = FechaBaut;
+    }
+
+    public JDateChooser getFechaCon() {
+        return FechaCon;
+    }
+
+    public void setFechaCon(JDateChooser FechaCon) {
+        this.FechaCon = FechaCon;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public void setBtnGuardar(JButton btnGuardar) {
+        this.btnGuardar = btnGuardar;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public void setjLabel11(JLabel jLabel11) {
+        this.jLabel11 = jLabel11;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JRadioButton getRdBautizoNo() {
+        return rdBautizoNo;
+    }
+
+    public void setRdBautizoNo(JRadioButton rdBautizoNo) {
+        this.rdBautizoNo = rdBautizoNo;
+    }
+
+    public JRadioButton getRdBautizoSi() {
+        return rdBautizoSi;
+    }
+
+    public void setRdBautizoSi(JRadioButton rdBautizoSi) {
+        this.rdBautizoSi = rdBautizoSi;
+    }
+
+    public JTextField getTxtCargos() {
+        return txtCargos;
+    }
+
+    public void setTxtCargos(JTextField txtCargos) {
+        this.txtCargos = txtCargos;
+    }
+
+    public JTextField getTxtCiudad() {
+        return txtCiudad;
+    }
+
+    public void setTxtCiudad(JTextField txtCiudad) {
+        this.txtCiudad = txtCiudad;
+    }
+
+    public JTextField getTxtEdadMinis() {
+        return txtEdadMinis;
+    }
+
+    public void setTxtEdadMinis(JTextField txtEdadMinis) {
+        this.txtEdadMinis = txtEdadMinis;
+    }
+
+    public JTextField getTxtEjerMinis() {
+        return txtEjerMinis;
+    }
+
+    public void setTxtEjerMinis(JTextField txtEjerMinis) {
+        this.txtEjerMinis = txtEjerMinis;
+    }
+
+    public JTextField getTxtExpeMinis() {
+        return txtExpeMinis;
+    }
+
+    public void setTxtExpeMinis(JTextField txtExpeMinis) {
+        this.txtExpeMinis = txtExpeMinis;
+    }
+
+    public JTextField getTxtGradoMinis() {
+        return txtGradoMinis;
+    }
+
+    public void setTxtGradoMinis(JTextField txtGradoMinis) {
+        this.txtGradoMinis = txtGradoMinis;
+    }
+
+    public JTextField getTxtIgleMinis() {
+        return txtIgleMinis;
+    }
+
+    public void setTxtIgleMinis(JTextField txtIgleMinis) {
+        this.txtIgleMinis = txtIgleMinis;
+    }
+    
+    
 }

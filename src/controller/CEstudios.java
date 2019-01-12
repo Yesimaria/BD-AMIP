@@ -31,7 +31,7 @@ public class CEstudios implements ActionListener, KeyListener {
     DAOPersona daopersona;
     DAOEstudios daoestudios;
     String codigo;
-    public CEstudios(EstRealizados vestudios) {
+    public CEstudios(EstRealizados vestudios, String codigo) {
     this.vestudios = vestudios;
     vestudios.aggActionListener(this);
     vestudios.setVisible(true);

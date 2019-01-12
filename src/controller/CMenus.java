@@ -6,6 +6,8 @@
 package controller;
 
 import Vistas.DatLab;
+import Vistas.DatMinis;
+import Vistas.EstRealizados;
 import Vistas.InfPersonal;
 import Vistas.Inicio;
 import Vistas.Menus;
@@ -29,8 +31,11 @@ public class CMenus implements ActionListener {
     CInfoPersonal cpersonal;
     DatLab vlaboral;
     CInfoLaboral claboral;
-   
-
+    DatMinis vministerial;
+    CInfoMinisterial cministerial;
+    EstRealizados vestudios;
+    CEstudios cestudios;
+    
     public CMenus(Menus vmenus) {
         this.vmenus = vmenus;
         vmenus.aggActionListener(this);
@@ -43,19 +48,30 @@ public class CMenus implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
        if(e.getActionCommand().equalsIgnoreCase("salir")){
-          vmenus.setVisible(false);
           vinicio = new Inicio();
           cinicio = new CInicio(vinicio);
+          vmenus.setVisible(false);
         }
       if(e.getActionCommand().equalsIgnoreCase("infopersonal")){
-          vmenus.setVisible(false);
           vpersonal = new InfPersonal();
           cpersonal = new CInfoPersonal(vpersonal, null);
+          vmenus.setVisible(false);
         }
       if(e.getActionCommand().equalsIgnoreCase("infolaboral")){
-          vmenus.setVisible(false);
           vlaboral = new DatLab ();
           claboral = new CInfoLaboral(vlaboral, null);
+          vmenus.setVisible(false);
+        }
+      
+        if(e.getActionCommand().equalsIgnoreCase("infoministerial")){
+          vministerial = new DatMinis ();
+          cministerial = new CInfoMinisterial(vministerial, null);
+          vmenus.setVisible(false);
+        }
+         if(e.getActionCommand().equalsIgnoreCase("infoestudios")){
+          vestudios = new EstRealizados ();
+          cestudios = new CEstudios(vestudios, null);
+          vmenus.setVisible(false);
         }
     }
     
