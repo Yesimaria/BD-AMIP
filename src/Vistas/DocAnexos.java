@@ -5,12 +5,19 @@
  */
 package Vistas;
 
+import java.io.FileInputStream;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 /**
  *
  * @author Usuario
  */
 public class DocAnexos extends javax.swing.JFrame {
 
+    FileInputStream fis;
+    int longitudBytes;
+    
+   
     /**
      * Creates new form DocAnexos
      */
@@ -40,6 +47,26 @@ public class DocAnexos extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         btnGuardar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        btnCredencial = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        btnRefLab = new javax.swing.JButton();
+        btnRefPer = new javax.swing.JButton();
+        btnRefFam = new javax.swing.JButton();
+        btnCedula = new javax.swing.JButton();
+        btnMatrimonio = new javax.swing.JButton();
+        btnCedulaCony = new javax.swing.JButton();
+        btnSeguro = new javax.swing.JButton();
+        btnSisben = new javax.swing.JButton();
+        btnDiplomas = new javax.swing.JButton();
         jlbFondoDocAne = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -110,11 +137,141 @@ public class DocAnexos extends javax.swing.JFrame {
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 550, 150, 70));
 
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 160, 40));
+
+        btnCredencial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnCredencial.setBorder(null);
+        btnCredencial.setBorderPainted(false);
+        btnCredencial.setContentAreaFilled(false);
+        btnCredencial.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCredencial.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnCredencial.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnCredencial, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, -1, 50));
+
+        jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 160, 40));
+
+        jLabel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 160, 40));
+
+        jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 160, 40));
+
+        jLabel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 160, 40));
+
+        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 160, 40));
+
+        jLabel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 160, 40));
+
+        jLabel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 160, 40));
+
+        jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 160, 40));
+
+        jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 160, 40));
+
+        btnRefLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnRefLab.setBorder(null);
+        btnRefLab.setBorderPainted(false);
+        btnRefLab.setContentAreaFilled(false);
+        btnRefLab.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnRefLab.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnRefLab.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnRefLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, -1, 50));
+
+        btnRefPer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnRefPer.setBorder(null);
+        btnRefPer.setBorderPainted(false);
+        btnRefPer.setContentAreaFilled(false);
+        btnRefPer.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnRefPer.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnRefPer.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnRefPer, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, -1, 50));
+
+        btnRefFam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnRefFam.setBorder(null);
+        btnRefFam.setBorderPainted(false);
+        btnRefFam.setContentAreaFilled(false);
+        btnRefFam.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnRefFam.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnRefFam.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnRefFam, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, 50));
+
+        btnCedula.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnCedula.setBorder(null);
+        btnCedula.setBorderPainted(false);
+        btnCedula.setContentAreaFilled(false);
+        btnCedula.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCedula.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnCedula.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnCedula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCedulaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, -1, 50));
+
+        btnMatrimonio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnMatrimonio.setBorder(null);
+        btnMatrimonio.setBorderPainted(false);
+        btnMatrimonio.setContentAreaFilled(false);
+        btnMatrimonio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnMatrimonio.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnMatrimonio.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnMatrimonio, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, -1, 50));
+
+        btnCedulaCony.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnCedulaCony.setBorder(null);
+        btnCedulaCony.setBorderPainted(false);
+        btnCedulaCony.setContentAreaFilled(false);
+        btnCedulaCony.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCedulaCony.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnCedulaCony.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnCedulaCony, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, -1, 50));
+
+        btnSeguro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnSeguro.setBorder(null);
+        btnSeguro.setBorderPainted(false);
+        btnSeguro.setContentAreaFilled(false);
+        btnSeguro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSeguro.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnSeguro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnSeguro, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, -1, 50));
+
+        btnSisben.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnSisben.setBorder(null);
+        btnSisben.setBorderPainted(false);
+        btnSisben.setContentAreaFilled(false);
+        btnSisben.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSisben.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnSisben.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnSisben, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 460, -1, 50));
+
+        btnDiplomas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnDiplomas.setBorder(null);
+        btnDiplomas.setBorderPainted(false);
+        btnDiplomas.setContentAreaFilled(false);
+        btnDiplomas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDiplomas.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnDiplomas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnDiplomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, 50));
+
         jlbFondoDocAne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo14.png"))); // NOI18N
         getContentPane().add(jlbFondoDocAne, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, -1, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCedulaActionPerformed
+        // TODO add your handling code here:
+  
+    }//GEN-LAST:event_btnCedulaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,11 +310,31 @@ public class DocAnexos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnCedula;
+    private javax.swing.JButton btnCedulaCony;
+    private javax.swing.JButton btnCredencial;
+    private javax.swing.JButton btnDiplomas;
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnMatrimonio;
+    private javax.swing.JButton btnRefFam;
+    private javax.swing.JButton btnRefLab;
+    private javax.swing.JButton btnRefPer;
+    private javax.swing.JButton btnSeguro;
+    private javax.swing.JButton btnSisben;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
