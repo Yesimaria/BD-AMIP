@@ -5,11 +5,19 @@
  */
 package Vistas;
 
+import java.awt.Dimension;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Usuario
  */
-public class InfOrganizacionPrev extends javax.swing.JFrame {
+public class InfOrganizacionPrev extends javax.swing.JFrame implements IVista{
 
     /**
      * Creates new form InfOrganizacionPrev
@@ -32,12 +40,12 @@ public class InfOrganizacionPrev extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        btCancelar = new javax.swing.JButton();
+        btGuardar = new javax.swing.JButton();
+        txtTelefono = new javax.swing.JTextField();
+        txtRecomendacion = new javax.swing.JTextField();
+        txtTelefRecomendacion = new javax.swing.JTextField();
+        txtNombreOrganizacion = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,33 +72,45 @@ public class InfOrganizacionPrev extends javax.swing.JFrame {
         jLabel6.setText("Nombre de la organización anterior perteneciente:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 390, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 150, 70));
+        btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
+        btCancelar.setActionCommand("cancelar");
+        btCancelar.setBorder(null);
+        btCancelar.setBorderPainted(false);
+        btCancelar.setContentAreaFilled(false);
+        btCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 150, 70));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 150, 70));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 400, 30));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 400, 30));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 400, 30));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 400, 30));
+        btGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
+        btGuardar.setActionCommand("guardar");
+        btGuardar.setBorder(null);
+        btGuardar.setBorderPainted(false);
+        btGuardar.setContentAreaFilled(false);
+        btGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btGuardarMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 150, 70));
+        getContentPane().add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 400, 30));
+        getContentPane().add(txtRecomendacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 400, 30));
+        getContentPane().add(txtTelefRecomendacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 400, 30));
+        getContentPane().add(txtNombreOrganizacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 400, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo15.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btGuardarMouseClicked
+
+        this.btGuardar.setSize(this.btGuardar.getSize().width - 20, this.btGuardar.getSize().height);
+    }//GEN-LAST:event_btGuardarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -128,17 +148,131 @@ public class InfOrganizacionPrev extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btCancelar;
+    private javax.swing.JButton btGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField txtNombreOrganizacion;
+    private javax.swing.JTextField txtRecomendacion;
+    private javax.swing.JTextField txtTelefRecomendacion;
+    private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void aggActionListener(ActionListener acL) {
+       btGuardar.addActionListener(acL);
+       btCancelar.addActionListener(acL);
+    }
+
+    @Override
+    public void aggKeyListener(KeyListener keyL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void aggMouseListener(MouseListener mouseL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public JButton getBtCancelar() {
+        return btCancelar;
+    }
+
+    public void setBtCancelar(JButton btCancelar) {
+        this.btCancelar = btCancelar;
+    }
+
+    public JButton getBtGuardar() {
+        return btGuardar;
+    }
+
+    public void setBtGuardar(JButton btGuardar) {
+        this.btGuardar = btGuardar;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JTextField getTxtNombreOrganizacion() {
+        return txtNombreOrganizacion;
+    }
+
+    public void setTxtNombreOrganizacion(JTextField txtNombreOrganizacion) {
+        this.txtNombreOrganizacion = txtNombreOrganizacion;
+    }
+
+    public JTextField getTxtRecomendacion() {
+        return txtRecomendacion;
+    }
+
+    public void setTxtRecomendacion(JTextField txtRecomendacion) {
+        this.txtRecomendacion = txtRecomendacion;
+    }
+
+    public JTextField getTxtTelefRecomendacion() {
+        return txtTelefRecomendacion;
+    }
+
+    public void setTxtTelefRecomendacion(JTextField txtTelefRecomendacion) {
+        this.txtTelefRecomendacion = txtTelefRecomendacion;
+    }
+
+    public JTextField getTxtTelefono() {
+        return txtTelefono;
+    }
+
+    public void setTxtTelefono(JTextField txtTelefono) {
+        this.txtTelefono = txtTelefono;
+    }
+    
+    
 }

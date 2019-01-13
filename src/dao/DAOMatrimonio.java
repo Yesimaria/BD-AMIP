@@ -4,20 +4,23 @@
  * and open the template in the editor.
  */
 package dao;
+
 import modelo.MPersona;
-import modelo.MInfoEstudios;
+import modelo.MMatrimonio;
 import hibernate.SesionFactory;
+import java.util.List;
+import org.hibernate.Query;
 /**
  *
  * @author Usuario
  */
-public class DAOEstudios {
-    
-    public boolean saveInfoEstudios(MInfoEstudios infoEstudios, MPersona persona){
+public class DAOMatrimonio {
+   
+    public boolean savePMatrimonio(MMatrimonio matrimonio, MPersona persona){
       SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();
-           sesionFactory.save(infoEstudios);
+           sesionFactory.save(matrimonio);
            sesionFactory.save(persona);
            sesionFactory.closeTransaction();
            sesionFactory.closeSession();
@@ -27,11 +30,11 @@ public class DAOEstudios {
         }
     }
     
-      public boolean updateInfoEstudios(MInfoEstudios infoEstudios, MPersona persona){
+      public boolean updateMatrimonio(MMatrimonio matrimonio, MPersona persona){
           SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();
-           sesionFactory.saveOrUpdate(infoEstudios);
+           sesionFactory.saveOrUpdate(matrimonio);
            sesionFactory.saveOrUpdate(persona);
            sesionFactory.closeTransaction();
            sesionFactory.closeSession();

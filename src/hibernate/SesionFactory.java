@@ -55,9 +55,9 @@ public class SesionFactory {
         this.session.getTransaction().commit();
     }
     
-    public List query (Class clase){
+    public List query (String sql){
         List objs = new ArrayList();
-        objs = this.session.createQuery("FROM" + clase.getName()).list();
+        objs = this.session.createQuery(sql).list();
         return objs;
         
     }

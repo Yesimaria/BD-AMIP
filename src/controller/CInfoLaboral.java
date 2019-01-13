@@ -5,6 +5,7 @@
  */
 package controller;
 import Vistas.DatLab;
+import Vistas.DatMinis;
 import Vistas.Menus;
 import dao.DAOPersona;
 import dao.DAOInfoLaboral;
@@ -29,6 +30,8 @@ public class CInfoLaboral implements ActionListener, KeyListener {
     MInfoLaboral infolaboral;
     DAOPersona daopersona;
     DAOInfoLaboral daolaboral;
+    DatMinis vministerial;
+    CInfoMinisterial cministerial;
     String codigo;
     
     public CInfoLaboral(DatLab vlaboral, String codigo) {
@@ -47,7 +50,7 @@ public class CInfoLaboral implements ActionListener, KeyListener {
           try {
          persona = daopersona.getPersonaCodigo(codigo);
          System.out.println("la persona en v es: "+ persona.getNombre()+" y el codigo es: "  + persona.getCodigo());
-         infolaboral = daopersona.getPersonaCodigo(codigo).getInfoLaboral();
+         infolaboral = new MInfoLaboral();
          infolaboral.setNombre_empresa(vlaboral.getTxtNombEmpresa().getText());
          infolaboral.setNombre_jefe(vlaboral.getTxtNomJefe().getText());
          infolaboral.setIndependiente(vlaboral.getRdSi().isSelected() ? vlaboral.getRdSi().isSelected() : false );
@@ -55,9 +58,9 @@ public class CInfoLaboral implements ActionListener, KeyListener {
          persona.setInfoLaboral(infolaboral);
          infolaboral.setPersona(persona);
          daolaboral = new DAOInfoLaboral();
-         save = this.daolaboral.updatePersona(infolaboral, persona);
+         save = this.daolaboral.updateLabora(infolaboral, persona);
         } catch (Exception e) {
-         System.out.println(e);
+         System.out.println("error al incluir infolaboral: " + e);
         }
        
     }
@@ -65,19 +68,19 @@ public class CInfoLaboral implements ActionListener, KeyListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equalsIgnoreCase("cancelar")){
-          vlaboral.setVisible(false);
+         
           vmenus= new Menus();
           cmenus = new CMenus(vmenus);
-          
+          vlaboral.setVisible(false);
         }
          if(e.getActionCommand().equalsIgnoreCase("guardar")){
              try {
-                 System.out.println("el codigo: "+ codigo);
+           System.out.println("el codigo: "+ codigo);
            this.incluirDatosLaboral(codigo);
-           vlaboral.setVisible(false);
-          vmenus= new Menus();
-          cmenus = new CMenus(vmenus);
+           vministerial = new DatMinis();
+           cministerial = new CInfoMinisterial(vministerial, codigo);
           System.out.print("incluido exitosamente");
+          vlaboral.setVisible(false);
              } catch (Exception ex) {
                    System.out.print("Error al intentar incluir: "+ ex);
              }

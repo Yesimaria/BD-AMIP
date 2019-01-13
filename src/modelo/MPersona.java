@@ -59,6 +59,9 @@ public class MPersona implements Serializable {
   @OneToOne(cascade = CascadeType.ALL)
   @PrimaryKeyJoinColumn
   private MInfoEstudios infoEstudios;
+  @OneToOne(cascade = CascadeType.ALL)
+  @PrimaryKeyJoinColumn
+  private MInfoDocumentos infoDocumentos;
   
     public MPersona() {
         
@@ -245,6 +248,14 @@ public class MPersona implements Serializable {
 
     public void setIglesia(MIglesia iglesia) {
         this.iglesia = iglesia;
+    }
+
+    public MInfoDocumentos getInfoDocumentos() {
+        return infoDocumentos;
+    }
+
+    public void setInfoDocumentos(MInfoDocumentos infoDocumentos) {
+        this.infoDocumentos = infoDocumentos;
     }
 
   

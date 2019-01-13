@@ -56,7 +56,7 @@ public class DAOPersona {
     public List<Object[]> listPersonas(){
        SesionFactory sesionFactory = new SesionFactory();
        List objs = new ArrayList();
-       objs = sesionFactory.query(MPersona.class);
+       objs = sesionFactory.query("SELECT p FROM MPersona p" );
        return objs;
    }
 }

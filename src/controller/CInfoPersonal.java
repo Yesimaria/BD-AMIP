@@ -33,6 +33,7 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
     this.vpersonal = vpersonal;
     vpersonal.aggActionListener(this);
     vpersonal.setVisible(true);
+    daopersona = new DAOPersona();
     }
     
  public String incluirPersona(){
@@ -75,21 +76,21 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
      
           try {
           String codigo = this.incluirPersona();
-          vpersonal.setVisible(false);
           vlaboral= new DatLab();
           persona = daopersona.getPersonaCodigo(codigo);
           vlaboral.getLbnombre().setText(persona.getNombre());
           System.out.println("el codigo 1 es :" + codigo+"  el codigo 2 es :" + persona.getNombre());
           claboral = new CInfoLaboral(vlaboral, persona.getCodigo());
           System.out.print("incluido exitosamente");
+          vpersonal.setVisible(false);
           } catch (Exception ex) {
               System.out.print("Error al intentar incluir: " + ex);
           }
       }
       if(e.getActionCommand().equalsIgnoreCase("cancelar")){
-          vpersonal.setVisible(false);
           vmenus= new Menus();
           cmenus = new CMenus(vmenus);
+          vpersonal.setVisible(false);
         }
     }
 

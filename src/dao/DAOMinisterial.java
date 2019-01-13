@@ -8,8 +8,6 @@ package dao;
 import modelo.MPersona;
 import modelo.MInfoMinisterio;
 import hibernate.SesionFactory;
-import java.util.List;
-import org.hibernate.Query;
 
 /**
  *
@@ -17,7 +15,7 @@ import org.hibernate.Query;
  */
 public class DAOMinisterial {
     
-     public boolean savePersona(MInfoMinisterio infoMinisterio, MPersona persona){
+     public boolean saveInfoMinisterio(MInfoMinisterio infoMinisterio, MPersona persona){
       SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();
@@ -31,7 +29,7 @@ public class DAOMinisterial {
         }
     }
     
-      public boolean updatePersona(MInfoMinisterio infoMinisterio, MPersona persona){
+      public boolean updateInfoMinisterio(MInfoMinisterio infoMinisterio, MPersona persona){
           SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();

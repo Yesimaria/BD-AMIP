@@ -5,11 +5,19 @@
  */
 package Vistas;
 
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Usuario
  */
-public class InfEconomica extends javax.swing.JFrame {
+public class InfEconomica extends javax.swing.JFrame implements IVista{
 
     /**
      * Creates new form InfEconomica
@@ -38,21 +46,21 @@ public class InfEconomica extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        btGuardar = new javax.swing.JButton();
+        btCancelar = new javax.swing.JButton();
+        txtEstrato = new javax.swing.JTextField();
+        txtNombreSeguro = new javax.swing.JTextField();
+        txtNombreEmpresa = new javax.swing.JTextField();
+        txtDireccion = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        txtHijos = new javax.swing.JTextField();
+        txtNivel = new javax.swing.JTextField();
+        rdPensionNo = new javax.swing.JRadioButton();
+        rdPensionSi = new javax.swing.JRadioButton();
+        rdDependenSi = new javax.swing.JRadioButton();
+        rdCasaSi = new javax.swing.JRadioButton();
+        rdDependenNo = new javax.swing.JRadioButton();
+        rdCasaNo = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -103,54 +111,56 @@ public class InfEconomica extends javax.swing.JFrame {
         jLabel12.setText("Teléfono fijo:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 130, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 120, 60));
+        btGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btGuardar.setActionCommand("guardar");
+        btGuardar.setBorder(null);
+        btGuardar.setBorderPainted(false);
+        btGuardar.setContentAreaFilled(false);
+        btGuardar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btGuardar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 120, 60));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Btcanc.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, 120, 60));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 240, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 240, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 240, -1));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 240, -1));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 240, -1));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 240, -1));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 240, -1));
+        btCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Btcanc.png"))); // NOI18N
+        btCancelar.setActionCommand("cancelar");
+        btCancelar.setBorder(null);
+        btCancelar.setBorderPainted(false);
+        btCancelar.setContentAreaFilled(false);
+        btCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, 120, 60));
+        getContentPane().add(txtEstrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 240, -1));
+        getContentPane().add(txtNombreSeguro, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 240, -1));
+        getContentPane().add(txtNombreEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 240, -1));
+        getContentPane().add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 240, -1));
+        getContentPane().add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 240, -1));
+        getContentPane().add(txtHijos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 240, -1));
+        getContentPane().add(txtNivel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 240, -1));
 
-        jRadioButton1.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jRadioButton1.setText("No");
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 50, -1));
+        rdPensionNo.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        rdPensionNo.setText("No");
+        getContentPane().add(rdPensionNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 50, -1));
 
-        jRadioButton2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jRadioButton2.setText("Sí");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 40, -1));
+        rdPensionSi.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        rdPensionSi.setText("Sí");
+        getContentPane().add(rdPensionSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 40, -1));
 
-        jRadioButton3.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jRadioButton3.setText("Sí");
-        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 40, -1));
+        rdDependenSi.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        rdDependenSi.setText("Sí");
+        getContentPane().add(rdDependenSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 40, -1));
 
-        jRadioButton4.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jRadioButton4.setText("Sí");
-        getContentPane().add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 40, -1));
+        rdCasaSi.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        rdCasaSi.setText("Sí");
+        getContentPane().add(rdCasaSi, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 40, -1));
 
-        jRadioButton5.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jRadioButton5.setText("No");
-        getContentPane().add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 50, -1));
+        rdDependenNo.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        rdDependenNo.setText("No");
+        getContentPane().add(rdDependenNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 50, -1));
 
-        jRadioButton6.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jRadioButton6.setText("No");
-        getContentPane().add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 50, -1));
+        rdCasaNo.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        rdCasaNo.setText("No");
+        getContentPane().add(rdCasaNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 50, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo13.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -194,8 +204,8 @@ public class InfEconomica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btCancelar;
+    private javax.swing.JButton btGuardar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -208,18 +218,252 @@ public class InfEconomica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JRadioButton rdCasaNo;
+    private javax.swing.JRadioButton rdCasaSi;
+    private javax.swing.JRadioButton rdDependenNo;
+    private javax.swing.JRadioButton rdDependenSi;
+    private javax.swing.JRadioButton rdPensionNo;
+    private javax.swing.JRadioButton rdPensionSi;
+    private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtEstrato;
+    private javax.swing.JTextField txtHijos;
+    private javax.swing.JTextField txtNivel;
+    private javax.swing.JTextField txtNombreEmpresa;
+    private javax.swing.JTextField txtNombreSeguro;
+    private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void aggActionListener(ActionListener acL) {
+       btGuardar.addActionListener(acL);
+       btCancelar.addActionListener(acL);
+    }
+
+    @Override
+    public void aggKeyListener(KeyListener keyL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void aggMouseListener(MouseListener mouseL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public JButton getBtCancelar() {
+        return btCancelar;
+    }
+
+    public void setBtCancelar(JButton btCancelar) {
+        this.btCancelar = btCancelar;
+    }
+
+    public JButton getBtGuardar() {
+        return btGuardar;
+    }
+
+    public void setBtGuardar(JButton btGuardar) {
+        this.btGuardar = btGuardar;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
+
+    public void setjLabel1(JLabel jLabel1) {
+        this.jLabel1 = jLabel1;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public void setjLabel11(JLabel jLabel11) {
+        this.jLabel11 = jLabel11;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JRadioButton getRdDependenNo() {
+        return rdDependenNo;
+    }
+
+    public void setRdDependenNo(JRadioButton rdDependenNo) {
+        this.rdDependenNo = rdDependenNo;
+    }
+
+    public JRadioButton getRdDependenSi() {
+        return rdDependenSi;
+    }
+
+    public void setRdDependenSi(JRadioButton rdDependenSi) {
+        this.rdDependenSi = rdDependenSi;
+    }
+
+    public JRadioButton getRdPensionNo() {
+        return rdPensionNo;
+    }
+
+    public void setRdPensionNo(JRadioButton rdPensionNo) {
+        this.rdPensionNo = rdPensionNo;
+    }
+
+    public JRadioButton getRdPensionSi() {
+        return rdPensionSi;
+    }
+
+    public void setRdPensionSi(JRadioButton rdPensionSi) {
+        this.rdPensionSi = rdPensionSi;
+    }
+
+    public JRadioButton getRdCasaNo() {
+        return rdCasaNo;
+    }
+
+    public void setRdCasaNo(JRadioButton rdCasaNo) {
+        this.rdCasaNo = rdCasaNo;
+    }
+
+    public JRadioButton getRdCasaSi() {
+        return rdCasaSi;
+    }
+
+    public void setRdCasaSi(JRadioButton rdCasaSi) {
+        this.rdCasaSi = rdCasaSi;
+    }
+
+    public JTextField getTxtDireccion() {
+        return txtDireccion;
+    }
+
+    public void setTxtDireccion(JTextField txtDireccion) {
+        this.txtDireccion = txtDireccion;
+    }
+
+    public JTextField getTxtEstrato() {
+        return txtEstrato;
+    }
+
+    public void setTxtEstrato(JTextField txtEstrato) {
+        this.txtEstrato = txtEstrato;
+    }
+
+    public JTextField getTxtHijos() {
+        return txtHijos;
+    }
+
+    public void setTxtHijos(JTextField txtHijos) {
+        this.txtHijos = txtHijos;
+    }
+
+    public JTextField getTxtNivel() {
+        return txtNivel;
+    }
+
+    public void setTxtNivel(JTextField txtNivel) {
+        this.txtNivel = txtNivel;
+    }
+
+    public JTextField getTxtNombreEmpresa() {
+        return txtNombreEmpresa;
+    }
+
+    public void setTxtNombreEmpresa(JTextField txtNombreEmpresa) {
+        this.txtNombreEmpresa = txtNombreEmpresa;
+    }
+
+    public JTextField getTxtNombreSeguro() {
+        return txtNombreSeguro;
+    }
+
+    public void setTxtNombreSeguro(JTextField txtNombreSeguro) {
+        this.txtNombreSeguro = txtNombreSeguro;
+    }
+
+    public JTextField getTxtTelefono() {
+        return txtTelefono;
+    }
+
+    public void setTxtTelefono(JTextField txtTelefono) {
+        this.txtTelefono = txtTelefono;
+    }
+    
+    
 }

@@ -5,18 +5,19 @@
  */
 package Vistas;
 
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
 import java.io.FileInputStream;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 /**
  *
  * @author Usuario
  */
-public class DocAnexos extends javax.swing.JFrame {
-
-    FileInputStream fis;
-    int longitudBytes;
-    
+public class DocAnexos extends javax.swing.JFrame implements IVista{
    
     /**
      * Creates new form DocAnexos
@@ -47,19 +48,19 @@ public class DocAnexos extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         btnGuardar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lbCopiaCredencial = new javax.swing.JLabel();
         btnCredencial = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        lbreferelaboral = new javax.swing.JLabel();
+        lbreferenciapers = new javax.swing.JLabel();
+        lbrefFamiliar = new javax.swing.JLabel();
+        lbcopiaCedula = new javax.swing.JLabel();
+        lbCopiaacta = new javax.swing.JLabel();
+        lbCedulaConyuge = new javax.swing.JLabel();
+        lbCopiaSeguro = new javax.swing.JLabel();
+        lbCopiaSisben = new javax.swing.JLabel();
+        lbdiplomas = new javax.swing.JLabel();
         btnRefLab = new javax.swing.JButton();
-        btnRefPer = new javax.swing.JButton();
+        btnPersonal = new javax.swing.JButton();
         btnRefFam = new javax.swing.JButton();
         btnCedula = new javax.swing.JButton();
         btnMatrimonio = new javax.swing.JButton();
@@ -118,6 +119,7 @@ public class DocAnexos extends javax.swing.JFrame {
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, 170, -1));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btGuardar.png"))); // NOI18N
+        btnGuardar.setActionCommand("guardar");
         btnGuardar.setBorder(null);
         btnGuardar.setBorderPainted(false);
         btnGuardar.setContentAreaFilled(false);
@@ -128,6 +130,7 @@ public class DocAnexos extends javax.swing.JFrame {
         getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 550, 160, 70));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtCancelar.png"))); // NOI18N
+        btnCancelar.setActionCommand("cancelar");
         btnCancelar.setBorder(null);
         btnCancelar.setBorderPainted(false);
         btnCancelar.setContentAreaFilled(false);
@@ -137,10 +140,11 @@ public class DocAnexos extends javax.swing.JFrame {
         btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 550, 150, 70));
 
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 160, 40));
+        lbCopiaCredencial.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbCopiaCredencial, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 160, 40));
 
         btnCredencial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnCredencial.setActionCommand("credencial");
         btnCredencial.setBorder(null);
         btnCredencial.setBorderPainted(false);
         btnCredencial.setContentAreaFilled(false);
@@ -149,34 +153,35 @@ public class DocAnexos extends javax.swing.JFrame {
         btnCredencial.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(btnCredencial, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, -1, 50));
 
-        jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 160, 40));
+        lbreferelaboral.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbreferelaboral, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 160, 40));
 
-        jLabel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 160, 40));
+        lbreferenciapers.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbreferenciapers, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 160, 40));
 
-        jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 160, 40));
+        lbrefFamiliar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbrefFamiliar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 460, 160, 40));
 
-        jLabel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 160, 40));
+        lbcopiaCedula.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbcopiaCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 160, 40));
 
-        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 160, 40));
+        lbCopiaacta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbCopiaacta, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 160, 40));
 
-        jLabel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 160, 40));
+        lbCedulaConyuge.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbCedulaConyuge, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 300, 160, 40));
 
-        jLabel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 160, 40));
+        lbCopiaSeguro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbCopiaSeguro, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, 160, 40));
 
-        jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 160, 40));
+        lbCopiaSisben.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbCopiaSisben, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 160, 40));
 
-        jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 160, 40));
+        lbdiplomas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lbdiplomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 160, 40));
 
         btnRefLab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnRefLab.setActionCommand("Laboral");
         btnRefLab.setBorder(null);
         btnRefLab.setBorderPainted(false);
         btnRefLab.setContentAreaFilled(false);
@@ -185,16 +190,18 @@ public class DocAnexos extends javax.swing.JFrame {
         btnRefLab.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(btnRefLab, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, -1, 50));
 
-        btnRefPer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
-        btnRefPer.setBorder(null);
-        btnRefPer.setBorderPainted(false);
-        btnRefPer.setContentAreaFilled(false);
-        btnRefPer.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnRefPer.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btnRefPer.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnRefPer, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, -1, 50));
+        btnPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnPersonal.setActionCommand("rfpersonal");
+        btnPersonal.setBorder(null);
+        btnPersonal.setBorderPainted(false);
+        btnPersonal.setContentAreaFilled(false);
+        btnPersonal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPersonal.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnPersonal.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, -1, 50));
 
         btnRefFam.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnRefFam.setActionCommand("familiar");
         btnRefFam.setBorder(null);
         btnRefFam.setBorderPainted(false);
         btnRefFam.setContentAreaFilled(false);
@@ -204,6 +211,7 @@ public class DocAnexos extends javax.swing.JFrame {
         getContentPane().add(btnRefFam, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, 50));
 
         btnCedula.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnCedula.setActionCommand("cedula");
         btnCedula.setBorder(null);
         btnCedula.setBorderPainted(false);
         btnCedula.setContentAreaFilled(false);
@@ -218,6 +226,7 @@ public class DocAnexos extends javax.swing.JFrame {
         getContentPane().add(btnCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, -1, 50));
 
         btnMatrimonio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnMatrimonio.setActionCommand("acta");
         btnMatrimonio.setBorder(null);
         btnMatrimonio.setBorderPainted(false);
         btnMatrimonio.setContentAreaFilled(false);
@@ -227,6 +236,7 @@ public class DocAnexos extends javax.swing.JFrame {
         getContentPane().add(btnMatrimonio, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, -1, 50));
 
         btnCedulaCony.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnCedulaCony.setActionCommand("cedulaM");
         btnCedulaCony.setBorder(null);
         btnCedulaCony.setBorderPainted(false);
         btnCedulaCony.setContentAreaFilled(false);
@@ -236,6 +246,7 @@ public class DocAnexos extends javax.swing.JFrame {
         getContentPane().add(btnCedulaCony, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 300, -1, 50));
 
         btnSeguro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnSeguro.setActionCommand("seguro");
         btnSeguro.setBorder(null);
         btnSeguro.setBorderPainted(false);
         btnSeguro.setContentAreaFilled(false);
@@ -245,6 +256,8 @@ public class DocAnexos extends javax.swing.JFrame {
         getContentPane().add(btnSeguro, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, -1, 50));
 
         btnSisben.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnSisben.setToolTipText("");
+        btnSisben.setActionCommand("sisben");
         btnSisben.setBorder(null);
         btnSisben.setBorderPainted(false);
         btnSisben.setContentAreaFilled(false);
@@ -254,6 +267,7 @@ public class DocAnexos extends javax.swing.JFrame {
         getContentPane().add(btnSisben, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 460, -1, 50));
 
         btnDiplomas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
+        btnDiplomas.setActionCommand("diplomas");
         btnDiplomas.setBorder(null);
         btnDiplomas.setBorderPainted(false);
         btnDiplomas.setContentAreaFilled(false);
@@ -263,7 +277,7 @@ public class DocAnexos extends javax.swing.JFrame {
         getContentPane().add(btnDiplomas, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, 50));
 
         jlbFondoDocAne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondo14.png"))); // NOI18N
-        getContentPane().add(jlbFondoDocAne, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 0, -1, 630));
+        getContentPane().add(jlbFondoDocAne, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -316,25 +330,15 @@ public class DocAnexos extends javax.swing.JFrame {
     private javax.swing.JButton btnDiplomas;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnMatrimonio;
+    private javax.swing.JButton btnPersonal;
     private javax.swing.JButton btnRefFam;
     private javax.swing.JButton btnRefLab;
-    private javax.swing.JButton btnRefPer;
     private javax.swing.JButton btnSeguro;
     private javax.swing.JButton btnSisben;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -343,5 +347,315 @@ public class DocAnexos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jlbFondoDocAne;
+    private javax.swing.JLabel lbCedulaConyuge;
+    private javax.swing.JLabel lbCopiaCredencial;
+    private javax.swing.JLabel lbCopiaSeguro;
+    private javax.swing.JLabel lbCopiaSisben;
+    private javax.swing.JLabel lbCopiaacta;
+    private javax.swing.JLabel lbcopiaCedula;
+    private javax.swing.JLabel lbdiplomas;
+    private javax.swing.JLabel lbrefFamiliar;
+    private javax.swing.JLabel lbreferelaboral;
+    private javax.swing.JLabel lbreferenciapers;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void aggActionListener(ActionListener acL) {
+        btnCancelar.addActionListener(acL);
+        btnCedula.addActionListener(acL);
+        btnCedulaCony.addActionListener(acL);
+        btnCredencial.addActionListener(acL);
+        btnDiplomas.addActionListener(acL);
+        btnGuardar.addActionListener(acL);
+        btnMatrimonio.addActionListener(acL);
+        btnRefFam.addActionListener(acL);
+        btnRefLab.addActionListener(acL);
+        btnSeguro.addActionListener(acL);
+        btnSisben.addActionListener(acL);
+        btnPersonal.addActionListener(acL);
+    }
+
+    @Override
+    public void aggKeyListener(KeyListener keyL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void aggMouseListener(MouseListener mouseL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnCedula() {
+        return btnCedula;
+    }
+
+    public void setBtnCedula(JButton btnCedula) {
+        this.btnCedula = btnCedula;
+    }
+
+    public JButton getBtnCedulaCony() {
+        return btnCedulaCony;
+    }
+
+    public void setBtnCedulaCony(JButton btnCedulaCony) {
+        this.btnCedulaCony = btnCedulaCony;
+    }
+
+    public JButton getBtnCredencial() {
+        return btnCredencial;
+    }
+
+    public void setBtnCredencial(JButton btnCredencial) {
+        this.btnCredencial = btnCredencial;
+    }
+
+    public JButton getBtnDiplomas() {
+        return btnDiplomas;
+    }
+
+    public void setBtnDiplomas(JButton btnDiplomas) {
+        this.btnDiplomas = btnDiplomas;
+    }
+
+    public JButton getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public void setBtnGuardar(JButton btnGuardar) {
+        this.btnGuardar = btnGuardar;
+    }
+
+    public JButton getBtnMatrimonio() {
+        return btnMatrimonio;
+    }
+
+    public void setBtnMatrimonio(JButton btnMatrimonio) {
+        this.btnMatrimonio = btnMatrimonio;
+    }
+
+    public JButton getBtnRefFam() {
+        return btnRefFam;
+    }
+
+    public void setBtnRefFam(JButton btnRefFam) {
+        this.btnRefFam = btnRefFam;
+    }
+
+    public JButton getBtnRefLab() {
+        return btnRefLab;
+    }
+
+    public void setBtnRefLab(JButton btnRefLab) {
+        this.btnRefLab = btnRefLab;
+    }
+
+    public JButton getBtnSeguro() {
+        return btnSeguro;
+    }
+
+    public void setBtnSeguro(JButton btnSeguro) {
+        this.btnSeguro = btnSeguro;
+    }
+
+    public JButton getBtnSisben() {
+        return btnSisben;
+    }
+
+    public void setBtnSisben(JButton btnSisben) {
+        this.btnSisben = btnSisben;
+    }
+
+    public JLabel getjLabel10() {
+        return jLabel10;
+    }
+
+    public void setjLabel10(JLabel jLabel10) {
+        this.jLabel10 = jLabel10;
+    }
+
+    public JLabel getjLabel11() {
+        return jLabel11;
+    }
+
+    public void setjLabel11(JLabel jLabel11) {
+        this.jLabel11 = jLabel11;
+    }
+
+    public JLabel getjLabel12() {
+        return jLabel12;
+    }
+
+    public void setjLabel12(JLabel jLabel12) {
+        this.jLabel12 = jLabel12;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JLabel getjLabel5() {
+        return jLabel5;
+    }
+
+    public void setjLabel5(JLabel jLabel5) {
+        this.jLabel5 = jLabel5;
+    }
+
+    public JLabel getjLabel6() {
+        return jLabel6;
+    }
+
+    public void setjLabel6(JLabel jLabel6) {
+        this.jLabel6 = jLabel6;
+    }
+
+    public JLabel getjLabel7() {
+        return jLabel7;
+    }
+
+    public void setjLabel7(JLabel jLabel7) {
+        this.jLabel7 = jLabel7;
+    }
+
+    public JLabel getjLabel8() {
+        return jLabel8;
+    }
+
+    public void setjLabel8(JLabel jLabel8) {
+        this.jLabel8 = jLabel8;
+    }
+
+    public JLabel getjLabel9() {
+        return jLabel9;
+    }
+
+    public void setjLabel9(JLabel jLabel9) {
+        this.jLabel9 = jLabel9;
+    }
+
+    public JLabel getJlbFondoDocAne() {
+        return jlbFondoDocAne;
+    }
+
+    public void setJlbFondoDocAne(JLabel jlbFondoDocAne) {
+        this.jlbFondoDocAne = jlbFondoDocAne;
+    }
+
+    public JLabel getLbCedulaConyuge() {
+        return lbCedulaConyuge;
+    }
+
+    public void setLbCedulaConyuge(JLabel lbCedulaConyuge) {
+        this.lbCedulaConyuge = lbCedulaConyuge;
+    }
+
+    public JLabel getLbCopiaCredencial() {
+        return lbCopiaCredencial;
+    }
+
+    public void setLbCopiaCredencial(JLabel lbCopiaCredencial) {
+        this.lbCopiaCredencial = lbCopiaCredencial;
+    }
+
+    public JLabel getLbCopiaSeguro() {
+        return lbCopiaSeguro;
+    }
+
+    public void setLbCopiaSeguro(JLabel lbCopiaSeguro) {
+        this.lbCopiaSeguro = lbCopiaSeguro;
+    }
+
+    public JLabel getLbCopiaSisben() {
+        return lbCopiaSisben;
+    }
+
+    public void setLbCopiaSisben(JLabel lbCopiaSisben) {
+        this.lbCopiaSisben = lbCopiaSisben;
+    }
+
+    public JLabel getLbCopiaacta() {
+        return lbCopiaacta;
+    }
+
+    public void setLbCopiaacta(JLabel lbCopiaacta) {
+        this.lbCopiaacta = lbCopiaacta;
+    }
+
+    public JLabel getLbcopiaCedula() {
+        return lbcopiaCedula;
+    }
+
+    public void setLbcopiaCedula(JLabel lbcopiaCedula) {
+        this.lbcopiaCedula = lbcopiaCedula;
+    }
+
+    public JLabel getLbdiplomas() {
+        return lbdiplomas;
+    }
+
+    public void setLbdiplomas(JLabel lbdiplomas) {
+        this.lbdiplomas = lbdiplomas;
+    }
+
+    public JLabel getLbrefFamiliar() {
+        return lbrefFamiliar;
+    }
+
+    public void setLbrefFamiliar(JLabel lbrefFamiliar) {
+        this.lbrefFamiliar = lbrefFamiliar;
+    }
+
+    public JLabel getLbreferelaboral() {
+        return lbreferelaboral;
+    }
+
+    public void setLbreferelaboral(JLabel lbreferelaboral) {
+        this.lbreferelaboral = lbreferelaboral;
+    }
+
+    public JLabel getLbreferenciapers() {
+        return lbreferenciapers;
+    }
+
+    public void setLbreferenciapers(JLabel lbreferenciapers) {
+        this.lbreferenciapers = lbreferenciapers;
+    }
+
+    public JButton getBtnPersonal() {
+        return btnPersonal;
+    }
+
+    public void setBtnPersonal(JButton btnPersonal) {
+        this.btnPersonal = btnPersonal;
+    }
+    
+    
 }
