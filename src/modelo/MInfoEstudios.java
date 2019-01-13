@@ -30,7 +30,8 @@ public class MInfoEstudios implements Serializable {
   private boolean estudias_teologicos;
   private String fecha_estudios_teolog;
   private boolean seminarios_biblicos;
-  private boolean direccion_institucion;
+  private String nombre_institucion;
+  private String direccion_institucion;
   private String idiomas;
   @OneToOne(cascade = CascadeType.ALL)
   @PrimaryKeyJoinColumn
@@ -39,7 +40,7 @@ public class MInfoEstudios implements Serializable {
     public MInfoEstudios() {
     }
 
-    public MInfoEstudios(int id, boolean primaria_aprobada, boolean secundaria_aprobada, boolean universidad_aprobada, String ultimo_instituto, boolean estudias_teologicos, String fecha_estudios_teolog, boolean seminarios_biblicos, boolean direccion_institucion, String idiomas, MPersona persona) {
+    public MInfoEstudios(int id, boolean primaria_aprobada, boolean secundaria_aprobada, boolean universidad_aprobada, String ultimo_instituto, boolean estudias_teologicos, String fecha_estudios_teolog, boolean seminarios_biblicos, String nombre_institucion, String direccion_institucion, String idiomas, MPersona persona) {
         this.id = id;
         this.primaria_aprobada = primaria_aprobada;
         this.secundaria_aprobada = secundaria_aprobada;
@@ -48,6 +49,7 @@ public class MInfoEstudios implements Serializable {
         this.estudias_teologicos = estudias_teologicos;
         this.fecha_estudios_teolog = fecha_estudios_teolog;
         this.seminarios_biblicos = seminarios_biblicos;
+        this.nombre_institucion = nombre_institucion;
         this.direccion_institucion = direccion_institucion;
         this.idiomas = idiomas;
         this.persona = persona;
@@ -117,11 +119,19 @@ public class MInfoEstudios implements Serializable {
         this.seminarios_biblicos = seminarios_biblicos;
     }
 
-    public boolean isDireccion_institucion() {
+    public String getNombre_institucion() {
+        return nombre_institucion;
+    }
+
+    public void setNombre_institucion(String nombre_institucion) {
+        this.nombre_institucion = nombre_institucion;
+    }
+
+    public String isDireccion_institucion() {
         return direccion_institucion;
     }
 
-    public void setDireccion_institucion(boolean direccion_institucion) {
+    public void setDireccion_institucion(String direccion_institucion) {
         this.direccion_institucion = direccion_institucion;
     }
 

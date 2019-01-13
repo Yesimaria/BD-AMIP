@@ -7,6 +7,7 @@ package controller;
 
 import Vistas.DatLab;
 import Vistas.DatMinis;
+import Vistas.EstRealizados;
 import Vistas.Menus;
 import dao.DAOMinisterial;
 import dao.DAOPersona;
@@ -34,6 +35,8 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
     DatMinis vministerial;
     DAOMinisterial daoministerial;
     DAOPersona daopersona;
+    EstRealizados vestudios;
+    CEstudios cestudios;
     String codigo;
     public CInfoMinisterial(DatMinis vministerial, String codigo ) {
         this.vministerial = vministerial;
@@ -79,8 +82,8 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
          if(e.getActionCommand().equalsIgnoreCase("guardar")){
          try {
          this.incluirDatosMinisterial(this.codigo);
-          vmenus = new Menus();
-          cmenus = new CMenus(vmenus);
+          vestudios = new EstRealizados();
+          cestudios = new CEstudios(vestudios, this.codigo);
            vministerial.setVisible(false);
           System.out.print("incluido exitosamente");
              } catch (Exception ex) {

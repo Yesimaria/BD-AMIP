@@ -5,6 +5,7 @@
  */
 package Vistas;
 
+import com.toedter.calendar.JDateChooser;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseListener;
@@ -558,4 +559,13 @@ public class EstRealizados extends javax.swing.JFrame implements IVista{
     public void setRdUniversidadSi(JRadioButton rdUniversidadSi) {
         this.rdUniversidadSi = rdUniversidadSi;
     }
+
+    public JDateChooser getFechaEstu() {
+        return FechaEstu;
+    }
+
+    public void setFechaEstu(JDateChooser FechaEstu) {
+        this.FechaEstu = FechaEstu;
+    }
+    
 }

@@ -30,7 +30,7 @@ public class DAOEconomica {
         }
     }
     
-      public boolean updatePersona(MInfoEconomica infoEconomica, MPersona persona){
+      public boolean updateInfoEconomica(MInfoEconomica infoEconomica, MPersona persona){
           SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();
