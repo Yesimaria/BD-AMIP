@@ -6,6 +6,7 @@
 package controller;
 
 import Vistas.InfEconomica;
+import Vistas.InfOrganizacionPrev;
 import Vistas.Menus;
 import dao.DAOEconomica;
 import dao.DAOPersona;
@@ -29,6 +30,8 @@ public class CInfoEconomica implements ActionListener, KeyListener {
     DAOPersona daopersona;
     DAOEconomica daoeconomica;
     InfEconomica veconomica;
+    InfOrganizacionPrev vorganizacion;
+    COrganizacion corganizacion;
     String codigo;
     
     public CInfoEconomica(InfEconomica veconomica, String codigo ) {
@@ -77,8 +80,8 @@ public class CInfoEconomica implements ActionListener, KeyListener {
              try {
            System.out.println("el codigo: "+ codigo);
            this.incluirDatosEconomica(codigo);
-           vmenus = new Menus();
-           cmenus = new CMenus(vmenus);
+           vorganizacion = new InfOrganizacionPrev() ;
+           corganizacion = new COrganizacion(vorganizacion, codigo);
           System.out.print("incluido exitosamente");
           veconomica.setVisible(false);
              } catch (Exception ex) {

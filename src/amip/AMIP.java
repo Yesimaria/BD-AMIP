@@ -6,6 +6,8 @@
 package amip;
 import Vistas.Inicio;
 import Vistas.Menus;
+import Vistas.DocAnexos;
+import controller.CDocumentos;
 import controller.CInicio;
 import controller.CMenus;
 /**
@@ -22,6 +24,5 @@ public class AMIP {
         Inicio vinicio = new Inicio();
         CInicio cinicio = new CInicio(vinicio);
         
-
     }
 }

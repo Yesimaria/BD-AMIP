@@ -56,5 +56,6 @@ Contributor(s):
     <mapping class="modelo.MInfoMinisterio"/>
     <mapping class="modelo.MInfoLaboral"/>
     <mapping class="modelo.MInfoEstudios"/>
+    <mapping class="modelo.MInfoDocumentos"/>
   </session-factory>
 </hibernate-configuration>
