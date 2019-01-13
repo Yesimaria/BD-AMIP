@@ -145,11 +145,11 @@ public class DatMinis extends javax.swing.JFrame implements IVista{
         rdBautizoNo.setText("No");
         getContentPane().add(rdBautizoNo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 50, -1));
 
-        FechaBaut.setDateFormatString("yyyy/MM/dd");
+        FechaBaut.setDateFormatString("dd/MM/yyyy");
         FechaBaut.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         getContentPane().add(FechaBaut, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 170, 30));
 
-        FechaCon.setDateFormatString("yyyy/MM/dd");
+        FechaCon.setDateFormatString("dd/MM/yyyy");
         FechaCon.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         getContentPane().add(FechaCon, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 170, 30));
 

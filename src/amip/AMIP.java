@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package amip;
+import Vistas.Consultar;
 import Vistas.Inicio;
 import Vistas.Menus;
 import Vistas.DocAnexos;
+import controller.CConsulta;
 import controller.CDocumentos;
 import controller.CInicio;
 import controller.CMenus;
@@ -21,8 +23,8 @@ public class AMIP {
      */
     public static void main(String[] args) {
        
-        Inicio vinicio = new Inicio();
-        CInicio cinicio = new CInicio(vinicio);
+       Inicio vinicio = new Inicio();
+       CInicio cinicio = new CInicio(vinicio);
         
     }
 }

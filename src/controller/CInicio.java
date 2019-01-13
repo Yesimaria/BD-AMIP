@@ -6,6 +6,8 @@
 package controller;
 
 
+import Vistas.Consultar;
+import Vistas.InfPersonal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
@@ -14,6 +16,9 @@ import Vistas.Inicio;
 import Vistas.Menus;
 import Vistas.Principal;
 import controller.CMenus;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -26,7 +31,10 @@ public class CInicio implements ActionListener {
     CMenus cmenus;
     Principal vprincipal;
     OpJCalendar c;
-    
+    InfPersonal vpersonal;
+    CInfoPersonal cpersonal;
+    CConsulta cconsulta;
+    Consultar vconsulta;
     
     public CInicio(Inicio vinicio){
         Date fechaac = new Date();
@@ -39,14 +47,19 @@ public class CInicio implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equalsIgnoreCase("incluir")){
-            vmenus = new Menus();
-            cmenus = new CMenus(this.vmenus);
-            vinicio.setVisible(false);
+          vpersonal = new InfPersonal();
+            try {
+                cpersonal = new CInfoPersonal(vpersonal, null);
+                vinicio.setVisible(false);
+            } catch (ParseException ex) {
+                Logger.getLogger(CInicio.class.getName()).log(Level.SEVERE, null, ex);
+            }
+          
         }
-        if(e.getActionCommand().equalsIgnoreCase("consulta")){
-              System.out.println("click");
-            vprincipal = new Principal();
-            
+        if(e.getActionCommand().equalsIgnoreCase(vinicio.getBtnConsultar().getActionCommand())){
+            vconsulta = new Consultar();
+            cconsulta = new CConsulta(vconsulta);
+            vinicio.setVisible(false); 
         }
     }
 }

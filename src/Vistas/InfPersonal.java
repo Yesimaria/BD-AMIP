@@ -123,6 +123,12 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         jLabel2.setText("Código:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 60, 20));
+
+        txtcodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcodigoActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 230, 20));
         getContentPane().add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 230, -1));
         getContentPane().add(txtxCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 230, -1));
@@ -176,7 +182,11 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
         BtnCancelar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         BtnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(BtnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, 150, 70));
+
+        txtFechaNac.setDateFormatString("dd/MM/yyyy");
         getContentPane().add(txtFechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 230, -1));
+
+        txtFechaIngre.setDateFormatString("dd/MM/yyyy");
         getContentPane().add(txtFechaIngre, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 230, -1));
         getContentPane().add(txtLugarNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 230, -1));
 
@@ -220,6 +230,10 @@ public class InfPersonal extends javax.swing.JFrame implements IVista {
     private void rdMasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdMasculinoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rdMasculinoActionPerformed
+
+    private void txtcodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcodigoActionPerformed
 
     /**
      * @param args the command line arguments

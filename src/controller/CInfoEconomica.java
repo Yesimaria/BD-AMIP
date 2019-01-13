@@ -73,7 +73,7 @@ public class CInfoEconomica implements ActionListener, KeyListener {
     if(e.getActionCommand().equalsIgnoreCase("cancelar")){
          
           vmenus= new Menus();
-          cmenus = new CMenus(vmenus);
+          cmenus = new CMenus(vmenus, codigo);
           veconomica.setVisible(false);
         }
          if(e.getActionCommand().equalsIgnoreCase("guardar")){

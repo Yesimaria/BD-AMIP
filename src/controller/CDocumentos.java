@@ -204,7 +204,7 @@ public class CDocumentos implements ActionListener, KeyListener {
       if (e.getActionCommand().equalsIgnoreCase("cancelar")) {
 
             vmenus = new Menus();
-            cmenus = new CMenus(vmenus);
+            cmenus = new CMenus(vmenus, codigo);
             vanexos.setVisible(false);
         }
         if (e.getActionCommand().equalsIgnoreCase("guardar")) {
@@ -212,7 +212,7 @@ public class CDocumentos implements ActionListener, KeyListener {
                 System.out.println("el codigo: " + codigo);
                 this.incluirDocumentos(codigo);
                 vmenus = new Menus();
-                cmenus = new CMenus(vmenus);
+                cmenus = new CMenus(vmenus, codigo);
                 System.out.print("incluido exitosamente");
                 vanexos.setVisible(false);
             } catch (Exception ex) {

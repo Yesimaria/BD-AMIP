@@ -6,45 +6,19 @@
 package Vistas;
 
 import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseListener;
 import javax.swing.JTable;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 /**
  *
  * @author Usuario
  */
-public class Consultar extends javax.swing.JFrame {
+public class Consultar extends javax.swing.JFrame implements IVista{
 
-    private static Consultar instancia;
-    
-    public static Consultar instancia(){
-        
-        instancia=new Consultar();
-        return instancia;
-        
-    }
-
-    public JButton getBtnbuscar() {
-        return btnCancelar;
-    }
-
-    public JButton getBtncancelar() {
-        return btnCancelar;
-    }
-
-    public JButton getBtnModificar (){
-        return btnModificar;
-    }
-    public JTable getTBusqueda() {
-        return TBusqueda;
-    }
-    
-    public void agregarActionListener(ActionListener accion){
-        //metodo para que las acciones sean escuchadas
-        
-        this.btnCancelar.addActionListener(accion);
-        this.btnCancelar.addActionListener(accion);
-
-    }
     /**
      * Creates new form Consultar
      */
@@ -66,7 +40,7 @@ public class Consultar extends javax.swing.JFrame {
         btnCancelar = new javax.swing.JButton();
         txtNroPastor = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TBusqueda = new javax.swing.JTable();
+        tBusqueda = new javax.swing.JTable();
         btnModificar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         txtBuscar1 = new javax.swing.JTextField();
@@ -86,6 +60,7 @@ public class Consultar extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 120, -1));
 
         btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Btcanc.png"))); // NOI18N
+        btnCancelar.setActionCommand("cancelar");
         btnCancelar.setBorder(null);
         btnCancelar.setBorderPainted(false);
         btnCancelar.setContentAreaFilled(false);
@@ -95,8 +70,8 @@ public class Consultar extends javax.swing.JFrame {
         getContentPane().add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 120, 50));
         getContentPane().add(txtNroPastor, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 150, 90, 20));
 
-        TBusqueda.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        TBusqueda.setModel(new javax.swing.table.DefaultTableModel(
+        tBusqueda.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        tBusqueda.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -115,11 +90,16 @@ public class Consultar extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(TBusqueda);
+        tBusqueda.setCellSelectionEnabled(true);
+        tBusqueda.setEditingColumn(0);
+        tBusqueda.setEditingRow(0);
+        tBusqueda.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane1.setViewportView(tBusqueda);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 520, 260));
 
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnModificar.png"))); // NOI18N
+        btnModificar.setActionCommand("modificar");
         btnModificar.setBorder(null);
         btnModificar.setBorderPainted(false);
         btnModificar.setContentAreaFilled(false);
@@ -134,6 +114,7 @@ public class Consultar extends javax.swing.JFrame {
         getContentPane().add(txtBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 190, 30));
 
         btnBuscar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtBuscar.png"))); // NOI18N
+        btnBuscar2.setActionCommand("buscar");
         btnBuscar2.setBorder(null);
         btnBuscar2.setBorderPainted(false);
         btnBuscar2.setContentAreaFilled(false);
@@ -184,7 +165,6 @@ public class Consultar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable TBusqueda;
     private javax.swing.JButton btnBuscar2;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnModificar;
@@ -193,7 +173,116 @@ public class Consultar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlbFondoCons;
+    private javax.swing.JTable tBusqueda;
     private javax.swing.JTextField txtBuscar1;
     private javax.swing.JTextField txtNroPastor;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void aggActionListener(ActionListener acL) {
+       btnBuscar2.addActionListener(acL);
+       btnCancelar.addActionListener(acL);
+       btnModificar.addActionListener(acL);
+    }
+
+    @Override
+    public void aggKeyListener(KeyListener keyL) {
+    txtBuscar1.addKeyListener(keyL);
+    txtNroPastor.addKeyListener(keyL);
+    }
+
+    @Override
+    public void aggMouseListener(MouseListener mouseL) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public JButton getBtnBuscar2() {
+        return btnBuscar2;
+    }
+
+    public void setBtnBuscar2(JButton btnBuscar2) {
+        this.btnBuscar2 = btnBuscar2;
+    }
+
+    public JButton getBtnCancelar() {
+        return btnCancelar;
+    }
+
+    public void setBtnCancelar(JButton btnCancelar) {
+        this.btnCancelar = btnCancelar;
+    }
+
+    public JButton getBtnModificar() {
+        return btnModificar;
+    }
+
+    public void setBtnModificar(JButton btnModificar) {
+        this.btnModificar = btnModificar;
+    }
+
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public JLabel getjLabel3() {
+        return jLabel3;
+    }
+
+    public void setjLabel3(JLabel jLabel3) {
+        this.jLabel3 = jLabel3;
+    }
+
+    public JLabel getjLabel4() {
+        return jLabel4;
+    }
+
+    public void setjLabel4(JLabel jLabel4) {
+        this.jLabel4 = jLabel4;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JLabel getJlbFondoCons() {
+        return jlbFondoCons;
+    }
+
+    public void setJlbFondoCons(JLabel jlbFondoCons) {
+        this.jlbFondoCons = jlbFondoCons;
+    }
+
+    public JTable gettBusqueda() {
+        return tBusqueda;
+    }
+
+    public void settBusqueda(JTable tBusqueda) {
+        this.tBusqueda = tBusqueda;
+    }
+
+    public JTextField getTxtBuscar1() {
+        return txtBuscar1;
+    }
+
+    public void setTxtBuscar1(JTextField txtBuscar1) {
+        this.txtBuscar1 = txtBuscar1;
+    }
+
+    public JTextField getTxtNroPastor() {
+        return txtNroPastor;
+    }
+
+    public void setTxtNroPastor(JTextField txtNroPastor) {
+        this.txtNroPastor = txtNroPastor;
+    }
+    
+    
 }
