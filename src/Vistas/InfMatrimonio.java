@@ -116,7 +116,8 @@ public class InfMatrimonio extends javax.swing.JFrame implements IVista{
         btnGuardar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 110, 50));
 
-        FechaMatri.setDateFormatString("yyyy/MM/dd");
+        FechaMatri.setToolTipText("");
+        FechaMatri.setDateFormatString("dd/MM/yyyy");
         FechaMatri.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         getContentPane().add(FechaMatri, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 240, 30));
 

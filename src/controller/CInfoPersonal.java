@@ -12,6 +12,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import lib.OpJCalendar;
 import modelo.MPersona;
@@ -28,10 +30,14 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
     InfPersonal vpersonal;
     MPersona persona;
     DAOPersona daopersona;
+    String codigo;
     
-    public CInfoPersonal(InfPersonal vpersonal , String codigo) {
+    public CInfoPersonal(InfPersonal vpersonal , String codigo) throws ParseException {
     this.vpersonal = vpersonal;
+    this.codigo = codigo;
     vpersonal.aggActionListener(this);
+        System.out.println("el codigo" + this.codigo);
+    this.cargarDatos(this.codigo);
     vpersonal.setVisible(true);
     daopersona = new DAOPersona();
     }
@@ -64,12 +70,55 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
         }else{
             edoCivil = 0;
         }
-         persona = new MPersona(codigo, fechaIngre, nombre, apellido, cedula, telefono, correo, fnac, lnacimiento, edoCivil, cantHijos, sexo, null, null, null, null, null, null, null);
+        if(codigo!=null){
+            persona = daopersona.getPersonaCodigo(codigo);
+            persona.setNombre(nombre);
+            persona.setApellido(apellido);
+            persona.setCodigo(codigo);
+            persona.setCant_hijos(cantHijos);
+            persona.setCorreo(correo);
+            persona.setFecha_ingreso(fechaIngre);
+            persona.setFecha_nacimiento(fnac);
+            persona.setCedula(cedula);
+            persona.setEdo_civil(edoCivil);
+            persona.setSexo(sexo);
+            persona.setLugar_nacimiento(lnacimiento);
+            persona.setTelefono(telefono);
+        }else{
+         persona = new MPersona(codigo, fechaIngre, nombre, apellido, cedula, telefono, correo, fnac, lnacimiento, edoCivil, cantHijos, sexo, null, null, null, null, null, null, null);   
+        }
+         
          this.daopersona = new DAOPersona();
-         boolean save = this.daopersona.savePersona(persona);
+         boolean save = this.daopersona.updatePersona(persona);
         return codigo;
     }
 
+    public void cargarDatos(String codigo) throws ParseException{
+        if(codigo!= null){
+            SimpleDateFormat fecha = new SimpleDateFormat("dd-mm-yyyy");
+            Date fechanac = null;
+            Date fechaing = null;
+            System.out.println("La busqueda en personal");
+            this.daopersona = new DAOPersona();
+            this.persona = daopersona.getPersonaCodigo(codigo);
+            this.vpersonal.getTxtApellidos().setText(this.persona.getApellido());
+            this.vpersonal.getTxtNombres().setText(this.persona.getNombre());
+            this.vpersonal.getTxtxCedula().setText(this.persona.getCedula());
+            this.vpersonal.getTxtcodigo().setText(this.persona.getCodigo());
+            this.vpersonal.getTxtCantHijos().setText(String.valueOf(this.persona.getCant_hijos()));
+            this.vpersonal.getTxtCorreo().setText(this.persona.getCorreo());
+            fechanac = fecha.parse(this.persona.getFecha_nacimiento());
+            this.vpersonal.getTxtFechaNac().setDate(fechanac);
+            fechaing = fecha.parse(this.persona.getFecha_ingreso());
+            this.vpersonal.getFechaIngre().setDate(fechaing);
+            this.vpersonal.getRdCasado().setSelected(this.persona.getEdo_civil() == 1 ? true : false);
+            this.vpersonal.getRdSoltero().setSelected(this.persona.getEdo_civil() == 0 ? true : false);
+            this.vpersonal.getRdMasculino().setSelected(this.persona.getSexo() == 0 ? true : false);
+            this.vpersonal.getRdFemenino().setSelected(this.persona.getSexo()== 1 ? true : false);
+            this.vpersonal.getTxtLugarNac().setText(this.persona.getLugar_nacimiento());
+            this.vpersonal.getTxtTelefono().setText(this.persona.getTelefono());
+        }
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
       if(e.getActionCommand().equalsIgnoreCase("guardar")){
@@ -89,7 +138,7 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
       }
       if(e.getActionCommand().equalsIgnoreCase("cancelar")){
           vmenus= new Menus();
-          cmenus = new CMenus(vmenus);
+          cmenus = new CMenus(vmenus, codigo);
           vpersonal.setVisible(false);
         }
     }

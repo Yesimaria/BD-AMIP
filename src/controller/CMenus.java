@@ -14,8 +14,11 @@ import Vistas.Menus;
 import dao.DAOPersona;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.Locale;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import lib.OpJCalendar;
 import modelo.MPersona;
@@ -35,9 +38,10 @@ public class CMenus implements ActionListener {
     CInfoMinisterial cministerial;
     EstRealizados vestudios;
     CEstudios cestudios;
-    
-    public CMenus(Menus vmenus) {
+    String codigo;
+    public CMenus(Menus vmenus, String codigo) {
         this.vmenus = vmenus;
+        this.codigo = codigo;
         vmenus.aggActionListener(this);
         vmenus.setVisible(true);
         System.out.println("click");
@@ -54,23 +58,27 @@ public class CMenus implements ActionListener {
         }
       if(e.getActionCommand().equalsIgnoreCase("infopersonal")){
           vpersonal = new InfPersonal();
-          cpersonal = new CInfoPersonal(vpersonal, null);
+           try {
+               cpersonal = new CInfoPersonal(vpersonal, codigo);
+           } catch (ParseException ex) {
+               Logger.getLogger(CMenus.class.getName()).log(Level.SEVERE, null, ex);
+           }
           vmenus.setVisible(false);
         }
       if(e.getActionCommand().equalsIgnoreCase("infolaboral")){
           vlaboral = new DatLab ();
-          claboral = new CInfoLaboral(vlaboral, null);
+          claboral = new CInfoLaboral(vlaboral, codigo);
           vmenus.setVisible(false);
         }
       
         if(e.getActionCommand().equalsIgnoreCase("infoministerial")){
           vministerial = new DatMinis ();
-          cministerial = new CInfoMinisterial(vministerial, null);
+          cministerial = new CInfoMinisterial(vministerial, codigo);
           vmenus.setVisible(false);
         }
          if(e.getActionCommand().equalsIgnoreCase("infoestudios")){
           vestudios = new EstRealizados ();
-          cestudios = new CEstudios(vestudios, null);
+          cestudios = new CEstudios(vestudios, codigo);
           vmenus.setVisible(false);
         }
     }

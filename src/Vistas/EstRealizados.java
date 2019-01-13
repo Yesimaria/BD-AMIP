@@ -220,7 +220,7 @@ public class EstRealizados extends javax.swing.JFrame implements IVista{
         });
         getContentPane().add(txtInstSemimario, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 350, 30));
 
-        FechaEstu.setDateFormatString("yyyy/MM/dd");
+        FechaEstu.setDateFormatString("dd/MM/yyyy");
         FechaEstu.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         getContentPane().add(FechaEstu, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 170, 30));
 

@@ -89,7 +89,7 @@ public class CEstudios extends OpJCalendar implements ActionListener, KeyListene
        if(e.getActionCommand().equalsIgnoreCase("cancelar")){
          
           vmenus= new Menus();
-          cmenus = new CMenus(vmenus);
+          cmenus = new CMenus(vmenus, codigo);
           vestudios.setVisible(false);
         }
          if(e.getActionCommand().equalsIgnoreCase("guardar")){

@@ -71,7 +71,7 @@ public class CMatrimonio extends OpJCalendar implements ActionListener, KeyListe
         if (e.getActionCommand().equalsIgnoreCase("cancelar")) {
 
             vmenus = new Menus();
-            cmenus = new CMenus(vmenus);
+            cmenus = new CMenus(vmenus, codigo);
             vmatrimonio.setVisible(false);
         }
         if (e.getActionCommand().equalsIgnoreCase("guardar")) {

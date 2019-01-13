@@ -6,6 +6,7 @@
 package hibernate;
 import java.util.ArrayList;
 import java.util.List;
+import modelo.MPersona;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -63,9 +64,10 @@ public class SesionFactory {
     }
     
     public Object queryUniq(String sql){
+        System.out.println("La busqueda");
         Object query;
         query = this.session.createQuery(sql).uniqueResult();
-        System.out.print(query);
+        System.out.println("La busqueda" + query);
         return query;
     }
    

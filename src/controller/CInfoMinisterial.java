@@ -75,7 +75,7 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
     public void actionPerformed(ActionEvent e) {
     if(e.getActionCommand().equalsIgnoreCase("cancelar")){
           vmenus= new Menus();
-          cmenus = new CMenus(vmenus);
+          cmenus = new CMenus(vmenus, codigo);
           vministerial.setVisible(false);
           
         }

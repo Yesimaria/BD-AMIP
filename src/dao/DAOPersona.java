@@ -48,15 +48,16 @@ public class DAOPersona {
       
     public MPersona getPersonaCodigo(String codigo){
      SesionFactory sesionFactory = new SesionFactory();
+     System.out.println("La busquedaDAo");
      persona = (MPersona)sesionFactory.queryUniq("SELECT p FROM MPersona p WHERE p.codigo='"+codigo+"'" );
-     System.out.print(persona);
+     System.out.println("Apellido" + persona.getApellido());
      return persona;
     }
     
-    public List<Object[]> listPersonas(){
+    public List<MPersona> listPersonas(){
        SesionFactory sesionFactory = new SesionFactory();
-       List objs = new ArrayList();
-       objs = sesionFactory.query("SELECT p FROM MPersona p" );
-       return objs;
+       List mpersona = new ArrayList();
+       mpersona = sesionFactory.query("SELECT p FROM MPersona p" );
+       return mpersona;
    }
 }
