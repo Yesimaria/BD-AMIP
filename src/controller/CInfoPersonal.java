@@ -36,7 +36,7 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
     this.vpersonal = vpersonal;
     this.codigo = codigo;
     vpersonal.aggActionListener(this);
-        System.out.println("el codigo" + this.codigo);
+    System.out.println("el codigo" + this.codigo);
     this.cargarDatos(this.codigo);
     vpersonal.setVisible(true);
     daopersona = new DAOPersona();
@@ -70,7 +70,8 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
         }else{
             edoCivil = 0;
         }
-        if(codigo!=null){
+        this.daopersona = new DAOPersona();
+        if(this.codigo!=null){
             persona = daopersona.getPersonaCodigo(codigo);
             persona.setNombre(nombre);
             persona.setApellido(apellido);
@@ -87,8 +88,6 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
         }else{
          persona = new MPersona(codigo, fechaIngre, nombre, apellido, cedula, telefono, correo, fnac, lnacimiento, edoCivil, cantHijos, sexo, null, null, null, null, null, null, null);   
         }
-         
-         this.daopersona = new DAOPersona();
          boolean save = this.daopersona.updatePersona(persona);
         return codigo;
     }
@@ -122,13 +121,11 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
     @Override
     public void actionPerformed(ActionEvent e) {
       if(e.getActionCommand().equalsIgnoreCase("guardar")){
-     
           try {
           String codigo = this.incluirPersona();
           vlaboral= new DatLab();
           persona = daopersona.getPersonaCodigo(codigo);
           vlaboral.getLbnombre().setText(persona.getNombre());
-          System.out.println("el codigo 1 es :" + codigo+"  el codigo 2 es :" + persona.getNombre());
           claboral = new CInfoLaboral(vlaboral, persona.getCodigo());
           System.out.print("incluido exitosamente");
           vpersonal.setVisible(false);
@@ -157,7 +154,4 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
     public void keyReleased(KeyEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
 }
