@@ -32,9 +32,11 @@ public class CIglesia implements ActionListener, KeyListener {
     DAOIglesia daoiglesia;
     CMenus cmenus;
     Menus vmenus;
+    DocAnexos vanexos;
+    CDocumentos cdocumentos;
     InfIglesia viglesia;
     String codigo;
-
+    
     public CIglesia(InfIglesia viglesia, String codigo) {
         this.viglesia = viglesia;
         this.codigo = codigo;
@@ -42,7 +44,7 @@ public class CIglesia implements ActionListener, KeyListener {
         viglesia.setVisible(true);
     }
     
-     public void incluirDatosMatrimonio(String codigo){
+     public void incluirDatosIglesia(String codigo){
          daopersona = new DAOPersona();
          boolean save = false;
           try {
@@ -83,9 +85,9 @@ public class CIglesia implements ActionListener, KeyListener {
         if (e.getActionCommand().equalsIgnoreCase("guardar")) {
             try {
                 System.out.println("el codigo: " + codigo);
-                this.incluirDatosMatrimonio(codigo);
-                DocAnexos vanexos = new DocAnexos();
-                CDocumentos cdocumentos = new CDocumentos(vanexos, codigo);
+                this.incluirDatosIglesia(this.codigo);
+                DocAnexos vanexo = new DocAnexos();
+                CDocumentos cdocumentos = new CDocumentos(vanexo, this.codigo);
                 System.out.print("incluido exitosamente");
                 viglesia.setVisible(false);
             } catch (Exception ex) {

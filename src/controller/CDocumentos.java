@@ -13,10 +13,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.ResultSet;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
@@ -64,10 +67,12 @@ public class CDocumentos implements ActionListener, KeyListener {
     DAOPersona daopersona;
     DocAnexos vanexos;
     String codigo;
+    
     public CDocumentos(DocAnexos vanexos, String codigo) {
         this.vanexos = vanexos;
         this.codigo = codigo;
         vanexos.aggActionListener(this);
+        this.cargarDatos(codigo);
         vanexos.setVisible(true);
     }
     
@@ -126,8 +131,46 @@ public class CDocumentos implements ActionListener, KeyListener {
         } catch (Exception e) {
          System.out.println("error al incluir infoestudios: " + e);
         }
-       
     }
+     
+     public void cargarImag(JLabel lb, byte[] arch){
+        ImageIcon foto;
+        InputStream is;
+        BufferedImage bi;
+        is = new ByteArrayInputStream(arch);            
+        try {
+           bi = ImageIO.read(is);
+           foto = new ImageIcon(bi);
+           Image img = foto.getImage();
+           Image newimg = img.getScaledInstance(lb.getWidth(),lb.getHeight(), java.awt.Image.SCALE_SMOOTH);
+           ImageIcon newicon = new ImageIcon(newimg); 
+           lb.setIcon(newicon);
+        } catch (IOException ex) {
+         
+            Logger.getLogger(CDocumentos.class.getName()).log(Level.SEVERE, null, ex);
+        }  
+     }
+     public void cargarDatos(String codigo){
+          if(codigo!= null){
+            this.daopersona = new DAOPersona();
+              try {
+                  this.documentos = daopersona.getPersonaCodigo(codigo).getInfoDocumentos();
+            this.cargarImag(this.vanexos.getLbCedulaConyuge(),this.documentos.getCopiaCedulaConyugue());
+            this.cargarImag(this.vanexos.getLbCopiaacta(),this.documentos.getCopiaActaMatri());
+            this.cargarImag(this.vanexos.getLbcopiaCedula(),this.documentos.getCopiaCedula());
+            this.cargarImag(this.vanexos.getLbCopiaCredencial(),this.documentos.getCopiaCredencial());
+            this.cargarImag(this.vanexos.getLbCopiaSeguro(),this.documentos.getCopiaSeguro());
+            this.cargarImag(this.vanexos.getLbCopiaSisben(),this.documentos.getCopiaSisben());
+            this.cargarImag(this.vanexos.getLbdiplomas(),this.documentos.getCopiadiploma());
+            this.cargarImag(this.vanexos.getLbrefFamiliar(),this.documentos.getReferenciaFamiliar());
+            this.cargarImag(this.vanexos.getLbreferelaboral(),this.documentos.getReferenciaLaboral());
+            this.cargarImag(this.vanexos.getLbreferenciapers(),this.documentos.getReferenciaPersonal());
+              } catch (Exception e) {
+                  System.err.println(e);
+              }
+            
+          }
+     }
     @Override
     public void actionPerformed(ActionEvent e) {
        if(e.getActionCommand().equalsIgnoreCase("cedula")){

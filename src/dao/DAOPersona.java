@@ -37,7 +37,7 @@ public class DAOPersona {
           SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();
-           sesionFactory.save(persona);
+           sesionFactory.saveOrUpdate(persona);
            sesionFactory.closeTransaction();
            sesionFactory.closeSession();
            return true;

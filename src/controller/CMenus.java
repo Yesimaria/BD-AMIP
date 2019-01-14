@@ -11,6 +11,7 @@ import Vistas.EstRealizados;
 import Vistas.InfIglesia;
 import Vistas.InfMatrimonio;
 import Vistas.InfOrganizacionPrev;
+import Vistas.InfEconomica;
 import Vistas.InfPersonal;
 import Vistas.Inicio;
 import Vistas.Menus;
@@ -47,6 +48,8 @@ public class CMenus implements ActionListener {
     CInfoMinisterial cministerial;
     EstRealizados vestudios;
     CEstudios cestudios;
+    InfEconomica veconomica;
+    CInfoEconomica ceconomica;
     String codigo;
     public CMenus(Menus vmenus, String codigo) {
         this.vmenus = vmenus;
@@ -90,6 +93,18 @@ public class CMenus implements ActionListener {
           cestudios = new CEstudios(vestudios, codigo);
           vmenus.setVisible(false);
         }
+          if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnEconomica().getActionCommand())){
+          veconomica = new InfEconomica ();
+          ceconomica = new CInfoEconomica(veconomica, codigo);
+          vmenus.setVisible(false);
+        }
+        
+        if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnEconomica().getActionCommand())){
+          vestudios = new EstRealizados ();
+          cestudios = new CEstudios(vestudios, codigo);
+          vmenus.setVisible(false);
+        }
+          
     }
     
 }
