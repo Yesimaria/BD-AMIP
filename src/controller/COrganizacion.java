@@ -16,6 +16,9 @@ import java.awt.event.KeyListener;
 import modelo.MOrganizacionPrev;
 import modelo.MPersona;
 import Vistas.InfOrganizacionPrev;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -33,11 +36,13 @@ public class COrganizacion implements ActionListener, KeyListener {
  CMatrimonio cmatrimonio;
  String codigo;
  
-    public COrganizacion(InfOrganizacionPrev vorganizacion, String codigo) {
+    public COrganizacion(InfOrganizacionPrev vorganizacion, String codigo) throws ParseException {
         this.vorganizacion = vorganizacion;
         this.codigo = codigo;
         vorganizacion.aggActionListener(this);
+         this.cargarDatos(codigo);
         vorganizacion.setVisible(true);
+       
         
     }
     
@@ -62,9 +67,22 @@ public class COrganizacion implements ActionListener, KeyListener {
         }
        
     }
- 
-    @Override
-    public void actionPerformed(ActionEvent e) {
+   
+   public void cargarDatos(String codigo) throws ParseException{
+       daopersona = new DAOPersona();
+         this.organizacion = daopersona.getPersonaCodigo(codigo).getOrganizacionPrev();
+        if(this.organizacion instanceof MOrganizacionPrev){
+            System.out.println("La busqueda en personal");
+            this.daoorganizacion = new DAOOrganizacion();
+            this.organizacion = daopersona.getPersonaCodigo(codigo).getOrganizacionPrev();
+            this.vorganizacion.getTxtNombreOrganizacion().setText(this.organizacion.getAnterior_organizacion());
+            this.vorganizacion.getTxtRecomendacion().setText(this.organizacion.getRecomendacion());
+            this.vorganizacion.getTxtTelefRecomendacion().setText(this.organizacion.getTelef_recomendacion());
+            this.vorganizacion.getTxtTelefono().setText(this.organizacion.getTelef_organizacion());
+        }
+   }
+        @Override
+        public void actionPerformed(ActionEvent e) {
          if(e.getActionCommand().equalsIgnoreCase("cancelar")){
          
           vmenus= new Menus();

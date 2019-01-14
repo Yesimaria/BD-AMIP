@@ -14,7 +14,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.text.ParseException;
 import modelo.MIglesia;
+import modelo.MInfoMinisterio;
 import modelo.MPersona;
 
 /**
@@ -31,17 +33,20 @@ public class CIglesia implements ActionListener, KeyListener {
     DAOIglesia daoiglesia;
     CMenus cmenus;
     Menus vmenus;
+    DocAnexos vanexos;
+    CDocumentos cdocumentos;
     InfIglesia viglesia;
     String codigo;
-
+    
     public CIglesia(InfIglesia viglesia, String codigo) {
         this.viglesia = viglesia;
         this.codigo = codigo;
         viglesia.aggActionListener(this);
+        this.cargarDatos(codigo);
         viglesia.setVisible(true);
     }
     
-     public void incluirDatosMatrimonio(String codigo){
+     public void incluirDatosIglesia(String codigo){
          daopersona = new DAOPersona();
          boolean save = false;
           try {
@@ -60,6 +65,19 @@ public class CIglesia implements ActionListener, KeyListener {
         }
        
     }
+     
+        public void cargarDatos(String codigo){
+         daopersona = new DAOPersona();
+         this.iglesia = daopersona.getPersonaCodigo(codigo).getIglesia();
+        
+        if(this.iglesia instanceof MIglesia){
+            System.out.println("La busqueda en personal");
+            this.daoiglesia = new DAOIglesia();
+            this.viglesia.getTxtDireccion().setText(this.iglesia.getDireccion_iglesia());
+            this.viglesia.getTxtResponsable().setText(this.iglesia.getResponsable_iglesia());
+            this.viglesia.getTxtTelefono().setText(this.iglesia.getTelef_iglesia());
+        }
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
  if (e.getActionCommand().equalsIgnoreCase("cancelar")) {
@@ -71,9 +89,9 @@ public class CIglesia implements ActionListener, KeyListener {
         if (e.getActionCommand().equalsIgnoreCase("guardar")) {
             try {
                 System.out.println("el codigo: " + codigo);
-                this.incluirDatosMatrimonio(codigo);
-                DocAnexos vanexos = new DocAnexos();
-                CDocumentos cdocumentos = new CDocumentos(vanexos, codigo);
+                this.incluirDatosIglesia(this.codigo);
+                DocAnexos vanexo = new DocAnexos();
+                CDocumentos cdocumentos = new CDocumentos(vanexo, this.codigo);
                 System.out.print("incluido exitosamente");
                 viglesia.setVisible(false);
             } catch (Exception ex) {

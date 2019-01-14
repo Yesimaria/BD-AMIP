@@ -43,7 +43,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         btnSalir = new javax.swing.JButton();
         lbpastorname = new javax.swing.JLabel();
         btnMatrimonio = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnEconomica = new javax.swing.JButton();
         btnIglesia = new javax.swing.JButton();
         btnOrganizacion = new javax.swing.JButton();
         jlbFondoMenu = new javax.swing.JLabel();
@@ -106,6 +106,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         getContentPane().add(btnEstudRea, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, -1, 50));
 
         btnDocAnex.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnAnexos.png"))); // NOI18N
+        btnDocAnex.setActionCommand("documentos");
         btnDocAnex.setBorder(null);
         btnDocAnex.setBorderPainted(false);
         btnDocAnex.setContentAreaFilled(false);
@@ -113,6 +114,11 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         btnDocAnex.setIconTextGap(-3);
         btnDocAnex.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnDocAnex.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnDocAnex.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDocAnexActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnDocAnex, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 510, -1, 50));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
@@ -138,6 +144,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         getContentPane().add(lbpastorname, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 260, 40));
 
         btnMatrimonio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnMatrimonio.png"))); // NOI18N
+        btnMatrimonio.setActionCommand("matrimonio");
         btnMatrimonio.setBorder(null);
         btnMatrimonio.setBorderPainted(false);
         btnMatrimonio.setContentAreaFilled(false);
@@ -146,16 +153,18 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         btnMatrimonio.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         getContentPane().add(btnMatrimonio, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, -1, 50));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnEconomica.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 180, -1));
+        btnEconomica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnEconomica.png"))); // NOI18N
+        btnEconomica.setActionCommand("economica");
+        btnEconomica.setBorder(null);
+        btnEconomica.setBorderPainted(false);
+        btnEconomica.setContentAreaFilled(false);
+        btnEconomica.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEconomica.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btnEconomica.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnEconomica, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 180, -1));
 
         btnIglesia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnIglesia.png"))); // NOI18N
+        btnIglesia.setActionCommand("iglesia");
         btnIglesia.setBorder(null);
         btnIglesia.setBorderPainted(false);
         btnIglesia.setContentAreaFilled(false);
@@ -165,6 +174,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         getContentPane().add(btnIglesia, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 180, -1));
 
         btnOrganizacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/btnOrganizacion.png"))); // NOI18N
+        btnOrganizacion.setActionCommand("organizacion");
         btnOrganizacion.setBorder(null);
         btnOrganizacion.setBorderPainted(false);
         btnOrganizacion.setContentAreaFilled(false);
@@ -185,6 +195,10 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void btnDocAnexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDocAnexActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDocAnexActionPerformed
+
     private void btnEstudReaActionPerformed(java.awt.event.ActionEvent evt){
         
     }
@@ -193,6 +207,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
     private javax.swing.JButton btnDatLab;
     private javax.swing.JButton btnDatMinis;
     private javax.swing.JButton btnDocAnex;
+    private javax.swing.JButton btnEconomica;
     private javax.swing.JButton btnEstudRea;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnIglesia;
@@ -200,7 +215,6 @@ public class Menus extends  javax.swing.JFrame implements IVista {
     private javax.swing.JButton btnMatrimonio;
     private javax.swing.JButton btnOrganizacion;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jlbFondoMenu;
     private javax.swing.JLabel lbpastorname;
     // End of variables declaration//GEN-END:variables
@@ -214,10 +228,21 @@ public class Menus extends  javax.swing.JFrame implements IVista {
       btnGuardar.addActionListener(acL);
       btnInfPersonal.addActionListener(acL);
       btnSalir.addActionListener(acL);
+      btnIglesia.addActionListener(acL);
+      btnOrganizacion.addActionListener(acL);
+      btnMatrimonio.addActionListener(acL);
+      btnEconomica.addActionListener(acL);
       
     }
     
-     public JButton getBtnOrganizacion() {
+    public JButton getBtnEconomica() {
+        return btnEconomica;
+    }
+
+    public void setBtnEconomica(JButton btnEconomica) {
+        this.btnEconomica = btnEconomica;
+    }
+    public JButton getBtnOrganizacion() {
         return btnOrganizacion;
     }
 
@@ -310,6 +335,7 @@ public class Menus extends  javax.swing.JFrame implements IVista {
     public void setLbpastorname(JLabel lbpastorname) {
         this.lbpastorname = lbpastorname;
     }
+
 
     @Override
     public void aggKeyListener(KeyListener keyL) {

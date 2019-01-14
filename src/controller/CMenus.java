@@ -7,7 +7,12 @@ package controller;
 
 import Vistas.DatLab;
 import Vistas.DatMinis;
+import Vistas.DocAnexos;
 import Vistas.EstRealizados;
+import Vistas.InfIglesia;
+import Vistas.InfMatrimonio;
+import Vistas.InfOrganizacionPrev;
+import Vistas.InfEconomica;
 import Vistas.InfPersonal;
 import Vistas.Inicio;
 import Vistas.Menus;
@@ -32,12 +37,22 @@ public class CMenus implements ActionListener {
     CInicio cinicio; 
     InfPersonal vpersonal;
     CInfoPersonal cpersonal;
+    InfMatrimonio vmatrimonio;
+    CMatrimonio cmatrimonio;
+    InfOrganizacionPrev vorganizacion;
+    COrganizacion corganizacion;
+    InfIglesia viglesia;
+    CIglesia ciglesia;
     DatLab vlaboral;
     CInfoLaboral claboral;
     DatMinis vministerial;
     CInfoMinisterial cministerial;
     EstRealizados vestudios;
     CEstudios cestudios;
+    InfEconomica veconomica;
+    CInfoEconomica ceconomica;
+    DocAnexos vanexos;
+    CDocumentos cdocumentos;
     String codigo;
     public CMenus(Menus vmenus, String codigo) {
         this.vmenus = vmenus;
@@ -66,11 +81,15 @@ public class CMenus implements ActionListener {
           vmenus.setVisible(false);
         }
       if(e.getActionCommand().equalsIgnoreCase("infolaboral")){
-          vlaboral = new DatLab ();
-          claboral = new CInfoLaboral(vlaboral, codigo);
-          vmenus.setVisible(false);
+           try {
+               vlaboral = new DatLab ();
+               claboral = new CInfoLaboral(vlaboral, codigo);
+               vmenus.setVisible(false);
+           } catch (ParseException ex) {
+               Logger.getLogger(CMenus.class.getName()).log(Level.SEVERE, null, ex);
+           }
         }
-      
+           
         if(e.getActionCommand().equalsIgnoreCase("infoministerial")){
           vministerial = new DatMinis ();
           cministerial = new CInfoMinisterial(vministerial, codigo);
@@ -81,6 +100,43 @@ public class CMenus implements ActionListener {
           cestudios = new CEstudios(vestudios, codigo);
           vmenus.setVisible(false);
         }
+          if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnEconomica().getActionCommand())){
+           try {
+               veconomica = new InfEconomica ();
+               ceconomica = new CInfoEconomica(veconomica, codigo);
+               vmenus.setVisible(false);
+           } catch (ParseException ex) {
+               Logger.getLogger(CMenus.class.getName()).log(Level.SEVERE, null, ex);
+           }
+        }
+        
+        if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnDocAnex().getActionCommand())){
+          vanexos= new DocAnexos ();
+          cdocumentos= new CDocumentos(vanexos, codigo);
+          vmenus.setVisible(false);
+        }
+         if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnIglesia().getActionCommand())){
+          viglesia= new InfIglesia();
+          ciglesia= new CIglesia(viglesia, codigo);
+          vmenus.setVisible(false);
+        }
+         
+         if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnOrganizacion().getActionCommand())){
+           try {
+               vorganizacion = new InfOrganizacionPrev();
+               corganizacion= new COrganizacion(vorganizacion, codigo);
+               vmenus.setVisible(false);
+           } catch (ParseException ex) {
+               Logger.getLogger(CMenus.class.getName()).log(Level.SEVERE, null, ex);
+           }
+        }
+          if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnMatrimonio().getActionCommand())){
+          vmatrimonio= new InfMatrimonio();
+          cmatrimonio= new CMatrimonio(vmatrimonio, codigo);
+          vmenus.setVisible(false);
+        }
+         
+         
     }
     
 }

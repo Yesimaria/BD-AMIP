@@ -37,7 +37,7 @@ public class DAOPersona {
           SesionFactory sesionFactory = new SesionFactory();
         try {
            sesionFactory.openTransaction();
-           sesionFactory.save(persona);
+           sesionFactory.saveOrUpdate(persona);
            sesionFactory.closeTransaction();
            sesionFactory.closeSession();
            return true;
@@ -48,9 +48,7 @@ public class DAOPersona {
       
     public MPersona getPersonaCodigo(String codigo){
      SesionFactory sesionFactory = new SesionFactory();
-     System.out.println("La busquedaDAo");
      persona = (MPersona)sesionFactory.queryUniq("SELECT p FROM MPersona p WHERE p.codigo='"+codigo+"'" );
-     System.out.println("Apellido" + persona.getApellido());
      return persona;
     }
     

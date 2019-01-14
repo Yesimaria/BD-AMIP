@@ -14,6 +14,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.text.ParseException;
 import modelo.MInfoEconomica;
 import modelo.MPersona;
 
@@ -34,11 +35,12 @@ public class CInfoEconomica implements ActionListener, KeyListener {
     COrganizacion corganizacion;
     String codigo;
     
-    public CInfoEconomica(InfEconomica veconomica, String codigo ) {
+    public CInfoEconomica(InfEconomica veconomica, String codigo ) throws ParseException {
       this.veconomica = veconomica;
       this.codigo = codigo;
         veconomica.aggActionListener(this);
-        veconomica.setVisible(true);
+      this.cargarDatos(codigo);
+       veconomica.setVisible(true);
     }
     
       public void incluirDatosEconomica(String codigo){
@@ -67,7 +69,27 @@ public class CInfoEconomica implements ActionListener, KeyListener {
         }
        
     }
-
+        public void cargarDatos(String codigo) throws ParseException{
+       daopersona = new DAOPersona();
+         this.infoEconomica = daopersona.getPersonaCodigo(codigo).getInfoEconomica();
+        if(this.infoEconomica instanceof MInfoEconomica){
+            System.out.println("La busqueda en personal");
+            this.daoeconomica = new DAOEconomica();
+            this.veconomica.getTxtDireccion().setText(this.infoEconomica.getDireccion());
+            this.veconomica.getTxtEstrato().setText(this.infoEconomica.getEstrato());
+            this.veconomica.getTxtHijos().setText(this.infoEconomica.getNombre_hijos());
+            this.veconomica.getTxtNivel().setText(this.infoEconomica.getNivel());
+            this.veconomica.getTxtNombreEmpresa().setText(this.infoEconomica.getNombre_empresa());
+            this.veconomica.getTxtNombreSeguro().setText(this.infoEconomica.getNombre_seguro());
+            this.veconomica.getTxtTelefono().setText(this.infoEconomica.getTelefono_fijo());
+            this.veconomica.getRdCasaSi().setSelected(this.infoEconomica.isCasa() ? true : false);
+            this.veconomica.getRdCasaNo().setSelected(this.infoEconomica.isCasa() ? false : true);
+            this.veconomica.getRdDependenSi().setSelected(this.infoEconomica.isDependen_economica() ? true : false);
+            this.veconomica.getRdDependenNo().setSelected(this.infoEconomica.isDependen_economica() ? false : true);
+            this.veconomica.getRdPensionSi().setSelected(this.infoEconomica.isPensionado() ? true : false);
+            this.veconomica.getRdPensionNo().setSelected(this.infoEconomica.isPensionado() ? false : true);
+        }
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
     if(e.getActionCommand().equalsIgnoreCase("cancelar")){

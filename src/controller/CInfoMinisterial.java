@@ -15,6 +15,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import lib.OpJCalendar;
 import modelo.MInfoLaboral;
 import modelo.MInfoMinisterio;
@@ -41,8 +46,14 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
     public CInfoMinisterial(DatMinis vministerial, String codigo ) {
         this.vministerial = vministerial;
         vministerial.aggActionListener(this);
-        vministerial.setVisible(true);
+        
         this.codigo = codigo; 
+        try {
+            this.cargarDatos(codigo);
+        } catch (ParseException ex) {
+            Logger.getLogger(CInfoMinisterial.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        vministerial.setVisible(true);
     }
 
      public void incluirDatosMinisterial(String codigo){
@@ -51,8 +62,8 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
           try {
          persona = daopersona.getPersonaCodigo(codigo);
          infoministerial = new MInfoMinisterio();
-         infoministerial.setFecha_conversion(ObtFecha(vministerial.getFechaCon(), "dd-mm-yyyy"));
-         infoministerial.setFecha_bautismo_agua(ObtFecha(vministerial.getFechaBaut(), "dd-mm-yyyy"));
+         infoministerial.setFecha_conversion(ObtFecha(vministerial.getFechaCon(), "dd/mm/yyyy"));
+         infoministerial.setFecha_bautismo_agua(ObtFecha(vministerial.getFechaBaut(), "dd/mm/yyyy"));
          infoministerial.setArea_experiencia(vministerial.getTxtExpeMinis().getText());
          infoministerial.setBautismo_espiritu_santo(vministerial.getRdBautizoSi().isSelected() ? vministerial.getRdBautizoSi().isSelected() : false );
          infoministerial.setCargos(vministerial.getTxtCargos().getText());
@@ -70,6 +81,30 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
        System.out.println("error en incluir ministerio 2: " + ex);
         }
        
+    }
+     public void cargarDatos(String codigo) throws ParseException{
+         daopersona = new DAOPersona();
+         this.infoministerial = daopersona.getPersonaCodigo(codigo).getInfoMinisterio();
+        if(this.infoministerial instanceof MInfoMinisterio){
+            SimpleDateFormat fecha = new SimpleDateFormat("dd/mm/yyyy");
+            Date fechaCon = null;
+            Date fechaBaut = null;
+            System.out.println("La busqueda en personal");
+            this.daoministerial = new DAOMinisterial();
+            this.vministerial.getTxtCargos().setText(this.infoministerial.getCargos());
+            this.vministerial.getTxtCiudad().setText(this.infoministerial.getCiudad_departamento());
+            this.vministerial.getTxtEdadMinis().setText(String.valueOf(this.infoministerial.getEdad_inicio_ministerio()));
+            this.vministerial.getTxtEjerMinis().setText(this.infoministerial.getLugares_ministerio());
+            this.vministerial.getTxtExpeMinis().setText(this.infoministerial.getArea_experiencia());
+            this.vministerial.getTxtGradoMinis().setText(this.infoministerial.getGrado_ministerial());
+            this.vministerial.getTxtIgleMinis().setText(this.infoministerial.getIglesia_organizacion());
+            fechaCon = fecha.parse(this.infoministerial.getFecha_conversion());
+            this.vministerial.getFechaCon().setDate(fechaCon);
+            fechaBaut = fecha.parse(this.infoministerial.getFecha_bautismo_agua());
+            this.vministerial.getFechaBaut().setDate(fechaBaut);
+            this.vministerial.getRdBautizoSi().setSelected(this.infoministerial.isBautismo_espiritu_santo() ? true : false);
+            this.vministerial.getRdBautizoNo().setSelected(this.infoministerial.isBautismo_espiritu_santo() ? false : true);
+        }
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -91,7 +126,7 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
              }
         }
     }
-
+       
     @Override
     public void keyTyped(KeyEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -106,5 +141,7 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
     public void keyReleased(KeyEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
     
 }
