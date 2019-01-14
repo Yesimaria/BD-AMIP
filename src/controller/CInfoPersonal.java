@@ -48,11 +48,11 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
         String apellido = vpersonal.getTxtApellidos().getText();
         String codigo = vpersonal.getTxtcodigo().getText();
         String lnacimiento = vpersonal.getTxtLugarNac().getText();
-        String fnac = ObtFecha(vpersonal.getTxtFechaNac(), "dd-mm-yyyy");
+        String fnac = ObtFecha(vpersonal.getTxtFechaNac(), "dd/mm/yyyy");
         String cedula = vpersonal.getTxtxCedula().getText();
         String correo = vpersonal.getTxtCorreo().getText();
         String telefono = vpersonal.getTxtTelefono().getText();
-        String fechaIngre = ObtFecha(vpersonal.getFechaIngre(), "dd-mm-yyyy");
+        String fechaIngre = ObtFecha(vpersonal.getFechaIngre(), "dd/mm/yyyy");
         int cantHijos = Integer.parseInt(vpersonal.getTxtCantHijos().getText().trim());
         boolean sexoM = vpersonal.getRdMasculino().isSelected();
         boolean sexoF = vpersonal.getRdFemenino().isSelected();
@@ -94,7 +94,7 @@ public class CInfoPersonal extends OpJCalendar implements ActionListener, KeyLis
 
     public void cargarDatos(String codigo) throws ParseException{
         if(codigo!= null){
-            SimpleDateFormat fecha = new SimpleDateFormat("dd-mm-yyyy");
+            SimpleDateFormat fecha = new SimpleDateFormat("dd/mm/yyyy");
             Date fechanac = null;
             Date fechaing = null;
             System.out.println("La busqueda en personal");

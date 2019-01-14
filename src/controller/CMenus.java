@@ -7,6 +7,7 @@ package controller;
 
 import Vistas.DatLab;
 import Vistas.DatMinis;
+import Vistas.DocAnexos;
 import Vistas.EstRealizados;
 import Vistas.InfIglesia;
 import Vistas.InfMatrimonio;
@@ -50,6 +51,8 @@ public class CMenus implements ActionListener {
     CEstudios cestudios;
     InfEconomica veconomica;
     CInfoEconomica ceconomica;
+    DocAnexos vanexos;
+    CDocumentos cdocumentos;
     String codigo;
     public CMenus(Menus vmenus, String codigo) {
         this.vmenus = vmenus;
@@ -78,9 +81,13 @@ public class CMenus implements ActionListener {
           vmenus.setVisible(false);
         }
       if(e.getActionCommand().equalsIgnoreCase("infolaboral")){
-          vlaboral = new DatLab ();
-          claboral = new CInfoLaboral(vlaboral, codigo);
-          vmenus.setVisible(false);
+           try {
+               vlaboral = new DatLab ();
+               claboral = new CInfoLaboral(vlaboral, codigo);
+               vmenus.setVisible(false);
+           } catch (ParseException ex) {
+               Logger.getLogger(CMenus.class.getName()).log(Level.SEVERE, null, ex);
+           }
         }
            
         if(e.getActionCommand().equalsIgnoreCase("infoministerial")){
@@ -94,17 +101,42 @@ public class CMenus implements ActionListener {
           vmenus.setVisible(false);
         }
           if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnEconomica().getActionCommand())){
-          veconomica = new InfEconomica ();
-          ceconomica = new CInfoEconomica(veconomica, codigo);
-          vmenus.setVisible(false);
+           try {
+               veconomica = new InfEconomica ();
+               ceconomica = new CInfoEconomica(veconomica, codigo);
+               vmenus.setVisible(false);
+           } catch (ParseException ex) {
+               Logger.getLogger(CMenus.class.getName()).log(Level.SEVERE, null, ex);
+           }
         }
         
-        if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnEconomica().getActionCommand())){
-          vestudios = new EstRealizados ();
-          cestudios = new CEstudios(vestudios, codigo);
+        if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnDocAnex().getActionCommand())){
+          vanexos= new DocAnexos ();
+          cdocumentos= new CDocumentos(vanexos, codigo);
           vmenus.setVisible(false);
         }
-          
+         if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnIglesia().getActionCommand())){
+          viglesia= new InfIglesia();
+          ciglesia= new CIglesia(viglesia, codigo);
+          vmenus.setVisible(false);
+        }
+         
+         if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnOrganizacion().getActionCommand())){
+           try {
+               vorganizacion = new InfOrganizacionPrev();
+               corganizacion= new COrganizacion(vorganizacion, codigo);
+               vmenus.setVisible(false);
+           } catch (ParseException ex) {
+               Logger.getLogger(CMenus.class.getName()).log(Level.SEVERE, null, ex);
+           }
+        }
+          if(e.getActionCommand().equalsIgnoreCase(vmenus.getBtnMatrimonio().getActionCommand())){
+          vmatrimonio= new InfMatrimonio();
+          cmatrimonio= new CMatrimonio(vmatrimonio, codigo);
+          vmenus.setVisible(false);
+        }
+         
+         
     }
     
 }

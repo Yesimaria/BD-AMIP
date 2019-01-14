@@ -46,13 +46,14 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
     public CInfoMinisterial(DatMinis vministerial, String codigo ) {
         this.vministerial = vministerial;
         vministerial.aggActionListener(this);
-        vministerial.setVisible(true);
+        
         this.codigo = codigo; 
         try {
             this.cargarDatos(codigo);
         } catch (ParseException ex) {
             Logger.getLogger(CInfoMinisterial.class.getName()).log(Level.SEVERE, null, ex);
         }
+        vministerial.setVisible(true);
     }
 
      public void incluirDatosMinisterial(String codigo){
@@ -61,8 +62,8 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
           try {
          persona = daopersona.getPersonaCodigo(codigo);
          infoministerial = new MInfoMinisterio();
-         infoministerial.setFecha_conversion(ObtFecha(vministerial.getFechaCon(), "dd-mm-yyyy"));
-         infoministerial.setFecha_bautismo_agua(ObtFecha(vministerial.getFechaBaut(), "dd-mm-yyyy"));
+         infoministerial.setFecha_conversion(ObtFecha(vministerial.getFechaCon(), "dd/mm/yyyy"));
+         infoministerial.setFecha_bautismo_agua(ObtFecha(vministerial.getFechaBaut(), "dd/mm/yyyy"));
          infoministerial.setArea_experiencia(vministerial.getTxtExpeMinis().getText());
          infoministerial.setBautismo_espiritu_santo(vministerial.getRdBautizoSi().isSelected() ? vministerial.getRdBautizoSi().isSelected() : false );
          infoministerial.setCargos(vministerial.getTxtCargos().getText());
@@ -82,16 +83,17 @@ public class CInfoMinisterial extends OpJCalendar implements ActionListener, Key
        
     }
      public void cargarDatos(String codigo) throws ParseException{
-        if(codigo!= null){
-            SimpleDateFormat fecha = new SimpleDateFormat("dd-mm-yyyy");
+         daopersona = new DAOPersona();
+         this.infoministerial = daopersona.getPersonaCodigo(codigo).getInfoMinisterio();
+        if(this.infoministerial instanceof MInfoMinisterio){
+            SimpleDateFormat fecha = new SimpleDateFormat("dd/mm/yyyy");
             Date fechaCon = null;
             Date fechaBaut = null;
             System.out.println("La busqueda en personal");
             this.daoministerial = new DAOMinisterial();
-            this.infoministerial = daopersona.getPersonaCodigo(codigo).getInfoMinisterio();
             this.vministerial.getTxtCargos().setText(this.infoministerial.getCargos());
             this.vministerial.getTxtCiudad().setText(this.infoministerial.getCiudad_departamento());
-           // this.vministerial.getTxtEdadMinis().setText(this.infoministerial.getEdad_inicio_ministerio());
+            this.vministerial.getTxtEdadMinis().setText(String.valueOf(this.infoministerial.getEdad_inicio_ministerio()));
             this.vministerial.getTxtEjerMinis().setText(this.infoministerial.getLugares_ministerio());
             this.vministerial.getTxtExpeMinis().setText(this.infoministerial.getArea_experiencia());
             this.vministerial.getTxtGradoMinis().setText(this.infoministerial.getGrado_ministerial());

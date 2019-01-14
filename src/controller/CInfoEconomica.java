@@ -39,8 +39,8 @@ public class CInfoEconomica implements ActionListener, KeyListener {
       this.veconomica = veconomica;
       this.codigo = codigo;
         veconomica.aggActionListener(this);
-        veconomica.setVisible(true);
       this.cargarDatos(codigo);
+       veconomica.setVisible(true);
     }
     
       public void incluirDatosEconomica(String codigo){
@@ -70,10 +70,11 @@ public class CInfoEconomica implements ActionListener, KeyListener {
        
     }
         public void cargarDatos(String codigo) throws ParseException{
-        if(codigo!= null){
+       daopersona = new DAOPersona();
+         this.infoEconomica = daopersona.getPersonaCodigo(codigo).getInfoEconomica();
+        if(this.infoEconomica instanceof MInfoEconomica){
             System.out.println("La busqueda en personal");
             this.daoeconomica = new DAOEconomica();
-            this.infoEconomica = daopersona.getPersonaCodigo(codigo).getInfoEconomica();
             this.veconomica.getTxtDireccion().setText(this.infoEconomica.getDireccion());
             this.veconomica.getTxtEstrato().setText(this.infoEconomica.getEstrato());
             this.veconomica.getTxtHijos().setText(this.infoEconomica.getNombre_hijos());

@@ -16,6 +16,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.text.ParseException;
 import modelo.MIglesia;
+import modelo.MInfoMinisterio;
 import modelo.MPersona;
 
 /**
@@ -41,6 +42,7 @@ public class CIglesia implements ActionListener, KeyListener {
         this.viglesia = viglesia;
         this.codigo = codigo;
         viglesia.aggActionListener(this);
+        this.cargarDatos(codigo);
         viglesia.setVisible(true);
     }
     
@@ -64,11 +66,13 @@ public class CIglesia implements ActionListener, KeyListener {
        
     }
      
-        public void cargarDatos(String codigo) throws ParseException{
-        if(codigo!= null){
+        public void cargarDatos(String codigo){
+         daopersona = new DAOPersona();
+         this.iglesia = daopersona.getPersonaCodigo(codigo).getIglesia();
+        
+        if(this.iglesia instanceof MIglesia){
             System.out.println("La busqueda en personal");
             this.daoiglesia = new DAOIglesia();
-            this.iglesia = daopersona.getPersonaCodigo(codigo).getIglesia();
             this.viglesia.getTxtDireccion().setText(this.iglesia.getDireccion_iglesia());
             this.viglesia.getTxtResponsable().setText(this.iglesia.getResponsable_iglesia());
             this.viglesia.getTxtTelefono().setText(this.iglesia.getTelef_iglesia());

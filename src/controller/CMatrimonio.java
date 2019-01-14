@@ -44,12 +44,13 @@ public class CMatrimonio extends OpJCalendar implements ActionListener, KeyListe
         this.vmatrimonio = vmatrimonio;
         this.codigo = codigo;
         vmatrimonio.aggActionListener(this);
-        vmatrimonio.setVisible(true);
+       
         try {
             this.cargarDatos(codigo);
         } catch (ParseException ex) {
             Logger.getLogger(CMatrimonio.class.getName()).log(Level.SEVERE, null, ex);
         }
+         vmatrimonio.setVisible(true);
     }
 
     public void incluirDatosMatrimonio(String codigo) {
@@ -65,7 +66,7 @@ public class CMatrimonio extends OpJCalendar implements ActionListener, KeyListe
             matrimonio.setCorreo(vmatrimonio.getTxtCorreo().getText());
             matrimonio.setLugar_nacimiento(vmatrimonio.getTxtLugarNac().getText());
             matrimonio.setTelefono(vmatrimonio.getTxtTelefono().getText());
-            matrimonio.setFecha_nacimiento(ObtFecha(vmatrimonio.getFechaMatri(), "dd-mm-yyyy"));
+            matrimonio.setFecha_nacimiento(ObtFecha(vmatrimonio.getFechaMatri(), "dd/mm/yyyy"));
             persona.setMatrimonio(matrimonio);
             matrimonio.setPersona(persona);
             daomatrimonio = new DAOMatrimonio();
@@ -76,12 +77,13 @@ public class CMatrimonio extends OpJCalendar implements ActionListener, KeyListe
 
     }
         public void cargarDatos(String codigo) throws ParseException{
-        if(codigo!= null){
-            SimpleDateFormat fecha = new SimpleDateFormat("dd-mm-yyyy");
+         daopersona = new DAOPersona();
+          this.matrimonio = daopersona.getPersonaCodigo(codigo).getMatrimonio();
+        if(this.matrimonio instanceof MMatrimonio){
+            SimpleDateFormat fecha = new SimpleDateFormat("dd/mm/yyyy");
             Date fechaMatri = null;
             System.out.println("La busqueda en personal");
             this.daomatrimonio = new DAOMatrimonio();
-            this.matrimonio = daopersona.getPersonaCodigo(codigo).getMatrimonio();
             this.vmatrimonio.getTxtApellidos().setText(this.matrimonio.getApellido());
             this.vmatrimonio.getTxtCedula().setText(this.matrimonio.getCedula());
             this.vmatrimonio.getTxtCorreo().setText(this.matrimonio.getCorreo());

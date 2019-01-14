@@ -7,6 +7,7 @@ package controller;
 
 import modelo.MPersona;
 import Vistas.Consultar;
+import Vistas.Inicio;
 import Vistas.Menus;
 import dao.DAOPersona;
 import java.awt.event.ActionEvent;
@@ -28,6 +29,8 @@ public class CConsulta  implements ActionListener, KeyListener{
     Consultar vconsulta;
     DefaultTableModel tabla;
     DAOPersona daopersona;
+    CInicio cinicio;
+    Inicio vinicio;
     List<MPersona> persona;
     public CConsulta ( Consultar vconsulta) {
         this.vconsulta = vconsulta;
@@ -82,6 +85,11 @@ public class CConsulta  implements ActionListener, KeyListener{
             vconsulta.setVisible(false);
             }
           
+        }
+         if(e.getActionCommand().equalsIgnoreCase("salir")){
+          vinicio = new Inicio();
+            cinicio = new CInicio(vinicio);
+          vconsulta.setVisible(false);
         }
     }
 

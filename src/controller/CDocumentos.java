@@ -71,9 +71,10 @@ public class CDocumentos implements ActionListener, KeyListener {
     public CDocumentos(DocAnexos vanexos, String codigo) {
         this.vanexos = vanexos;
         this.codigo = codigo;
-        vanexos.aggActionListener(this);
+       
+        this.vanexos.aggActionListener(this);
         this.cargarDatos(codigo);
-        vanexos.setVisible(true);
+        this.vanexos.setVisible(true);
     }
     
     
@@ -146,15 +147,17 @@ public class CDocumentos implements ActionListener, KeyListener {
            ImageIcon newicon = new ImageIcon(newimg); 
            lb.setIcon(newicon);
         } catch (IOException ex) {
-         
+            System.out.println(ex);
             Logger.getLogger(CDocumentos.class.getName()).log(Level.SEVERE, null, ex);
         }  
      }
      public void cargarDatos(String codigo){
-          if(codigo!= null){
-            this.daopersona = new DAOPersona();
+      daopersona = new DAOPersona();
+       System.out.println("Cargos");
+         this.documentos = daopersona.getPersonaCodigo(codigo).getInfoDocumentos();
+        //if(this.documentos instanceof MInfoDocumentos){
+            System.out.println("Cargos1");
               try {
-                  this.documentos = daopersona.getPersonaCodigo(codigo).getInfoDocumentos();
             this.cargarImag(this.vanexos.getLbCedulaConyuge(),this.documentos.getCopiaCedulaConyugue());
             this.cargarImag(this.vanexos.getLbCopiaacta(),this.documentos.getCopiaActaMatri());
             this.cargarImag(this.vanexos.getLbcopiaCedula(),this.documentos.getCopiaCedula());
@@ -169,7 +172,7 @@ public class CDocumentos implements ActionListener, KeyListener {
                   System.err.println(e);
               }
             
-          }
+         // }
      }
     @Override
     public void actionPerformed(ActionEvent e) {

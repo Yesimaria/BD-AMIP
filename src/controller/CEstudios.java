@@ -78,12 +78,13 @@ public class CEstudios extends OpJCalendar implements ActionListener, KeyListene
        
     }
         public void cargarDatos(String codigo) throws ParseException{
-        if(codigo!= null){
+        daopersona = new DAOPersona();
+         this.infoestudios = daopersona.getPersonaCodigo(codigo).getInfoEstudios();
+        if(this.infoestudios instanceof MInfoEstudios){
             SimpleDateFormat fecha = new SimpleDateFormat("dd-mm-yyyy");
             Date fechaEstu = null;
             System.out.println("La busqueda en personal");
             this.daoestudios = new DAOEstudios();
-            this.infoestudios = daopersona.getPersonaCodigo(codigo).getInfoEstudios();
             this.vestudios.getTxtDirecSeminario().setText(this.infoestudios.isDireccion_institucion());
             this.vestudios.getTxtInstSemimario().setText(this.infoestudios.getNombre_institucion());
             this.vestudios.getTxtUltimoEstud().setText(this.infoestudios.getUltimo_instituto());

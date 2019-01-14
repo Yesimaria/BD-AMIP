@@ -41,8 +41,9 @@ public class CInfoLaboral implements ActionListener, KeyListener {
     this.codigo = codigo;
     System.out.println("el codigo en v es: "+ codigo);
     vlaboral.aggActionListener(this);
-    vlaboral.setVisible(true);
     this.cargarDatos(codigo);
+    vlaboral.setVisible(true);
+    
     
     
     }
@@ -68,7 +69,7 @@ public class CInfoLaboral implements ActionListener, KeyListener {
        
     }
         public void cargarDatos(String codigo) throws ParseException{
-        if(codigo!= null){
+        if( daopersona.getPersonaCodigo(codigo).getCodigo()!= null){
             System.out.println("La busqueda en personal");
             this.daolaboral = new DAOInfoLaboral();
             this.infolaboral = daopersona.getPersonaCodigo(codigo).getInfoLaboral();

@@ -114,6 +114,11 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         btnDocAnex.setIconTextGap(-3);
         btnDocAnex.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         btnDocAnex.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnDocAnex.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDocAnexActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnDocAnex, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 510, -1, 50));
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/BtGuard.png"))); // NOI18N
@@ -190,6 +195,10 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void btnDocAnexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDocAnexActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDocAnexActionPerformed
+
     private void btnEstudReaActionPerformed(java.awt.event.ActionEvent evt){
         
     }
@@ -219,7 +228,6 @@ public class Menus extends  javax.swing.JFrame implements IVista {
       btnGuardar.addActionListener(acL);
       btnInfPersonal.addActionListener(acL);
       btnSalir.addActionListener(acL);
-      btnDocAnex.addActionListener(acL);
       btnIglesia.addActionListener(acL);
       btnOrganizacion.addActionListener(acL);
       btnMatrimonio.addActionListener(acL);
@@ -328,13 +336,6 @@ public class Menus extends  javax.swing.JFrame implements IVista {
         this.lbpastorname = lbpastorname;
     }
 
-    public JButton getBtnEconomica() {
-        return btnEconomica;
-    }
-
-    public void setBtnEconomica(JButton btnEconomica) {
-        this.btnEconomica = btnEconomica;
-    }
 
     @Override
     public void aggKeyListener(KeyListener keyL) {

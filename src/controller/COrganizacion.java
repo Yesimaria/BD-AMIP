@@ -40,8 +40,9 @@ public class COrganizacion implements ActionListener, KeyListener {
         this.vorganizacion = vorganizacion;
         this.codigo = codigo;
         vorganizacion.aggActionListener(this);
+         this.cargarDatos(codigo);
         vorganizacion.setVisible(true);
-        this.cargarDatos(codigo);
+       
         
     }
     
@@ -68,7 +69,9 @@ public class COrganizacion implements ActionListener, KeyListener {
     }
    
    public void cargarDatos(String codigo) throws ParseException{
-        if(codigo!= null){
+       daopersona = new DAOPersona();
+         this.organizacion = daopersona.getPersonaCodigo(codigo).getOrganizacionPrev();
+        if(this.organizacion instanceof MOrganizacionPrev){
             System.out.println("La busqueda en personal");
             this.daoorganizacion = new DAOOrganizacion();
             this.organizacion = daopersona.getPersonaCodigo(codigo).getOrganizacionPrev();
