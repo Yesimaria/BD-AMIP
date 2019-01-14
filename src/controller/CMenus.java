@@ -8,6 +8,9 @@ package controller;
 import Vistas.DatLab;
 import Vistas.DatMinis;
 import Vistas.EstRealizados;
+import Vistas.InfIglesia;
+import Vistas.InfMatrimonio;
+import Vistas.InfOrganizacionPrev;
 import Vistas.InfPersonal;
 import Vistas.Inicio;
 import Vistas.Menus;
@@ -32,6 +35,12 @@ public class CMenus implements ActionListener {
     CInicio cinicio; 
     InfPersonal vpersonal;
     CInfoPersonal cpersonal;
+    InfMatrimonio vmatrimonio;
+    CMatrimonio cmatrimonio;
+    InfOrganizacionPrev vorganizacion;
+    COrganizacion corganizacion;
+    InfIglesia viglesia;
+    CIglesia ciglesia;
     DatLab vlaboral;
     CInfoLaboral claboral;
     DatMinis vministerial;
@@ -70,7 +79,7 @@ public class CMenus implements ActionListener {
           claboral = new CInfoLaboral(vlaboral, codigo);
           vmenus.setVisible(false);
         }
-      
+           
         if(e.getActionCommand().equalsIgnoreCase("infoministerial")){
           vministerial = new DatMinis ();
           cministerial = new CInfoMinisterial(vministerial, codigo);
