@@ -14,6 +14,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import lib.OpJCalendar;
 import modelo.MMatrimonio;
 import modelo.MPersona;
@@ -40,6 +45,11 @@ public class CMatrimonio extends OpJCalendar implements ActionListener, KeyListe
         this.codigo = codigo;
         vmatrimonio.aggActionListener(this);
         vmatrimonio.setVisible(true);
+        try {
+            this.cargarDatos(codigo);
+        } catch (ParseException ex) {
+            Logger.getLogger(CMatrimonio.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void incluirDatosMatrimonio(String codigo) {
@@ -65,7 +75,23 @@ public class CMatrimonio extends OpJCalendar implements ActionListener, KeyListe
         }
 
     }
-
+        public void cargarDatos(String codigo) throws ParseException{
+        if(codigo!= null){
+            SimpleDateFormat fecha = new SimpleDateFormat("dd-mm-yyyy");
+            Date fechaMatri = null;
+            System.out.println("La busqueda en personal");
+            this.daomatrimonio = new DAOMatrimonio();
+            this.matrimonio = daopersona.getPersonaCodigo(codigo).getMatrimonio();
+            this.vmatrimonio.getTxtApellidos().setText(this.matrimonio.getApellido());
+            this.vmatrimonio.getTxtCedula().setText(this.matrimonio.getCedula());
+            this.vmatrimonio.getTxtCorreo().setText(this.matrimonio.getCorreo());
+            this.vmatrimonio.getTxtLugarNac().setText(this.matrimonio.getLugar_nacimiento());
+            this.vmatrimonio.getTxtNombre().setText(this.matrimonio.getNombre());
+            this.vmatrimonio.getTxtTelefono().setText(this.matrimonio.getTelefono());
+            fechaMatri = fecha.parse(this.matrimonio.getFecha_nacimiento());
+            this.vmatrimonio.getFechaMatri().setDate(fechaMatri);
+        }
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equalsIgnoreCase("cancelar")) {
